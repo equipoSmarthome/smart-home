@@ -101,3 +101,11 @@ body{
     
 }
 /*---------------------------------------------*/
+#volverInicio {
+    position: absolute;
+    width: 200px;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    padding: 5px 0;
+}
