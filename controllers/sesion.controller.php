@@ -6,7 +6,6 @@ class ControllerSesion {
 			$usuario = $_POST["user"];
 			$respuesta = ModeloSesion::iniciarSesionMdl($tabla, $usuario);
 			if ($respuesta["correo"] == $_POST["user"] && $respuesta["password"] == $_POST["password"] ){
-				$_SESSION["autenticar"] = "ok";
 				$_SESSION["nombre"] = $respuesta["correo"];
 				$_SESSION["id"] = $respuesta["id"];
 				echo '
