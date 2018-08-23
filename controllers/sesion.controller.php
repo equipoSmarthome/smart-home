@@ -1,7 +1,11 @@
 <?php 
+<<<<<<< HEAD
 	require_once('../models/usuario.php');
 	require_once('../models/crud_usuario.php');
 	require_once('../models/conexion.php');
+=======
+
+>>>>>>> origin/interfaz
 
 	//inicio de sesion
 	session_start();
