@@ -16,70 +16,33 @@
     <title>Menu</title>
 </head>
 <body class="fondo">
-<?php
 
-?>
     <div class="opacidad"></div>
     <!-- CONTAINER DEL MENU DE ARRIBA -->
-<<<<<<< HEAD
-    <nav class="navbar fixed-top navbar-expand-xs navbar-dark row justify-content-between cabezera">
-        <div class="col-2 menuHamburgueza">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"   aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <form class="w3-container" action="../controllers/sesion.controller.php" method="post">
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav mr-auto mt-5 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Mi Perfil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Añadir Perfil</a>
-                    </li>
-                    <li class="nav-item">
-              
-                        <a class="nav-link" href="modulos/salir.php" >Cerrar Sesion</a>
-                        
-                    </li>
-                </ul>
-            </div>
-            </form>
-        </div>
+   
 
-        <div class="col-3 inDoor">
-            <h1>Menu</h1>
-
-        </div>
-
-        <div class="col-3 outDoor">
-            <h1>Boton</h1>
-        </div>
-
-        <div class="col-3 logo">
-            <img class="img-fluid" src="img/logo/logo-pequeño.png" alt="">
-        </div>
-
-=======
     <div class="col-12 nav fixed-top" >
     <nav class="col-3 navbar navbar-expand-xs navbar-dark">
-  <button class="navbar-toggler boton-nav mb-4 ml-5" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 menu-desplegable">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Mi Perfil</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Añadir Perfil</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Cerrar Sesion</a>
-      </li>
-    </ul>
-  </div>
-</nav>
->>>>>>> origin/interfaz
+
+        <button class="navbar-toggler boton-nav ml-1" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+         
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 menu-desplegable">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Mi Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Añadir Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="modulos/salir.php">Cerrar Sesion</a>
+                        </li>
+                        </ul>
+                    </div>
+          
+    </nav>
 
 <div class="col-2 mt-3 ">
     <h1>Menu</h1>
