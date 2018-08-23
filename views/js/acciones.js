@@ -4,7 +4,7 @@ function dockOk(){
     $("#volverInicio").click(volverInicio)
 }
 function irLogin(){
-    window.location = "views/modulos/login.html"
+    window.location = "views/modulos/login.php"
 }
 function volverInicio(){
     window.location = "../../index.html"

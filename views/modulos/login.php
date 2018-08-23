@@ -1,7 +1,7 @@
 <?php 
-require_once "../../controllers/sesion.controller.php";
-require_once "../../models/sesion.modelo.php";
- ?>
+	session_start();
+	unset($_SESSION['usuario']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,31 +30,29 @@ require_once "../../models/sesion.modelo.php";
                 <!-- fin del logo -->
 
                 <!-- inicio del formulario -->
-            <div class="col-md-5">
-                <form method="post">
+            <div class="col-md-5" >
+                <form method="post" action="../../controllers/sesion.controller.php">
                     <div class="input-group mb-5 mt-2">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Correo" aria-label="Username"name="user" required>
+                        <input type="text" class="form-control" placeholder="Correo" aria-label="Username"name="usuario" required>
                     </div>
 
                     <div class="input-group mb-5">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
-                        <input type="password" class="form-control" placeholder="Contraseña" aria-label="Username" name="password" required>
+                        <input type="password" class="form-control" placeholder="Contraseña" aria-label="Username" name="pas" required>
                     </div>
 
                     <div class="row justify-content-center">
                         <div class="col-10">
-                            <button type="submit" class="btn btn-primary btn-block">Iniciar Sesion</button>
+                            <button type="submit" class="btn btn-primary btn-block" name="entrar" value="entrar">Iniciar Sesion</button>
                         </div>
+
                     </div>
-                          <?php 
-                              $iniciarSesion = new ControllerSesion();
-                              $iniciarSesion -> IniciarSesionCtr();
-                         ?>
+
                 </form>
             </div>
                 <!-- fin del formulario -->

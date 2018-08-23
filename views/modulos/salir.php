@@ -1,9 +1,4 @@
 <?php 
-
-session_destroy();
-
-echo '<script>
-	window.location = "../../index.html"
-</script>';
-
+		header('Location: ../../index.php');//envia encabezado http
+		unset($_SESSION['usuario']); //destruye la sesión
 ?>
