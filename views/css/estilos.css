@@ -7,20 +7,22 @@
     box-sizing: border-box;
 }
 /*--------Inicio Estilos Fondo---------*/
-.fondo{
-    background: url("../img/fondo/fondo.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+body{
+  background: url("../img/fondo/fondo.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 .opacidad{
-    background: #1F1F1F;
-    opacity: .7;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+  background: #1F1F1F;
+  opacity: .7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
     
 }
 /*---------Fin Estilos Fondo---------*/
@@ -47,6 +49,7 @@ body{
 .eslogan{
     font-size: 30px;
     font-weight: bold;
+    color: #fafafa;
 }
 
 .boton{
@@ -94,7 +97,6 @@ body{
 }
 /*---------Fin Estilos Login---------*/
 /*--------Inicio Estilos Menu---------*/
-
 .nav{
     background: #1F1F1F;
 }
@@ -107,9 +109,19 @@ margin-top: 14px !important;
     border: 1px solid #ccc !important;
     color: #ccc !important;
 }
+.menu-desplegable li a:hover{
+    color:#fff !important;
+    background: #2f2f2f;
+}
+.alarma h4 {
+  display: inline-block;
+  width: 40%;
+  margin-top: 20px;
+}
+.actAlarma {
+  vertical-align: middle;
+  display: inline-block;
 
-nav ul li a:hover{
-    color:#006DF2 !important;
 }
  .custom-switch .custom-switch-input {
     display: none; }
@@ -199,6 +211,15 @@ nav ul li a:hover{
 .menuHamburgueza button {
     margin-top: 10px;
 }
+.logo-header {
+  width: 30%;
+}
+.logo-header img {
+  width: 100%;
+  height: 80px;
+  margin-top: 5px;
+  margin-left: 30px;
+}
 .principal{
     padding-top: 120px;
 }
@@ -223,9 +244,38 @@ nav ul li a:hover{
 }
 
 /*---------Fin Estilos Menu---------*/
+#volverMenu {
+    position: absolute;
+    width: 200px;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    padding: 5px 0;
+}
+/*--------Inicio Estilos Luces---------*/
+.luces{
+  padding-top: 120px;
+  z-index: 100;
+}
+.luces fieldset {
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 2em;
+  border: 1px #fff solid;
+}
+.luces legend {
+  color: #fff;
+  width: auto;
 
-/*--------Inicio Estilos Fondo Menu---------*/
-/*---------Fin Estilos Fondo Menu---------*/
+}
 
-/*--------Inicio Estilos Fondo Menu---------*/
-/*---------Fin Estilos Fondo Menu---------*/
+.luz {
+  border: 1px solid red;
+  width: 40%;
+  display: inline-block;
+  margin: 10px 30px;
+  text-align: center;
+}
+
+/*---------Fin Estilos Luces---------*/
