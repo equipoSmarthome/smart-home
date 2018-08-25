@@ -6,7 +6,7 @@
 
 		//inserta los datos del usuario, esto para registrar un nuevo usuario
 		public function insertar($usuario){
-			$db=DB::conectar();
+			$db=Conexion::conectar();
 			$insert=$db->prepare('INSERT INTO usuarios VALUES(NULL,:correo, :pass)');
 			$insert->bindValue('correo',$usuario->getNombre());
 			//encripta la clave.

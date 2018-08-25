@@ -22,7 +22,7 @@
 			alert("Datos erroneos");
 			window.location.href="../index.php";
 			</script>';  // cuando los datos son incorrectos se muestra el alert
-		}		
+		}
 		
 	}elseif (isset($_POST['entrar'])) { //verifica si la variable entrar está definida, este viene del login.php
 		$usuario=$crud->obtenerUsuario($_POST['usuario'],$_POST['pas']);
