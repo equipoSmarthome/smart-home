@@ -23,6 +23,8 @@ body{
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
     
 }
 /*---------Fin Estilos Fondo---------*/
@@ -225,8 +227,12 @@ margin-top: 14px !important;
 }
 
 .menu-principal{
-    border: 1px #1F1F1F solid;
+    border: 1px #fff solid;
     padding: 0 2em;
+}
+.menu-principal legend{
+    color: #fff;
+    width: auto;
 }
 
 .botones-menu button{
@@ -253,13 +259,9 @@ margin-top: 14px !important;
     padding: 5px 0;
 }
 /*--------Inicio Estilos Luces---------*/
-.luces{
-  padding-top: 120px;
-  z-index: 100;
-}
+
 .luces fieldset {
   text-align: left;
-  width: 90%;
   margin: 0 auto;
   padding: 0 2em;
   border: 1px #fff solid;

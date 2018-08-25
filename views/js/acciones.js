@@ -12,6 +12,7 @@ function dockOk(){
 function irLogin(){
     window.location = "views/modulos/login.php"
 }
+
 function volverInicio(){
     window.location = "../../index.php"
 }

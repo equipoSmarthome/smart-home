@@ -44,8 +44,10 @@
             </div>
         </div>
     </header>
-    <div class=luces>
-        <fieldset class="menu-principal">
+    <div class="container principal">
+        <div class="row">
+            <div class="col-12 luces">
+            <fieldset class="menu-principal">
             <legend>Configuración</legend>
             <div class="luz">
                 <i class="fas fa-lightbulb"></i>
@@ -98,16 +100,16 @@
             </div>
             
         </fieldset>
+            </div>
+        </div>
+    </div>
+    <div class="luces">
+        
 
 
 
         
     </div>
-
-
-
-
-
 
     <div class="btn btn-primary" id="volverMenu">Volver</div>
     <script src="../js/jquery-3.3.1.min.js"></script>

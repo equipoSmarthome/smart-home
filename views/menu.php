@@ -26,7 +26,7 @@
                             <a class="nav-link" href="#">Añadir Perfil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Cerrar Sesion</a>
+                            <a class="nav-link" href="modulos/salir.php">Cerrar Sesion</a>
                         </li>
                     </ul>
                 </div>
@@ -64,6 +64,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/fontawesome.min.js"></script>
     <script src="js/acciones.js"></script>
+    <script src="js/alertify.js"></script>
 </body>
 
 </html>

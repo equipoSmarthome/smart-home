@@ -60,13 +60,6 @@
                                 </div>
                                 <input type="email" class="form-control" placeholder="Ingrese su Correo">
                             </div>
-
-                            <div class="col-auto input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroup-sizing-default"><i class="fas fa-laptop"></i></span>
-                                </div>
-                                <input type="email" class="form-control" placeholder="Ingrese Mac">
-                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary">Enviar</button>
