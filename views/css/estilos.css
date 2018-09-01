@@ -280,4 +280,8 @@ margin-top: 14px !important;
   text-align: center;
 }
 
+.evento {
+    vertical-align: middle;
+    margin:auto auto;
+}
 /*---------Fin Estilos Luces---------*/

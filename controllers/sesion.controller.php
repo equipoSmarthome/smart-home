@@ -30,6 +30,7 @@
 		if ($usuario->getId()!=NULL) {
 			$_SESSION['usuario']=$usuario; //si el usuario se encuentra, crea la sesión de usuario
 			header('Location: ../views/menu.php'); //Si todo lo anterior esta OK, se redirecciona a menu.php
+			
 		}else{
 			
 			echo '<script>

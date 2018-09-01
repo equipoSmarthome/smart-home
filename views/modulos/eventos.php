@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/fontawesome.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
-    <title>Luces</title>
+    <link rel="stylesheet" href="../css/calendar.min.css">
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/calendar.min.js"></script>
+    <title>Eventos</title>
 </head>
 <body>
     <div class="opacidad"></div>
@@ -44,13 +47,94 @@
             </div>
         </div>
     </header>
+    <div class="container principal">
+        <div class="row">
+            <div class="col-6">
+            <div class="calendar" data-color="normal">
+        <div data-role="day" data-day="<?php echo date("Ynd",mktime(0,0,0,date("m"),date("d")+1,date("Y"))); ?>">
+            <div data-role="event" data-name="Soy un evento que siempre saldr&eacute; ma&ntilde;ana" data-start="9.00" data-end="9.30" data-location="martiniglesias.eu">
+            </div>
+        </div>
+    </div>
+	<script>
+	var yy;
+	var calendarArray =[];
+	var monthOffset = [6,7,8,9,10,11,0,1,2,3,4,5];
+	var monthArray = [["ENE","enero"],["FEB","Febrero"],["MAR","Marzo"],["ABR","Abril"],["MAY","Mayo"],["JUN","Junio"],["JUL","Julio"],["AGO","Agosto"],["SEP","Septiembre"],["OCT","Octubre"],["NOV","Noviembre"],["DIC","Diciembre"]];
+	var letrasArray = ["L","M","X","J","V","S","D"];
+	var dayArray = ["7","1","2","3","4","5","6"];
+	$(document).ready(function() {
+		$(document).on('click','.calendar-day.have-events',activateDay);
+		$(document).on('click','.specific-day',activatecalendar);
+		$(document).on('click','.calendar-month-view-arrow',offsetcalendar);
+		$(window).resize(calendarScale);
+		$(".calendar").calendar({
+			"2013910": {
+				"Mulberry Festival": {
+					start: "9.00",
+					end: "9.30",
+					location: "London"
+				}
+			}
+		});
+		calendarSet();
+		calendarScale();
+		});
+	</script>
+	
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-266167-20");
+		pageTracker._setDomainName(".martiniglesias.eu");
+		pageTracker._trackPageview();
+	} catch(err) {}</script>
+            </div>
+
+            <div class="col-6 evento ">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modal-evento">
+            Ver Evento
+            </button>
+            </div>
+
+            <div class="modal fade" id="modal-evento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Crear Evento</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-2">
+                <input type="date" class="form-control">
+            </div>
+            
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Crear Evento</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+    </div>
     
 
     <div class="btn btn-primary" id="volverMenu">Volver</div>
-    <script src="../js/jquery-3.3.1.min.js"></script>
+    
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/fontawesome.min.js"></script>
+    <script src="../js/calendar.min.js"></script>
     <script src="../js/acciones.js"></script>
+    
 </body>
 </html>
