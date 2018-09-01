@@ -47,16 +47,7 @@
             </div>
         </div>
     </header>
-    <div class="container principal">
-        <div class="row">
-            <div class="col">
-            <div class="input-append date" id="datepicker" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-    <input size="16" type="text" value="12-02-2012" readonly>
-    <span class="add-on"><i class="icon-th"></i></span>
-</div>
-            </div>
-        </div>
-    </div>
+    
     <div class="btn btn-primary" id="volverMenu">Volver</div>
     
     <script src="../js/popper.min.js"></script>

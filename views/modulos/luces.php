@@ -46,71 +46,121 @@
     </header>
     <div class="container principal">
         <div class="row">
-            <div class="col-12 luces">
-            <fieldset class="menu-principal">
-            <legend>Configuración</legend>
+            <div class="col-12">
+                <fieldset class="menu-principal">
+                    <legend>Menu</legend>
             <div class="luz">
-                <i class="fas fa-lightbulb"></i>
-                <div class="custom-switch custom-switch-label-onoff swith-luces"> 
-                    <label for="">Cocina</label>  
-                    <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
-                    <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+                <label for="">Cocina</label>
+                <div class="row">
+                    <div class="col">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="col">
+                        <div class="custom-switch custom-switch-label-onoff swith-luces">   
+                            <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
+                            <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+                        </div>
+                    </div>
+                    <div class="col">
+                    <i class="far fa-lightbulb"></i>
+                    </div>
                 </div>
-                <i class="fas fa-lightbulb"></i>
             </div>
-            <div class="luz">
-                <i class="fas fa-lightbulb"></i>
-                <div class="custom-switch custom-switch-label-onoff swith-luces">   
-                    <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
-                    <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+
+             <div class="luz">
+                <label for="">Luz Baño</label>
+                <div class="row">
+                    <div class="col">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="col">
+                        <div class="custom-switch custom-switch-label-onoff swith-luces">   
+                            <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
+                            <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+                        </div>
+                    </div>
+                    <div class="col">
+                    <i class="far fa-lightbulb"></i>
+                    </div>
                 </div>
-                <i class="fas fa-lightbulb"></i>
             </div>
-            <div class="luz">
-                <i class="fas fa-lightbulb"></i>
-                <div class="custom-switch custom-switch-label-onoff swith-luces">   
-                    <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
-                    <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+
+             <div class="luz">
+                <label for="">Luz Garage</label>
+                <div class="row">
+                    <div class="col">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="col">
+                        <div class="custom-switch custom-switch-label-onoff swith-luces">   
+                            <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
+                            <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+                        </div>
+                    </div>
+                    <div class="col">
+                    <i class="far fa-lightbulb"></i>
+                    </div>
                 </div>
-                <i class="fas fa-lightbulb"></i>
             </div>
-            <div class="luz">
-                <i class="fas fa-lightbulb"></i>
-                <div class="custom-switch custom-switch-label-onoff swith-luces">   
-                    <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
-                    <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+
+             <div class="luz">
+                <label for="">Luz Dormitorio 1</label>
+                <div class="row">
+                    <div class="col">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="col">
+                        <div class="custom-switch custom-switch-label-onoff swith-luces">   
+                            <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
+                            <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+                        </div>
+                    </div>
+                    <div class="col">
+                    <i class="far fa-lightbulb"></i>
+                    </div>
                 </div>
-                <i class="fas fa-lightbulb"></i>
             </div>
-            <div class="luz">
-                <i class="fas fa-lightbulb"></i>
-                <div class="custom-switch custom-switch-label-onoff swith-luces">   
-                    <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
-                    <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+
+             <div class="luz">
+                <label for="">Luz Dormitorio 2</label>
+                <div class="row">
+                    <div class="col">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="col">
+                        <div class="custom-switch custom-switch-label-onoff swith-luces">   
+                            <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
+                            <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+                        </div>
+                    </div>
+                    <div class="col">
+                    <i class="far fa-lightbulb"></i>
+                    </div>
                 </div>
-                <i class="fas fa-lightbulb"></i>
             </div>
-            <div class="luz">
-                <i class="fas fa-lightbulb"></i>
-                <div class="custom-switch custom-switch-label-onoff swith-luces">   
-                    <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
-                    <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+
+             <div class="luz">
+                <label for="">Luz Dormitorio 3</label>
+                <div class="row">
+                    <div class="col">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="col">
+                        <div class="custom-switch custom-switch-label-onoff swith-luces">   
+                            <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
+                            <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+                        </div>
+                    </div>
+                    <div class="col">
+                    <i class="far fa-lightbulb"></i>
+                    </div>
                 </div>
-                <i class="fas fa-lightbulb"></i>
             </div>
-            
-        </fieldset>
+                </fieldset>
             </div>
         </div>
     </div>
-    <div class="luces">
-        
-
-
-
-        
-    </div>
-
+   
     <div class="btn btn-primary" id="volverMenu">Volver</div>
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/popper.min.js"></script>

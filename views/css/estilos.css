@@ -273,7 +273,6 @@ margin-top: 14px !important;
 }
 
 .luz {
-  border: 1px solid red;
   width: 40%;
   display: inline-block;
   margin: 10px 30px;
@@ -283,5 +282,9 @@ margin-top: 14px !important;
 .evento {
     vertical-align: middle;
     margin:auto auto;
+}
+
+.switch-luces{
+    margin: auto auto;
 }
 /*---------Fin Estilos Luces---------*/
