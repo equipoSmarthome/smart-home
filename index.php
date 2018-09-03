@@ -45,15 +45,15 @@
             </div>
             <!-- Modal -->
             <div class="modal fade" id="modal-registrarse" tabindex="-1" role="dialog" aria-labelledby="modal-registrarse" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
+                <div class="modal-dialog modal-dialog-md modal-dialog-centered " role="document">
+                    <div class="modal-content bg-dark">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Activacion</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body bg-dark">
                             <div class="col-auto input-group mb-4">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="inputGroup-sizing-default"><i class="fas fa-user"></i></span>

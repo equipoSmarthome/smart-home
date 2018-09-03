@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/datepicker.css">
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/bootstrap-datepicker.js"></script>
-    <title>Luces</title>
+    <title>Puertas</title>
 </head>
 <body>
     <div class="opacidad"></div>
@@ -47,7 +47,37 @@
             </div>
         </div>
     </header>
-    
+    <div class="container principal">
+        <div class="row">
+            <div class="col-6">
+                <fieldset class="menu-principal">
+                    <legend>Puerta Principal</legend>
+                    <div class="row">
+                        <div class="col-12 mt-3 mb-5">
+                            <button class="btn btn-primary" id="luz"><img class="iconos-menu mt-3" src="../img/iconos/unlock.png" alt=""><p class="mt-4">Desbloquear</p></button>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="col-6">
+                <fieldset class="menu-principal">
+                    <legend>Puerta Garage</legend>
+                    <div class="row">
+                        <div class="col-12 ">
+                            <button class="btn btn-primary" id="luz"><img class="iconos-menu mt-3" src="../img/iconos/abrir-puerta.png" alt=""><p class="mt-4">Abrir</p></button>
+                        </div>
+
+                        <div class="col-12 mt-5 mb-3">
+                            <button class="btn btn-primary" id="luz"><img class="iconos-menu mt-3" src="../img/iconos/abrir-puerta.png" alt=""><p class="mt-4">Abrir</p></button>
+                        </div>
+
+                        
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
     <div class="btn btn-primary" id="volverMenu">Volver</div>
     
     <script src="../js/popper.min.js"></script>
