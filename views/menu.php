@@ -26,7 +26,7 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0 menu-desplegable">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Mi Perfil</a>
+                            <a class="nav-link" href="modulos/miperfil.php">Mi Perfil</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Añadir Perfil</a>
