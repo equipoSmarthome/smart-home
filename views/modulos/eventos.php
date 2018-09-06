@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/calendar.min.css">
     <script src="../js/jquery-3.3.1.min.js"></script>
@@ -94,27 +96,138 @@
 	} catch(err) {}</script>
             </div>
 
-            <div class="col-6 evento ">
-            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modal-evento">
+<div class="col-6 evento ">
+    <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modal-ver-evento">
             Ver Evento
-            </button>
-            </div>
+    </button>
+    <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modal-crear-evento">
+            Crear Evento
+    </button>
+</div>
 
-            <div class="modal fade" id="modal-evento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
+<div class="modal fade" id="modal-ver-evento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Crear Evento</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body bg-dark">
+          <div class="table-responsive-md">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                    <th scope="col">Dispositivo</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <th scope="row">Luz de la Cocina</th>
+                    <td>On</td>
+                    <td><a href=""><i class="far fa-edit"></i></a></td>
+                    <td><a href=""><i class="far fa-trash-alt"></i></a></td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Ventilador</th>
+                    <td>On</td>
+                    <td><a href=""><i class="far fa-edit"></i></a></td>
+                    <td><a href=""><i class="far fa-trash-alt"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-crear-evento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Crear Evento</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body bg-dark">
         <div class="row">
-            <div class="col-2">
-                <input type="date" class="form-control">
+            <div class="col-3">
+                <h6>Comienza</h6>
+                <input type="date">
             </div>
-            
+            <div class="col-3">
+                <h6>Hora</h6>
+                <input type="time">
+            </div>
+            <div class="col-6">
+                <h6>Estado</h6>
+                <div class="row">
+                    <div class="col-auto">
+                        <p>Apagar</p>
+                    </div> 
+                    <div class="col-auto">
+                        <div class="custom-switch custom-switch-label-onoff swith-luces">   
+                            <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
+                            <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <p>Encender</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <h6>Finaliza</h6>
+                <input type="date">
+            </div>
+            <div class="col-3">
+                <h6>Hora</h6>
+                <input type="time">
+            </div>
+            <div class="col-6">
+                <h6>Estado</h6>
+                <div class="row">
+                    <div class="col-auto">
+                        <p>Apagar</p>
+                    </div> 
+                    <div class="col-auto">
+                        <div class="custom-switch custom-switch-label-onoff swith-luces">   
+                            <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
+                            <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <p>Encender</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Example select</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                </div>
+            </div>
         </div>
       </div>
       <div class="modal-footer">
@@ -124,8 +237,8 @@
     </div>
   </div>
 </div>
-        </div>
-    </div>
+</div>
+ </div>
     
 
     <div class="btn btn-primary" id="volverMenu">Volver</div>

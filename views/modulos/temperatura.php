@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/fontawesome.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
-    <title>Luces</title>
+    <title>Temperatura</title>
 </head>
 <body>
     <div class="opacidad"></div>
@@ -44,20 +44,49 @@
             </div>
         </div>
     </header>
-    <div class=luces>
-        <fieldset class="menu-principal">
-            <legend>Configuración</legend>
-            
-            
-        </fieldset>        
-    </div>
-    <div class=luces>
-        <fieldset class="menu-principal">
-            <legend>Configuración</legend>
-            
-            
-        </fieldset>        
-    </div>
+    <div class="container principal">
+        <div class="row">
+            <div class="col-6">
+                <fieldset class="menu-principal">
+                    <legend>Informacion General</legend>
+                    <div class="row">
+                        <div class="col-12 mt-3 mb-5">
+                            <h1>Temperatura Actual</h1>
+                            <p class="h1 mt-5 mb-5">5,0° C</p>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="col-6 configuracion-ventilador ">
+                <fieldset class="menu-principal">
+                    <legend>Configuracion Ventilador</legend>
+                    <label>Funciones Ventilador</label>
+                    <h6 class="mb-3">Definido por el sensor de T°</h6>
+                    <div class="row">
+                        <div class="col-12 ">
+                            <button class="btn btn-primary" id="luz"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/rayo.png" alt=""><p class="mt-2">Automatico</p></button>
+                        </div>
+
+                        
+                        <div class="col-12 mt-5 mb-3">
+                            <h6 class="mb-3">Definido por el usuario</h6>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <button class="btn btn-primary" id="luz"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-apagado.png" alt=""><p class="mt-2">Desactivado</p></button>
+                                    </div>         
+
+                                    <div class="col-6">
+                                        <button class="btn btn-primary" id="luz"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-encendido.png" alt=""><p class="mt-2">automatico</p></button>
+                                    </div>                        
+                                </div>
+                           
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>>
 
     <div class="btn btn-primary" id="volverMenu">Volver</div>
     <script src="../js/jquery-3.3.1.min.js"></script>

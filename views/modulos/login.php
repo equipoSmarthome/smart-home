@@ -67,14 +67,14 @@
             <!-- inicio de ventana modal -->
             <div class="modal fade" id="modal-contraseña" tabindex="-1" role="dialog" aria-labelledby="#modal-contraseña" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
+                    <div class="modal-content bg-dark">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Recuperar Contraseña</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body bg-dark">
                             <p class="">Para Recuperar su Contraseña, Ingrese su Correo Electronico</p>
                             <div class="col-auto input-group mb-3 mt-1">
                                 <div class="input-group-prepend">

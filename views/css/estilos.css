@@ -69,7 +69,7 @@ body{
     font-size: 16px;
     font-weight: bold;
 }
-.modal-title{
+/* .modal-title{
     color: rgba(100%, 96.1%, 93.3%, 100%)!important;
 }
 
@@ -83,7 +83,7 @@ body{
 }
 .modal-dialog{
     max-width: 600px !important;
-}
+} */
 /*---------Fin Estilos Index---------*/
 /*--------Inicio Estilos Login---------*/
 #modal-contraseña{
@@ -288,3 +288,13 @@ margin-top: 14px !important;
     margin: auto auto;
 }
 /*---------Fin Estilos Luces---------*/
+.configuracion-ventilador button{
+    width: 150px;
+    height:100px;
+}
+.iconos-menu-temperatura{
+    width: 35%;
+}
+.configuracion-ventilador p{
+    font-size: 12px;
+}
