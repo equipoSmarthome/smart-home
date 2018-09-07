@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/calendar.min.css">
     <script src="../js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap-switch.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <script src="../js/calendar.min.js"></script>
     <title>Mi Perfil</title>
 </head>
@@ -38,8 +40,10 @@
             <div class="col-4 mt-1 alarma">
                 <h4>Alarma</h4>
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
-                    <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
-                    <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+                <label class="bs-switch">
+                <input type="checkbox" name="alarma" checked>
+  
+                </label>
                 </div>
             </div>
             <div class="logo-header">
@@ -57,20 +61,22 @@
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Correo</label>
                         <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="Correo"  name="micorreo">
+                        <input type="text" class="form-control" placeholder="Correo"  name="micorreo" readonly>
                         </div>
                         <div class="col-sm-3">
                             <button class="btn btn-sm btn-info ">
-                                <i class="far fa-edit">Editar</i>
+                            
+                                <i class="fas fa-edit">Editar</i>
                             </button>  
                         </div>
                   
                     </div>
                     <br>
                     <div class="form-group row">
+                        
                         <label class="col-sm-2 col-form-label">Contraseña</label>
                         <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="Contraseña"  name="mipass">
+                        <input type="password" class="form-control" placeholder="Contraseña"  name="mipass">
                         </div>
                         <div class="col-sm-3">
                             <button class="btn btn-sm btn-info ">
@@ -79,7 +85,22 @@
                         </div>
                     </div>
                     <br>
+                    <div class="form-group row">
+                        
+                        <label class="col-sm-2 col-form-label">Contraseña</label>
+                        <div class="col-sm-7">
+                        <input type="password" class="form-control" placeholder="Contraseña"  name="mipass">
+                        </div>
+                        <div class="col-sm-3">
+                            <button class="btn btn-sm btn-info ">
+                                <i class="far fa-edit">Editar</i>
+                            </button>  
+                        </div>
                     <br>
+                    <br>
+                    <div class="form-group row">
+                       <button class="btn btn-primary">Guardar</button> 
+                        </div>
                 </fieldset>
             </div>
         </div>
@@ -99,6 +120,7 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/fontawesome.min.js"></script>
     <script src="../js/calendar.min.js"></script>
+    <script src="../js/bootstrap-switch.min.js"></script>
     <script src="../js/acciones.js"></script>
     
 </body>

@@ -12,6 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap-switch.min.css">
     <link rel="stylesheet" href="css/estilos.css">
     <title>Menu</title>
 </head>
@@ -29,7 +30,7 @@
                             <a class="nav-link" href="modulos/miperfil.php">Mi Perfil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Añadir Perfil</a>
+                            <a class="nav-link" href="modulos/nueva-cuenta.php">Añadir Cuenta</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="modulos/salir.php">Cerrar Sesion</a>
@@ -41,8 +42,10 @@
             <div class="col-4 mt-1 alarma">
                 <h4>Alarma</h4>
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
-                    <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
-                        <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+                <label class="bs-switch">
+                <input type="checkbox" name="alarma" checked>
+  
+                </label>
                 </div>
             </div>
             <div class="logo-header">
@@ -70,6 +73,7 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/fontawesome.min.js"></script>
+    <script src="js/bootstrap-switch.min.js"></script>
     <script src="js/acciones.js"></script>
     <script src="js/alertify.js"></script>
 </body>

@@ -34,3 +34,4 @@ function irEventos(){
 function volverMenu(){
 	window.location = "../menu.php"
 }
+$("[name='alarma']").bootstrapSwitch();
