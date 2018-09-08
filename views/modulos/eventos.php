@@ -19,11 +19,11 @@
     <div class="opacidad"></div>
     <header>
        <div class="col-12 nav fixed-top" >
-            <nav class="col-3 navbar navbar-expand-xs navbar-dark">
+            <nav class="col-5 col-md-3 navbar navbar-expand-xs navbar-dark">
                 <button class="navbar-toggler boton-nav mb-4 ml-5" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <div class="collapse navbar-collapse texto-menu-hamburguesa" id="navbarTogglerDemo01">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0 menu-desplegable">
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Mi Perfil</a>
@@ -37,14 +37,14 @@
                     </ul>
                 </div>
             </nav>
-            <div class="col-4 mt-1 alarma">
+            <div class="col col-md-4 mt-1 alarma">
                 <h4>Alarma</h4>
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
                     <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
                     <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
                 </div>
             </div>
-            <div class="logo-header">
+            <div class="d-none d-md-block logo-header">
                 <img class="" src="../img/logo/logo-pequeño.png" alt="">
             </div>
         </div>
@@ -96,7 +96,7 @@
 	} catch(err) {}</script>
             </div>
 
-<div class="col-6 evento ">
+<div class="col-6 botones-evento ">
     <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modal-ver-evento">
             Ver Evento
     </button>
@@ -238,10 +238,15 @@
   </div>
 </div>
 </div>
+<div class="row justify-content-end ">
+      <div class="col-auto">
+           <div class="btn btn-primary" id="volverMenu">Volver</div>
+       </div>
+    </div>
  </div>
     
 
-    <div class="btn btn-primary" id="volverMenu">Volver</div>
+    
     
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>

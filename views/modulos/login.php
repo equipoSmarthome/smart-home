@@ -1,6 +1,6 @@
 <?php 
-	session_start();
-	unset($_SESSION['usuario']);
+	// session_start();
+	// unset($_SESSION['usuario']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,15 +24,15 @@
 
         <div class="row justify-content-center">
             <!-- inicio del logo -->
-            <div class="col-12">
+            <div class="col-12 col-sm-10 col-md-8 logo">
                 <img class="img-fluid" src="../img/logo/logo.png" alt="">
             </div>
                 <!-- fin del logo -->
 
                 <!-- inicio del formulario -->
-            <div class="col-md-5" >
+            <div class="col-10 col-md-6 col-lg-5 formulario" >
                 <form method="post" action="../../controllers/sesion.controller.php">
-                    <div class="input-group mb-5 mt-2">
+                    <div class="input-group mb-4 mt-2">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
@@ -65,7 +65,7 @@
             <!-- fin del recuperar contraseña -->
 
             <!-- inicio de ventana modal -->
-            <div class="modal fade" id="modal-contraseña" tabindex="-1" role="dialog" aria-labelledby="#modal-contraseña" aria-hidden="true">
+            <div class="modal fade modal-recupera-contraseña" id="modal-contraseña" tabindex="-1" role="dialog" aria-labelledby="#modal-contraseña" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content bg-dark">
                         <div class="modal-header">
@@ -85,7 +85,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary">Enviar</button>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
                 </div>
@@ -99,6 +99,6 @@
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/fontawesome.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+   
 </body>
 </html>
