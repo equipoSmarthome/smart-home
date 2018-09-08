@@ -102,6 +102,11 @@
                        <button class="btn btn-primary">Guardar</button> 
                         </div>
                 </fieldset>
+                <div class="row justify-content-end ">
+                     <div class="col-auto">
+                         <div class="btn btn-primary" id="volverMenu">Volver</div>
+                      </div>
+                </div>
             </div>
         </div>
     </div>
@@ -114,7 +119,6 @@
     
     
 
-    <div class="btn btn-primary" id="volverMenu">Volver</div>
     
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>

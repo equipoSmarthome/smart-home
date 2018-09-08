@@ -54,7 +54,7 @@
     </header>
     <div class="container principal">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-md-6">
             <div class="calendar" data-color="normal">
         <div data-role="day" data-day="<?php echo date("Ynd",mktime(0,0,0,date("m"),date("d")+1,date("Y"))); ?>">
             <div data-role="event" data-name="Soy un evento que siempre saldr&eacute; ma&ntilde;ana" data-start="9.00" data-end="9.30" data-location="martiniglesias.eu">
@@ -99,7 +99,7 @@
 	} catch(err) {}</script>
             </div>
 
-<div class="col-6 botones-evento ">
+<div class="col-12 col-md-6 botones-evento ">
     <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modal-ver-evento">
             Ver Evento
     </button>

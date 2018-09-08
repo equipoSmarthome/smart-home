@@ -99,11 +99,7 @@
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/fontawesome.min.js"></script>
-<<<<<<< HEAD
-   
-=======
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="../js/acciones.js"></script>
->>>>>>> origin/programacion
 </body>
 </html>

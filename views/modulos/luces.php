@@ -58,16 +58,6 @@
                     <div class="col-auto">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-<<<<<<< HEAD
-                    <div class="col-auto col-md-6">
-                        <div class="custom-switch custom-switch-label-onoff swith-luces">   
-                            <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
-                            <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
-                        </div>
-                    </div>
-                    <div class="col-auto">
-                        <i class="far fa-lightbulb"></i>
-=======
                     <div class="col-4 mt-1 alarma">
                 
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
@@ -79,7 +69,6 @@
             </div>
                     <div class="col">
                     <i class="far fa-lightbulb"></i>
->>>>>>> origin/programacion
                     </div>
                 </div>
             </div>
@@ -90,14 +79,6 @@
                     <div class="col">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-<<<<<<< HEAD
-                    <div class="col-12 col-md-6">
-                        <div class="custom-switch custom-switch-label-onoff swith-luces">   
-                            <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
-                            <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
-                        </div>
-                    </div>
-=======
                     <div class="col-4 mt-1 alarma">
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
                 <label class="bs-switch">
@@ -106,7 +87,6 @@
                 </label>
                 </div>
             </div>
->>>>>>> origin/programacion
                     <div class="col">
                     <i class="far fa-lightbulb"></i>
                     </div>
@@ -119,14 +99,6 @@
                     <div class="col">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-<<<<<<< HEAD
-                    <div class="col-12 col-md-6">
-                        <div class="custom-switch custom-switch-label-onoff swith-luces">   
-                            <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
-                            <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
-                        </div>
-                    </div>
-=======
                     <div class="col-4 mt-1 alarma">
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
                 <label class="bs-switch">
@@ -135,7 +107,6 @@
                 </label>
                 </div>
             </div>
->>>>>>> origin/programacion
                     <div class="col">
                     <i class="far fa-lightbulb"></i>
                     </div>
@@ -148,14 +119,6 @@
                     <div class="col">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-<<<<<<< HEAD
-                    <div class="col-12 col-md-6">
-                        <div class="custom-switch custom-switch-label-onoff swith-luces">   
-                            <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
-                            <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
-                        </div>
-                    </div>
-=======
                     <div class="col-4 mt-1 alarma"> 
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
                 <label class="bs-switch">
@@ -164,7 +127,6 @@
                 </label>
                 </div>
             </div>
->>>>>>> origin/programacion
                     <div class="col">
                     <i class="far fa-lightbulb"></i>
                     </div>
@@ -177,14 +139,6 @@
                     <div class="col">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-<<<<<<< HEAD
-                    <div class="col-12 col-md-6">
-                        <div class="custom-switch custom-switch-label-onoff swith-luces">   
-                            <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
-                            <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
-                        </div>
-                    </div>
-=======
                     <div class="col-4 mt-1 alarma">
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
                 <label class="bs-switch">
@@ -193,7 +147,6 @@
                 </label>
                 </div>
             </div>
->>>>>>> origin/programacion
                     <div class="col">
                     <i class="far fa-lightbulb"></i>
                     </div>
@@ -206,14 +159,6 @@
                     <div class="col">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-<<<<<<< HEAD
-                    <div class="col-12 col-md-6">
-                        <div class="custom-switch custom-switch-label-onoff swith-luces">   
-                            <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
-                            <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
-                        </div>
-                    </div>
-=======
                     <div class="col-4 mt-1 alarma">
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
                 <label class="bs-switch">
@@ -222,7 +167,6 @@
                 </label>
                 </div>
             </div>
->>>>>>> origin/programacion
                     <div class="col">
                     <i class="far fa-lightbulb"></i>
                     </div>

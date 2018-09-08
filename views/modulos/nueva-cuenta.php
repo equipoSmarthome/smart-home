@@ -1,4 +1,4 @@
-<div>
+
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -18,7 +18,7 @@
     </head>
     <body>
         <div class="opacidad"></div>
-        <div class="btn btn-primary" id="volverMenu">Volver</div>
+    
         <header>
            <div class="col-12 nav fixed-top" >
                 <nav class="col-3 navbar navbar-expand-xs navbar-dark">
@@ -59,7 +59,7 @@
                     <fieldset class="menu-principal">
                         <legend>Mis Cuentas</legend>
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Nueva Cuenta</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="bd-example-modal-lg">Nueva Cuenta</button>
 
                         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
@@ -108,7 +108,14 @@
           </tr>
         </thead>
         <tbody>
+        </table>
                     </fieldset>
+
+                    <div class="row justify-content-end ">
+                     <div class="col-auto">
+                         <div class="btn btn-primary" id="volverMenu">Volver</div>
+                      </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -132,4 +139,3 @@
         
     </body>
     </html>
-</div>
