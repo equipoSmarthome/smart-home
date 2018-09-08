@@ -29,7 +29,7 @@
                             <a class="nav-link" href="miperfil.php">Mi Perfil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Añadir Perfil</a>
+                            <a class="nav-link" href="nueva-cuenta.php">Añadir Perfil</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="salir.php">Cerrar Sesion</a>
