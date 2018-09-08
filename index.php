@@ -60,14 +60,14 @@
                                 </div>
                                 <input type="email" class="form-control" placeholder="Ingrese su Correo">
                             </div>
-
                             <div class="col-auto input-group mb-4">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroup-sizing-default"><i class="fas fa-laptop"></i></span>
+                                        <span class="input-group-text" id="inputGroup-sizing-default"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Ingrese MAC de Arduino">
                                 </div>
-                                <input type="email" class="form-control" placeholder="Ingrese Mac">
                             </div>
-                        </div>
+                        
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary">Enviar</button>
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>

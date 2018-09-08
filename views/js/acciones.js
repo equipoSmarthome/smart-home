@@ -14,7 +14,7 @@ function irLogin(){
 }
 
 function volverInicio(){
-    window.location = "../../index.php"
+    window.location = "../../"
 }
 function irMenu(){
 	window.location = "../menu.php"
@@ -34,3 +34,4 @@ function irEventos(){
 function volverMenu(){
 	window.location = "../menu.php"
 }
+$("[name='alarma']").bootstrapSwitch();

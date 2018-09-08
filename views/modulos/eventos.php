@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/calendar.min.css">
     <script src="../js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap-switch.min.css">
     <script src="../js/calendar.min.js"></script>
     <title>Eventos</title>
 </head>
@@ -26,13 +27,13 @@
                 <div class="collapse navbar-collapse texto-menu-hamburguesa" id="navbarTogglerDemo01">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0 menu-desplegable">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Mi Perfil</a>
+                            <a class="nav-link" href="miperfil.php">Mi Perfil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Añadir Perfil</a>
+                            <a class="nav-link" href="nueva-cuenta.php">Añadir Perfil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Cerrar Sesion</a>
+                            <a class="nav-link" href="salir.php">Cerrar Sesion</a>
                         </li>
                     </ul>
                 </div>
@@ -40,8 +41,10 @@
             <div class="col col-md-4 mt-1 alarma">
                 <h4>Alarma</h4>
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
-                    <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
-                    <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+                <label class="bs-switch">
+                <input type="checkbox" name="alarma" checked>
+  
+                </label>
                 </div>
             </div>
             <div class="d-none d-md-block logo-header">
@@ -252,6 +255,7 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/fontawesome.min.js"></script>
     <script src="../js/calendar.min.js"></script>
+    <script src="../js/bootstrap-switch.min.js"></script>
     <script src="../js/acciones.js"></script>
     
 </body>
