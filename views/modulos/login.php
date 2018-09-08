@@ -1,6 +1,5 @@
 <?php 
-	// session_start();
-	// unset($_SESSION['usuario']);
+	// 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -99,11 +98,7 @@
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/fontawesome.min.js"></script>
-<<<<<<< HEAD
-   
-=======
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="../js/acciones.js"></script>
->>>>>>> origin/programacion
 </body>
 </html>
