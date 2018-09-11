@@ -9,97 +9,95 @@
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/fontawesome.min.css">
         <link rel="stylesheet" href="../css/estilos.css">
-        <link rel="stylesheet" href="../css/calendar.min.css">
-        <script src="../js/jquery-3.3.1.min.js"></script>
         <link rel="stylesheet" href="../css/bootstrap-switch.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-        <script src="../js/calendar.min.js"></script>
         <title>Mi Perfil</title>
     </head>
     <body>
         <div class="opacidad"></div>
-    
         <header>
-           <div class="col-12 nav fixed-top" >
-                <nav class="col-3 navbar navbar-expand-xs navbar-dark">
-                    <button class="navbar-toggler boton-nav mb-4 ml-5" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 menu-desplegable">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="miperfil.php">Mi Perfil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="nueva-cuenta.php">Añadir Perfil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="salir.php">Cerrar Sesion</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                <div class="col-4 mt-1 alarma">
-                    <h4>Alarma</h4>
-                    <div class="custom-switch custom-switch-label-onoff actAlarma">   
-                    <label class="bs-switch">
-                    <input type="checkbox" name="alarma" checked>
-      
-                    </label>
-                    </div>
+       <div class="col-12 nav fixed-top" >
+            <nav class="col-5 col-md-3 navbar navbar-expand-xs navbar-dark">
+                <button class="navbar-toggler boton-nav mb-4 ml-5" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse texto-menu-hamburguesa" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 menu-desplegable">
+                        <li class="nav-item">
+                            <a class="nav-link" href="miperfil.php">Mi Perfil</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="nueva-cuenta.php">Añadir Cuenta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="salir.php">Cerrar Sesion</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="logo-header">
-                    <img class="" src="../img/logo/logo-pequeño.png" alt="">
+            </nav>
+            
+            <div class="col col-md-4 mt-1 alarma">
+                <h4>Alarma</h4>
+                <div class="custom-switch custom-switch-label-onoff actAlarma">   
+                <label class="bs-switch">
+                <input type="checkbox" name="alarma" checked>
+  
+                </label>
                 </div>
             </div>
-        </header>
+            <div class="d-none d-md-block logo-header">
+                <img class="" src="../img/logo/logo-pequeño.png" alt="">
+            </div>
+        </div>
+    </header>
         <div class="container principal">
             <div class="row">
                 <div class="col-12">
-                    <fieldset class="menu-principal">
+                    <fieldset class="menu-principal nueva-cuenta">
                         <legend>Mis Cuentas</legend>
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="bd-example-modal-lg">Nueva Cuenta</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nueva-cuenta">Nueva Cuenta</button>
 
-                        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
+                        <div class="modal fade modal-nueva-cuenta" id="nueva-cuenta" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content bg-dark">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Nueva Cuenta</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body bg-dark">
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Correo</label>
+                                <h6 class="col-sm-2 col-form-label">Correo</h6>
                                 <div class="col-sm-10">
                                 <input type="text" class="form-control" placeholder="Categoria" required name="tituloCategoria">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Contraseña</label>
+                                <h6 class="col-sm-2 col-form-label">Contraseña</h6>
                                 <div class="col-sm-10">
                                 <input type="password" class="form-control" placeholder="Contraseña" required name="tituloCategoria">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Repetir Contraseña</label>
+                                <h6 class="col-sm-2 col-form-label">Repetir Contraseña</h6>
                                 <div class="col-sm-10">
                                 <input type="password" class="form-control" placeholder="Contraseña" required name="tituloCategoria">
                                 </div>
                             </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                                 <button type="button" class="btn btn-primary">Guardar</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                             </div>
                             </div>
                         </div>
                         </div>
                         <br>
                         <br>
-                        <table class="table table-dark">
+                        <div class="table-responsive-md">
+                        <table class="table table-dark table-bordered table-hover">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -109,6 +107,8 @@
         </thead>
         <tbody>
         </table>
+                        </div>
+                        
                     </fieldset>
 
                     <div class="row justify-content-end ">
@@ -130,10 +130,11 @@
     
 
         
+        
+        <script src="../js/jquery-3.3.1.min.js"></script>
         <script src="../js/popper.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/fontawesome.min.js"></script>
-        <script src="../js/calendar.min.js"></script>
         <script src="../js/bootstrap-switch.min.js"></script>
         <script src="../js/acciones.js"></script>
         

@@ -53,121 +53,119 @@
                 <fieldset class="menu-principal">
                     <legend>Menu</legend>
             <div class="luz">
-                <label for="">Cocina</label>
-                <div class="row justify-content-between">
-                    <div class="col-auto">
+                <h6>Cocina</h6>
+                <div class="row justify-content-around">
+                    <div class="col-2 col-md-auto">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <div class="col-4 mt-1 alarma">
-                
-                <div class="custom-switch custom-switch-label-onoff actAlarma">   
-                <label class="bs-switch">
-                <input type="checkbox" name="alarma" checked>
-  
-                </label>
-                </div>
-            </div>
-                    <div class="col">
+                    <div class="col-6 col-md-4 mt-1 alarma">
+                        <div class="custom-switch custom-switch-label-onoff ">   
+                            <label class="bs-switch">
+                                 <input type="checkbox" name="alarma" checked>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-2 col-md-auto">
                     <i class="far fa-lightbulb"></i>
                     </div>
                 </div>
             </div>
 
              <div class="luz">
-                <label for="">Luz Baño</label>
-                <div class="row">
-                    <div class="col">
+                <h6>Baño</h6>
+                <div class="row justify-content-around">
+                    <div class="col-2 col-md-auto">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <div class="col-4 mt-1 alarma">
-                <div class="custom-switch custom-switch-label-onoff actAlarma">   
+                    <div class="col-6 col-md-auto mt-1 alarma">
+                <div class="custom-switch custom-switch-label-onoff ">   
                 <label class="bs-switch">
                 <input type="checkbox" name="alarma" checked>
   
                 </label>
                 </div>
             </div>
-                    <div class="col">
+                    <div class="col-2 col-md-auto">
                     <i class="far fa-lightbulb"></i>
                     </div>
                 </div>
             </div>
 
              <div class="luz">
-                <label for="">Luz Garage</label>
-                <div class="row">
-                    <div class="col">
+                <h6>Garage</h6>
+                <div class="row justify-content-around">
+                    <div class="col-2 col-md-auto">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <div class="col-4 mt-1 alarma">
-                <div class="custom-switch custom-switch-label-onoff actAlarma">   
+                    <div class="col-6 col-md-auto mt-1 alarma">
+                <div class="custom-switch custom-switch-label-onoff">   
                 <label class="bs-switch">
                 <input type="checkbox" name="alarma" checked>
   
                 </label>
                 </div>
             </div>
-                    <div class="col">
+                    <div class="col-2 col-md-auto">
                     <i class="far fa-lightbulb"></i>
                     </div>
                 </div>
             </div>
 
              <div class="luz">
-                <label for="">Luz Dormitorio 1</label>
-                <div class="row">
-                    <div class="col">
+                <h6>Dormitorio 1</h6>
+                <div class="row justify-content-around">
+                    <div class="col-2 col-md-auto">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <div class="col-4 mt-1 alarma"> 
-                <div class="custom-switch custom-switch-label-onoff actAlarma">   
+                    <div class="col-6 col-md-auto mt-1 alarma"> 
+                <div class="custom-switch custom-switch-label-onoff ">   
                 <label class="bs-switch">
                 <input type="checkbox" name="alarma" checked>
   
                 </label>
                 </div>
             </div>
-                    <div class="col">
+                    <div class="col-2 col-md-auto">
                     <i class="far fa-lightbulb"></i>
                     </div>
                 </div>
             </div>
 
              <div class="luz">
-                <label for="">Luz Dormitorio 2</label>
-                <div class="row">
-                    <div class="col">
+                <h6>Dormitorio 2</h6>
+                <div class="row justify-content-around">
+                    <div class="col-2 col-md-auto">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <div class="col-4 mt-1 alarma">
-                <div class="custom-switch custom-switch-label-onoff actAlarma">   
+                    <div class="col-6 col-md-auto mt-1 alarma">
+                <div class="custom-switch custom-switch-label-onoff ">   
                 <label class="bs-switch">
                 <input type="checkbox" name="alarma" checked>
   
                 </label>
                 </div>
             </div>
-                    <div class="col">
+                    <div class="col-2 col-md-auto">
                     <i class="far fa-lightbulb"></i>
                     </div>
                 </div>
             </div>
 
              <div class="luz">
-                <label for="">Luz Dormitorio 3</label>
-                <div class="row">
-                    <div class="col">
+                <h6>Dormitorio 3</h6>
+                <div class="row justify-content-around">
+                    <div class="col-2 col-md-auto">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <div class="col-4 mt-1 alarma">
-                <div class="custom-switch custom-switch-label-onoff actAlarma">   
+                    <div class="col-6 col-md-auto mt-1 alarma">
+                <div class="custom-switch custom-switch-label-onoff ">   
                 <label class="bs-switch">
                 <input type="checkbox" name="alarma" checked>
   
                 </label>
                 </div>
             </div>
-                    <div class="col">
+                    <div class="col-2 col-md-auto">
                     <i class="far fa-lightbulb"></i>
                     </div>
                 </div>

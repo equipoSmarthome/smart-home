@@ -125,7 +125,7 @@ margin-top: 14px !important;
   display: inline-block;
 
 }
- .custom-switch .custom-switch-input {
+ /* .custom-switch .custom-switch-input {
     display: none; }
     .custom-switch .custom-switch-input, .custom-switch .custom-switch-input:after, .custom-switch .custom-switch-input:before,
     .custom-switch .custom-switch-input *,
@@ -205,7 +205,7 @@ margin-top: 14px !important;
   .custom-switch.custom-switch-label-status .custom-switch-input:checked + .custom-switch-btn {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='38'%3E%3Ctext x='9.71429' y='23.75' font-size='12px' font-family='-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji' fill='%23fff'%3EEnabled%3C/text%3E%3C/svg%3E"); }
     .custom-switch.custom-switch-label-status .custom-switch-input:checked + .custom-switch-btn:after {
-  left: 50px; }
+  left: 50px; } */
 
 .menuHamburgueza, .inDoor, .outDoor, .logo  {
     display: inline-block;
@@ -292,9 +292,7 @@ margin-top: 14px !important;
     vertical-align: middle;
     margin:auto auto;
 }
-.calendar {
-    width: 90%;
-}
+
 /*---------------------------------------------------------*/
 
 
@@ -397,7 +395,6 @@ margin-top: 14px !important;
 .alarma h4{
     font-size: 14px;
     margin-top: 0;
-    margin-left: 23px;
     position: absolute;
 
 }
@@ -466,11 +463,112 @@ margin-top: 14px !important;
         width: 35%;
     }
 
-/*---------------------------------------------------------*/    
+/*---------------------------------------------------------*/ 
+/*------------------responsive seccion eventos-------------------------------------*/ 
+.calendar-month-view p{
+    font-size: 15px;
 }
-@media(max-width:639px){
+.calendar-month-view-arrow{
+    font-size: 12px;
+}
+.letrasDay div{
+    font-size: 12px;
+}
+.calendar-day{
+    height: 30px !important;
+}
+.calendar-grid {
+    font-size: 12px;
+}
+.calendar-holder{
+    height: 180px !important;
+}
+.boton-ver-evento, .boton-crear-evento{
+    font-size: 12px; 
+}
+/*---------------------------------------------------------*/ 
 
+/*-----------------------responsive del modal lista de eventos-------------------------*/ 
+.modal-lista-evento th, .modal-lista-evento td{
+    font-size: 12px;
 }
+.modal-lista-evento button{
+    font-size: 12px;
+}
+/*---------------------------------------------------------*/ 
+
+/*---------------------------------------------------------*/ 
+.modal-crear-evento th, .modal-crear-evento td{
+    font-size: 12px;
+}
+.modal-crear-evento button{
+    font-size: 12px;
+}
+.modal-crear-evento p{
+    font-size: 14px;
+}
+.modal-crear-evento .dispositivos-select-label{
+  font-size: 16px;
+}
+.tamano-select{
+    height: 30px;
+}
+.inicio-evento{
+    border-bottom: 1px solid white;
+}
+.finaliza-evento{
+    border-bottom: 1px solid white;
+}
+/*------------------------------------------------------*/
+/*---------------responsive seccion luces---------------------------------------*/
+.luz{
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+.luz h6{
+    font-size: 16px;
+    margin: auto 40px;
+}
+/*------------------------------------------------------*/
+/*--------------responsive de mi perfil----------------------------------------*/
+
+.mi-perfil{
+    font-size: 16px;
+}
+.input-miperfil input{
+    font-size: 12px;
+    height: 30px;
+}
+.input-miperfil button{
+    font-size: 13px;
+}
+.input-miperfil label{
+    text-align: left;
+}
+.btn-guardar button{
+    font-size: 12px;
+}
+/*------------------------------------------------------*/
+
+/*----------------------responsive seccion nueva cuenta--------------------------------*/
+.nueva-cuenta legend{
+    font-size: 14px;
+}
+.nueva-cuenta button{
+    font-size: 12px;
+}
+.nueva-cuenta th, .nueva-cuenta td{
+    font-size: 12px;
+}
+.modal-nueva-cuenta h6{
+    font-size: 14px;
+}
+.modal-nueva-cuenta input{
+    height: 30px;
+}
+}
+
 
 
 /* 

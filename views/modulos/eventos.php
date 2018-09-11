@@ -99,16 +99,16 @@
 	} catch(err) {}</script>
             </div>
 
-<div class="col-12 col-md-6 botones-evento ">
-    <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modal-ver-evento">
+<div class="col-12 col-md-6 botones-evento mt-2">
+    <button type="button" class="btn btn-primary btn-block boton-ver-evento" data-toggle="modal" data-target="#modal-ver-evento">
             Ver Evento
     </button>
-    <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modal-crear-evento">
+    <button type="button" class="btn btn-primary btn-block boton-crear-evento" data-toggle="modal" data-target="#modal-crear-evento">
             Crear Evento
     </button>
 </div>
 
-<div class="modal fade" id="modal-ver-evento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade modal-lista-evento" id="modal-ver-evento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content bg-dark">
       <div class="modal-header">
@@ -152,7 +152,7 @@
   </div>
 </div>
 
-<div class="modal fade" id="modal-crear-evento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade modal-crear-evento" id="modal-crear-evento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content bg-dark">
       <div class="modal-header">
@@ -162,67 +162,69 @@
         </button>
       </div>
       <div class="modal-body bg-dark">
-        <div class="row">
-            <div class="col-3">
+        <div class="row inicio-evento">
+            <div class="col-6 col-md-3">
                 <h6>Comienza</h6>
                 <input type="date">
             </div>
-            <div class="col-3">
+            <div class="col-6 col-md-3">
                 <h6>Hora</h6>
                 <input type="time">
             </div>
-            <div class="col-6">
+            <div class="col-12 col-md-6">
                 <h6>Estado</h6>
                 <div class="row">
-                    <div class="col-auto">
-                        <p>Apagar</p>
+                    <div class="col-3 col-md-auto">
+                        <p>Encender</p>
                     </div> 
-                    <div class="col-auto">
-                        <div class="custom-switch custom-switch-label-onoff swith-luces">   
-                            <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
-                            <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+                    <div class="col-6 col-md-auto">
+                        <div class="custom-switch custom-switch-label-onoff estado">   
+                            <label class="bs-switch">
+                                <input type="checkbox" name="alarma" checked class="estado">
+                             </label>
                         </div>
                     </div>
-                    <div class="col-auto">
-                        <p>Encender</p>
+                    <div class="col-3 col-md-auto">
+                        <p>Apagar</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-3">
+        <div class="row finaliza-evento">
+            <div class="col-6 col-md-3">
                 <h6>Finaliza</h6>
                 <input type="date">
             </div>
-            <div class="col-3">
+            <div class="col-6 col-md-3">
                 <h6>Hora</h6>
                 <input type="time">
             </div>
-            <div class="col-6">
+            <div class="col-12 col-md-6">
                 <h6>Estado</h6>
                 <div class="row">
-                    <div class="col-auto">
-                        <p>Apagar</p>
+                    <div class="col-3 col-md-auto">
+                        <p>Encender</p>
                     </div> 
-                    <div class="col-auto">
-                        <div class="custom-switch custom-switch-label-onoff swith-luces">   
-                            <input class="custom-switch-input" id="ADD_ID_HERE" type="checkbox">
-                            <label class="custom-switch-btn" for="ADD_ID_HERE"></label>
+                    <div class="col-6 col-md-auto">
+                        <div class="custom-switch custom-switch-label-onoff estado">   
+                            <label class="bs-switch">
+                                <input type="checkbox" name="alarma" checked class="estado">
+                             </label>
                         </div>
                     </div>
-                    <div class="col-auto">
-                        <p>Encender</p>
+                    <div class="col-3 col-md-auto">
+                        <p>Apagar</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="row justify-content-center">
-            <div class="col-4">
+            <div class="col-12 col-md-4">
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <label for="dispositivos" class="dispositivos-select-label">Dispositivos</label>
+                    <select class="form-control tamano-select" id="dispositivos">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
