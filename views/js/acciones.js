@@ -34,4 +34,29 @@ function irEventos(){
 function volverMenu(){
 	window.location = "../menu.php"
 }
-$("[name='alarma']").bootstrapSwitch();
+$("#form-registro").submit(function(e){
+    e.preventDefault();
+    var datos = $(this).serialize()
+    $.ajax({
+        url: 'backend/correo/enviar.php',
+        type: 'POST',
+        data: datos,
+        success: function(respuesta){
+            console.log(respuesta)
+            if (respuesta == 1) {
+                swal("Genial", "Petición de registro enviada correctamente", "success")
+            } else if (respuesta == 2){
+                swal("Faltan Campos", "Tienes que completar todos los campos ", "error");
+            }else if (respuesta == 3){
+                swal("Algo esta mal", "Ocurrio un error inesperado. Intente nuevamente", "error");
+            }else if (respuesta == 4){
+                swal("Mac Incorrecta", "La Direccion Mac es incorrecta", "error");
+            }else if (respuesta == 5){
+                swal("Correo Incorrecto", "El Correo es incorrecto", "error");
+            }
+        }
+    })
+})
+
+
+

@@ -44,6 +44,7 @@
                 <a class="link-Registrate" href="#" data-toggle="modal" data-target="#modal-registrarse">¿Eres Nuevo?¡Registrate!</a>
             </div>
             <!-- Modal -->
+            <form id="form-registro">
             <div class="modal fade modal-registrarse" id="modal-registrarse" tabindex="-1" role="dialog" aria-labelledby="modal-registrarse" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-md modal-dialog-centered " role="document">
                     <div class="modal-content bg-dark">
@@ -58,29 +59,31 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="inputGroup-sizing-default"><i class="fas fa-user"></i></span>
                                 </div>
-                                <input type="email" class="form-control" placeholder="Ingrese su Correo">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Ingrese su Correo">
                             </div>
                             <div class="col-auto input-group mb-4">
                                 <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroup-sizing-default"><i class="fas fa-user"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Ingrese MAC de Arduino">
+                                    <input type="text" name="mac" id="mac" class="form-control" placeholder="Ingrese MAC de Arduino">
                                 </div>
                             </div>
                         
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">Enviar</button>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
                 </div>
             </div>
+            </form>
         </div>
     </div>
     <script src="views/js/jquery-3.3.1.min.js"></script>
     <script src="views/js/popper.min.js"></script>
     <script src="views/js/bootstrap.min.js"></script>
     <script src="views/js/fontawesome.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="views/js/acciones.js"></script>
 </body>
 
