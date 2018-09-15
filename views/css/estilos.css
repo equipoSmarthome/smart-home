@@ -341,32 +341,32 @@ margin-top: 14px !important;
 
 /*------------estilos del modal para registrarse(index)-----------------*/
     .modal-dialog h5 ,.modal-dialog input{
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .modal-registrarse .input-group-prepend, .modal-registrarse input{
         height: 28px;
-        font-size: 12px;
+        font-size: 13px;
         
     }
     .modal-registrarse button{
-        font-size: 12px;
+        font-size: 14px;
     }
 /*----------------------------------------------------------------------------*/
 
 /*--------------------------responsive del login------------------------------------------*/
     .formulario span{
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .formulario .input-group-prepend,.formulario input{ 
-        font-size: 12px;
+        font-size: 13px;
         height: 25px;
         margin-top: 10px;
     }
 
     .formulario button, #volverInicio{
-        font-size: 11px;
+        font-size: 13px;
     }
     #volverInicio{
     width: 120px;
@@ -376,11 +376,11 @@ margin-top: 14px !important;
 /*---------estilos del modal recuperar contreña-------------------------------*/
     .modal-recupera-contraseña .input-group-prepend, .modal-recupera-contraseña input, .modal-recupera-contraseña p{
         height: 28px;
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .modal-recupera-contraseña button{
-        font-size: 12px;
+        font-size: 14px;
     }
 /*----------------------------------------------------------------------------*/
 /*---------------------responsive del menu superior (nav)---------------------*/
@@ -389,11 +389,11 @@ margin-top: 14px !important;
     font-size: 18px;
 }
 .texto-menu-hamburguesa ul li a{
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .alarma h4{
-    font-size: 14px;
+    font-size: 15px;
     margin-top: 0;
     position: absolute;
 
@@ -412,7 +412,7 @@ margin-top: 14px !important;
     margin-bottom: 5px;
     width: 160px;
     height:100px;
-    font-size: 12px;
+    font-size: 14px;
 }
     .iconos-menu{
         width: 30%;
@@ -422,7 +422,7 @@ margin-top: 14px !important;
 
 /*-------------------------responsive de seccion temperatura--------------*/
     .temperatura legend{
-        font-size: 14px;
+        font-size: 15px;
     }
     .temperatura h1{
         font-size: 20px;
@@ -432,23 +432,23 @@ margin-top: 14px !important;
     }
     
     .configuracion-ventilador h6{
-        font-size: 12px;
+        font-size: 14px;
     }
     .configuracion-ventilador .boton-automatico button{
         width: 100px;
         height:70px;
-        font-size: 12px;
+        font-size: 13px;
     }
     .configuracion-ventilador .boton-usuario button{
         width: 100px;
         height:70px;
-        font-size: 12px;
+        font-size: 13px;
     }
     #volverMenu {
         width: 120px;
         bottom: 0px;
         right: 15px;
-        font-size: 12px;
+        font-size: 14px;
     }
 /*----------------------------------------------------------------------------*/
 
@@ -456,7 +456,7 @@ margin-top: 14px !important;
     .boton-desbloqueo button, .boton-garage button{
         width: 120px;
         height:100px;
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .boton-garage .iconos-menu{
@@ -469,43 +469,43 @@ margin-top: 14px !important;
     font-size: 15px;
 }
 .calendar-month-view-arrow{
-    font-size: 12px;
+    font-size: 13px;
 }
 .letrasDay div{
-    font-size: 12px;
+    font-size: 13px;
 }
 .calendar-day{
     height: 30px !important;
 }
 .calendar-grid {
-    font-size: 12px;
+    font-size: 13px;
 }
 .calendar-holder{
     height: 180px !important;
 }
 .boton-ver-evento, .boton-crear-evento{
-    font-size: 12px; 
+    font-size: 14px; 
 }
 /*---------------------------------------------------------*/ 
 
 /*-----------------------responsive del modal lista de eventos-------------------------*/ 
 .modal-lista-evento th, .modal-lista-evento td{
-    font-size: 12px;
+    font-size: 13px;
 }
 .modal-lista-evento button{
-    font-size: 12px;
+    font-size: 13px;
 }
 /*---------------------------------------------------------*/ 
 
 /*---------------------------------------------------------*/ 
 .modal-crear-evento th, .modal-crear-evento td{
-    font-size: 12px;
+    font-size: 13px;
 }
 .modal-crear-evento button{
-    font-size: 12px;
+    font-size: 13px;
 }
 .modal-crear-evento p{
-    font-size: 14px;
+    font-size: 15px;
 }
 .modal-crear-evento .dispositivos-select-label{
   font-size: 16px;
@@ -537,29 +537,29 @@ margin-top: 14px !important;
     font-size: 16px;
 }
 .input-miperfil input{
-    font-size: 12px;
+    font-size: 13px;
     height: 30px;
 }
 .input-miperfil button{
-    font-size: 13px;
+    font-size: 14px;
 }
 .input-miperfil label{
     text-align: left;
 }
 .btn-guardar button{
-    font-size: 12px;
+    font-size: 14px;
 }
 /*------------------------------------------------------*/
 
 /*----------------------responsive seccion nueva cuenta--------------------------------*/
 .nueva-cuenta legend{
-    font-size: 14px;
+    font-size: 18px;
 }
 .nueva-cuenta button{
-    font-size: 12px;
+    font-size: 14px;
 }
 .nueva-cuenta th, .nueva-cuenta td{
-    font-size: 12px;
+    font-size: 14px;
 }
 .modal-nueva-cuenta h6{
     font-size: 14px;

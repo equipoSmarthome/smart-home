@@ -71,7 +71,7 @@
                             <div class="form-group row">
                                 <h6 class="col-sm-2 col-form-label">Correo</h6>
                                 <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Categoria" required name="tituloCategoria">
+                                <input type="text" class="form-control" placeholder="Correo" required name="tituloCategoria">
                                 </div>
                             </div>
                             <div class="form-group row">
