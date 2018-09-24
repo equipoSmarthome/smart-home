@@ -11,54 +11,42 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/fontawesome.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
-
     <title>Login</title>
-
 </head>
-
 <body class="fondo">
     <div class="btn btn-primary" id="volverInicio">Volver</div>
     <div class="opacidad"></div>
-
     <div class="container mt-5">
-
         <div class="row justify-content-center">
             <!-- inicio del logo -->
             <div class="col-12 col-sm-10 col-md-8 logo">
                 <img class="img-fluid" src="../img/logo/logo.png" alt="">
             </div>
                 <!-- fin del logo -->
-
                 <!-- inicio del formulario -->
             <div class="col-10 col-md-6 col-lg-5 formulario" >
-                <form method="post" action="../../controllers/sesion.controller.php">
+                <form id="form-login">
                     <div class="input-group mb-4 mt-2">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="email" class="form-control" placeholder="Correo" aria-label="Username"name="usuario" required>
+                        <input type="email" class="form-control" placeholder="Correo"  aria-label="Username" name="correo" required>
                     </div>
-
                     <div class="input-group mb-5">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
-                        <input type="password" class="form-control" placeholder="Contraseña" aria-label="Username" name="pas" required>
+                        <input type="password" class="form-control" placeholder="Contraseña" aria-label="Username" name="pass" required>
                     </div>
-
                     <div class="row justify-content-center">
                         <div class="col-10">
                             <button type="submit" class="btn btn-primary btn-block" name="entrar" value="entrar">Iniciar Sesion</button>
                         </div>
-
                     </div>
-
                 </form>
             </div>
-                <!-- fin del formulario -->
-
-                <!-- link de recuperar contraseña -->
-
+            <!-- fin del formulario -->
+            <!-- link de recuperar contraseña -->
             <div class="col-12 mt-4">
                 <a class="link-recupera" href="#" data-toggle="modal" data-target="#modal-contraseña">Recuperar Contraseña</a>
             </div>
