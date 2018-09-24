@@ -58,7 +58,7 @@
                     <div class="col-2 col-md-auto">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <div class="col-6 col-md-4 mt-1 alarma">
+                    <div class="col-6 col-md-auto mt-1 alarma">
                         <div class="custom-switch custom-switch-label-onoff ">   
                             <label class="bs-switch">
                                  <input type="checkbox" name="alarma" checked>

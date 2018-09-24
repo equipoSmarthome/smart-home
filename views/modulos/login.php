@@ -1,6 +1,6 @@
 <?php 
-	// session_start();
-	// unset($_SESSION['usuario']);
+	//  session_start();
+	//  unset($_SESSION['usuario']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +14,6 @@
     <title>Login</title>
 </head>
 <body class="fondo">
-    <div class="btn btn-primary" id="volverInicio">Volver</div>
     <div class="opacidad"></div>
     <div class="container mt-5">
         <div class="row justify-content-center">
@@ -79,6 +78,12 @@
                 </div>
             </div>
             <!-- fin ventana modal -->
+        </div>
+
+        <div class="row justify-content-end ">
+            <div class="col-auto mt-5">
+               <div class="btn btn-primary" id="volverInicio">Volver</div>
+            </div>
         </div>
 
 
