@@ -1,8 +1,8 @@
 <?php 
-	// session_start();
-	// if (!isset($_SESSION['usuario'])) {
-	// 	header('Location: ../index.php');
-	//  }
+	session_start();
+	if (!isset($_SESSION['correo'])) {
+	 	header('Location: ../index.php');
+	}
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +57,7 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <fieldset class="menu-principal">
-                    <legend>Menu</legend>
+                    <legend>Menu <?php echo $_SESSION['correo']; ?></legend>
                     <div class="botones-menu mb-3">
                         <div class="row">
                             <div class="col-12 col-md-6">

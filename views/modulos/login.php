@@ -29,13 +29,13 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="email" class="form-control" placeholder="Correo"  aria-label="Username" name="correo" required>
+                        <input type="email" class="form-control" placeholder="Correo"  aria-label="Username" name="correo" >
                     </div>
                     <div class="input-group mb-5">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
-                        <input type="password" class="form-control" placeholder="Contraseña" aria-label="Username" name="pass" required>
+                        <input type="password" class="form-control" placeholder="Contraseña" aria-label="Username" name="pass" >
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-10">
