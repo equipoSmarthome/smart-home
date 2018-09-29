@@ -251,10 +251,19 @@ margin-top: 14px !important;
 /*---------Fin Estilos Menu---------*/
  #volverMenu {
     width: 200px;
-    margin: 10px 0;
-    
+    margin: 10px 0;    
     padding: 5px 0;
 } 
+
+.nombre-usuario{
+    vertical-align: center;
+    top: 21px;
+    left: 200px;
+    color: #ccc;
+    font-weight: bold;
+    position: absolute;
+}
+
 /*--------Inicio Estilos Luces---------*/
 
 .luces fieldset {
@@ -374,7 +383,7 @@ margin-top: 14px !important;
     }
 /*----------------------------------------------------------------------------*/
 
-/*---------estilos del modal recuperar contreña-------------------------------*/
+/*---------estilos del modal recuperar contraseña-------------------------------*/
     .modal-recupera-contraseña .input-group-prepend, .modal-recupera-contraseña input, .modal-recupera-contraseña p{
         height: 28px;
         font-size: 13px;
@@ -418,6 +427,13 @@ margin-top: 14px !important;
     .iconos-menu{
         width: 30%;
         margin-top:10px;
+    }
+    .nombre-usuario{
+        font-size: 14px;
+        top:30px;
+        left: 70px;
+        font-weight: bold;
+        position: absolute;
     }
 /*----------------------------------------------------------------------------*/
 

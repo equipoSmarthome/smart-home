@@ -38,7 +38,9 @@
                     </ul>
                 </div>
             </nav>
-            
+            <div class="col-auto col-md-1 nombre-usuario ">
+                <p><?php echo $_SESSION['correo']; ?></p>
+            </div>
             <div class="col col-md-4 mt-1 alarma">
                 <h4>Alarma</h4>
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
@@ -48,7 +50,7 @@
                 </label>
                 </div>
             </div>
-            <div class="d-none d-md-block logo-header">
+            <div class="col d-none d-md-block logo-header">
                 <img class="" src="img/logo/logo-pequeño.png" alt="">
             </div>
         </div>
@@ -57,7 +59,7 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <fieldset class="menu-principal">
-                    <legend>Menu <?php echo $_SESSION['correo']; ?></legend>
+                    <legend>Menu </legend>
                     <div class="botones-menu mb-3">
                         <div class="row">
                             <div class="col-12 col-md-6">
