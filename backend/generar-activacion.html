@@ -160,51 +160,61 @@ desired effect
   <div class="content-wrapper">
     <section class="content container-fluid">
       <div class="row contenedor">
-        <div class="col-6">
-          <div class="logo">
-              <img src="dist/img/logo.png" alt="">
+        <fieldset>
+          <legend>Crear Usuario</legend>
+          <div class="col-12">
+                <form action="" class="app" id="app">
+                  <div class="input-group">
+                      <span class="input-group-addon" id="basic-addon1"><i class="fas fa-user"></i></span>
+                      <input type="text" class="form-control" placeholder="Correo" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="fila numero-caracteres">
+                    <div class="col botones">
+                      <div>
+                        <input type="hidden" id="numero-caracteres" readonly value="8">
+                        <input type="hidden" id="numero-caracteres2" readonly value="16">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fila numeros">
+                    <div class="col">
+                      <button class="btn hidden" id="btn-numeros"><i class="fas fa-check"></i></button>
+                    </div>
+                  </div>
+                  <div class="fila mayusculas">
+                    <div class="col">
+                      <button class="btn hidden" id="btn-mayusculas"><i class="fas fa-check"></i></button>
+                    </div>
+                  </div>
+                  <div class="fila generar">
+                    <div class="col">
+                      <input type="text" class="input-password" id="input-password" readonly value="T3sT">
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-generar" id="btn-generar">Contraseña <i class="fas fa-lock"></i></button>
+                    </div>
+                  </div>
+                  <div class="input-group">
+                      <span class="input-group-addon" id="basic-addon1"><i class="fas fa-user"></i></span>
+                      <input type="text" class="form-control" placeholder="Mac del Equipo" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="fila generar2">
+                      <div class="col">
+                        <input type="text" class="input-password" id="input-password1" readonly value="8">
+                      </div>
+                      <div class="col">
+                          <button class="btn btn-generar" id="btn-generar1">Serial <i class="fas fa-lock"></i></button>
+                      </div>
+                  </div>
+                  <div class="row fila-boton">
+                    <div class="col btn-enviar">
+                      <button type="button" class="btn btn-primary">Enviar</button>
+                    </div>
+                  </div>
+                </form>
             </div>
-            <form action="" class="app" id="app">
-              <div class="fila numero-caracteres">
-                <div class="col botones">
-                  <div>
-                    <input type="hidden" id="numero-caracteres" readonly value="16">
-                  </div>
-                </div>
-              </div>
-              <div class="fila numeros">
-                <div class="col">
-                  <label for="numeros">¿Incluir Numeros?</label>
-                </div>
-                <div class="col">
-                  <button class="btn" id="btn-numeros"><i class="fas fa-check"></i></button>
-                </div>
-              </div>
-              <div class="fila mayusculas">
-                <div class="col">
-                  <label for="mayusculas">¿Incluir Mayusculas?</label>
-                </div>
-                <div class="col">
-                  <button class="btn" id="btn-mayusculas"><i class="fas fa-check"></i></button>
-                </div>
-              </div>
-              <div class="fila generar">
-                <div class="col">
-                  <button class="btn btn-generar" id="btn-generar">Generar <i class="fas fa-lock"></i></button>
-                </div>
-                <div class="col">
-                  <input type="text" class="input-password" id="input-password" readonly value="T3sT">
-                </div>
-              </div>
-              <div class="fila alerta">
-                <div class="col">
-                  <div class="alerta-copiado" id="alerta-copiado">
-                    <p><i class="fas fa-copy"></i> Texto Copiado!</p>
-                  </div>
-                </div>
-              </div>
-            </form>
-        </div>
+        </fieldset>
+        
       </div>  
     </section>
     <!-- /.content -->
