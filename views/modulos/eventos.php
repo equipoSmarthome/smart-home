@@ -264,7 +264,7 @@
     <script src="../js/fontawesome.min.js"></script>
     <script src="../js/calendar.min.js"></script>
     <script src="../js/bootstrap-switch.min.js"></script>
-    <script src="../js/acciones.js"></script>
+    <script src="../js/luces.js"></script>
     
 </body>
 </html>

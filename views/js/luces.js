@@ -274,13 +274,9 @@ $("#editarPass").click(function(e){
                         })
                     }
                 }
-            })
-
-            
+            })            
         } else {
             swal("Error", "Las Contraseñas deben ser Iguales ", "error");
-
         } 
      })
-
 })
