@@ -11,7 +11,9 @@
         $resultado = $mysql->query($sql);
         $fila = $resultado->fetch();
         if ($resultado->rowCount() == 1 ) {
-            $_SESSION['correo'] = $fila[0];
+            $_SESSION['iduser'] = $fila[0];
+            $_SESSION['correo'] = $fila[1];
+            $_SESSION['pass'] = $fila[2];
             echo "1";
         } else {
             echo 3;

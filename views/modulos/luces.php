@@ -39,10 +39,6 @@
                     </ul>
                 </div>
             </nav>
-           
-
-
-
             <div class="col col-md-4 mt-1 alarma">
                 <h4>Alarma</h4>
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
@@ -204,5 +200,6 @@
     <script src="../js/fontawesome.min.js"></script>
     <script src="../js/bootstrap-switch.min.js"></script>
     <script src="../js/acciones-menu.js"></script>
+    <script src="../js/luces.js"></script>
 </body>
 </html>

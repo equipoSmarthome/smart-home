@@ -60,15 +60,17 @@
             <div class="col-12">
                 <fieldset class="menu-principal">
                     <legend>Mi Perfil</legend>
+                    <form id="form-miPerfil">
                     <div class="form-group row justify-content-around mt-5 input-miperfil">
+                    
                         <label class="col-12 col-md-2 col-form-label">Correo</label>
                         <div class="col-8 col-md-7">
-                        <input type="text" class="form-control" placeholder="Correo"  name="micorreo" readonly>
+                        <input type="email" class="form-control" placeholder="" value="<?php echo $_SESSION['correo']; ?>" name="micorreo" readonly>
                         </div>
                         <div class="col-4 col-md-3">
-                            <button class="btn btn-sm btn-info ">
+                            <button class="btn btn-sm btn-primary " id="editarCorreo">
                             
-                                <i class="fas fa-edit">Editar</i>
+                                <i class="fas fa-edit"> Editar</i>
                             </button>  
                         </div>
                   
@@ -78,33 +80,34 @@
                         
                         <label class="col-12 col-md-2 col-form-label">Contraseña</label>
                         <div class="col-8 col-md-7">
-                        <input type="password" class="form-control" placeholder="Contraseña"  name="mipass">
+                        <input type="password" class="form-control" placeholder="" value="<?php echo $_SESSION['pass']; ?>" name="mipass" readonly>
                         </div>
                         <div class="col-4 col-md-3">
-                            <button class="btn btn-sm btn-info ">
-                                <i class="far fa-edit">Editar</i>
+                            <button class="btn btn-sm btn-primary" id="editarPass">
+                                <i class="fas fa-edit"> Editar</i>
                             </button>  
                         </div>
                     </div>
                     <br>
-                    <div class="form-group row input-miperfil">
+                    <div class="form-group row input-miperfil" style="display: none" id="pass2">
                         
-                        <label class="col-12 col-md-2 col-form-label">Contraseña</label>
+                        <label class="col-12 col-md-2 col-form-label">Repetir Contraseña</label>
                         <div class="col-8 col-md-7">
-                        <input type="password" class="form-control" placeholder="Contraseña"  name="mipass">
+                        <input type="password" class="form-control" placeholder="Contraseña"  name="mipass2" value="<?php echo $_SESSION['pass']; ?>">
                         </div>
                         <div class="col-4 col-md-3">
-                            <button class="btn btn-sm btn-info ">
-                                <i class="far fa-edit">Editar</i>
+                            <button class="btn btn-sm btn-primary ">
+                                <i class="fas fa-edit"> Editar</i>
                             </button>  
                         </div>
                     </div>
                     
-                    <div class="form-group row justify-content-end btn-guardar">
+                    <div class="form-group row justify-content-end btn-guardar" style="display:none">
                         <div class="col-5 col-md-2 mt-2">
-                            <button class="btn btn-primary">Guardar</button>
+                            <button type="submit" class="btn btn-primary" id="guardarMiPerfil">Guardar</button>
                         </div>    
                     </div>
+                    </form>
                 </fieldset>
                 <div class="row justify-content-end ">
                      <div class="col-auto">
@@ -114,21 +117,15 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-    
-    
+   
 
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/fontawesome.min.js"></script>
     <script src="../js/bootstrap-switch.min.js"></script>
-    <script src="../js/acciones.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../js/luces.js"></script>
     
 </body>
 </html>
