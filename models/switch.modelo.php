@@ -1,57 +1,70 @@
 <?php
 require_once 'conexion.php';
+session_start();
+$id = $_SESSION['iduser'];
 class SwitchModelo{
+    
     static public function AlarmaOn ($tabla) {
-        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 1 WHERE Id_Dispositivo = 1");
+        $id = $_SESSION['iduser'];
+        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 1 WHERE id_Dispositivo = 1 AND id_Usuario = '$id' ");
 		$sql -> execute();
 		echo 'funciona';
     }
     static public function AlarmaOff ($tabla) {
-        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 0 WHERE Id_Dispositivo = 1");
+        $id = $_SESSION['iduser'];
+        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 0 WHERE id_Dispositivo = 1 AND id_Usuario = '$id' ");
 		$sql -> execute();
 		echo 'funcionaaaaa';
     }
 
     static public function CocinaOn ($tabla) {
-        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 1 WHERE Id_Dispositivo = 2");
+        $id = $_SESSION['iduser'];
+        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 1 WHERE id_Dispositivo = 2 AND id_Usuario = '$id' ");
 		$sql -> execute();
 		echo 'funciona';
     }
     static public function CocinaOff ($tabla) {
-        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 0 WHERE Id_Dispositivo = 2");
+        $id = $_SESSION['iduser'];
+        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 0 WHERE id_Dispositivo = 2 AND id_Usuario = '$id' ");
 		$sql -> execute();
 		echo 'funcionaaaaa';
     }
 
     static public function BañoOn ($tabla) {
-        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 1 WHERE Id_Dispositivo = 3");
+        $id = $_SESSION['iduser'];
+        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 1 WHERE id_Dispositivo = 3 AND id_Usuario = '$id' ");
 		$sql -> execute();
 		echo 'funciona';
     }
     static public function BañoOff ($tabla) {
-        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 0 WHERE Id_Dispositivo = 3");
+        $id = $_SESSION['iduser'];
+        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 0 WHERE id_Dispositivo = 3 AND id_Usuario = '$id' ");
 		$sql -> execute();
 		echo 'funcionaaaaa';
     }
 
     static public function GarageOn ($tabla) {
-        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 1 WHERE Id_Dispositivo = 4");
+        $id = $_SESSION['iduser'];
+        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 1 WHERE id_Dispositivo = 4 AND id_Usuario = '$id' ");
 		$sql -> execute();
 		echo 'funciona';
     }
     static public function GarageOff ($tabla) {
-        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 0 WHERE Id_Dispositivo = 4");
+        $id = $_SESSION['iduser'];
+        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 0 WHERE id_Dispositivo = 4 AND id_Usuario = '$id' ");
 		$sql -> execute();
 		echo 'funcionaaaaa';
     }
 
     static public function Dormitorio1On ($tabla) {
-        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 1 WHERE Id_Dispositivo = 5");
+        $id = $_SESSION['iduser'];
+        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 1 WHERE id_Dispositivo = 5 AND id_Usuario = '$id' ");
 		$sql -> execute();
 		echo 'funciona';
     }
     static public function Dormitorio1Off ($tabla) {
-        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 0 WHERE Id_Dispositivo = 5");
+        $id = $_SESSION['iduser'];
+        $sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo= 0 WHERE id_Dispositivo = 5 AND id_Usuario = '$id' ");
 		$sql -> execute();
 		echo 'funcionaaaaa';
     }

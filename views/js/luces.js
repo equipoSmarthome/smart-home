@@ -280,3 +280,65 @@ $("#editarPass").click(function(e){
         } 
      })
 })
+
+$("#formu-nuevaCuenta").submit(function(e){
+    e.preventDefault()
+    var datos = $(this).serialize()
+    $.ajax({
+        url: '../../controllers/nuevacuenta.controller.php',
+        type: 'POST',
+        data: datos,
+        success: function(respuesta){
+            if (respuesta == 1){
+                if (respuesta == 1){
+                    swal("Genial", "Ha creado una Nueva Cuenta", "success").then((result) => {
+                        window.location = "../modulos/nueva-cuenta.php"
+                    })
+                }
+            }
+
+        }
+    })
+})
+
+
+
+$("body .table-dark").on("click", ".btnEliminarCuenta", function(){
+    var idCuenta = $(this).attr("idCuenta")
+    var datos = new FormData()
+    datos.append("id_cuenta", idCuenta)
+    datos.append("tipoOperacion", "eliminarCuenta")
+    swal({
+      title: '¿Estás seguro de eliminar?',
+      text: "Los cambios no son reversibles!",
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, Elimina!'
+    }).then((result) => {
+      if (result.value) {
+          $.ajax({
+            url: '../../controllers/eliminarcuenta.php',
+            type: 'POST',
+            data: datos,
+            processData: false,
+            contentType: false,
+            success: function(respuesta) {
+                console.log(respuesta)
+                if ( respuesta == "1") {
+                    swal(
+                      'Eliminado!',
+                      'Su cuenta a sido eliminada.',
+                      'success'
+                    ).then((result) => {
+                      if (result.value) {
+                        window.location = "../modulos/nueva-cuenta.php"
+                      }
+                    })
+                }
+            }
+        })
+      }
+    })
+})

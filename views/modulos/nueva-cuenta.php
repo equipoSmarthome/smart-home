@@ -1,4 +1,5 @@
 <?php 
+require_once '../../controllers/vercuentas.controller.php';
 	session_start();
 	if (!isset($_SESSION['correo'])) {
 	 	header('Location: ../index.php');
@@ -73,31 +74,34 @@
                                 </button>
                             </div>
                             <div class="modal-body bg-dark">
+                            <form id="formu-nuevaCuenta">
                             <div class="form-group row">
                                 <h6 class="col-sm-2 col-form-label">Correo</h6>
                                 <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Correo" required name="tituloCategoria">
+                                <input type="text" class="form-control" placeholder="Correo" required name="correo">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <h6 class="col-sm-2 col-form-label">Contraseña</h6>
                                 <div class="col-sm-10">
-                                <input type="password" class="form-control" placeholder="Contraseña" required name="tituloCategoria">
+                                <input type="password" class="form-control" placeholder="Contraseña" required name="pass">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <h6 class="col-sm-2 col-form-label">Repetir Contraseña</h6>
                                 <div class="col-sm-10">
-                                <input type="password" class="form-control" placeholder="Contraseña" required name="tituloCategoria">
+                                <input type="password" class="form-control" placeholder="Contraseña" required name="pass2">
                                 </div>
                             </div>
+                            <input type="hidden" name="tipoOperacion" value="insertarCuenta">
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-primary">Guardar</button>
+                                <button type="submit" class="btn btn-primary">Guardar</button>
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                             </div>
                             </div>
                         </div>
+                        </form>
                         </div>
                         <br>
                         <br>
@@ -107,10 +111,28 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Usuarios</th>
-            <th scope="col">Acciones</th>
+            <th scope="col">Eliminar</th>
           </tr>
         </thead>
         <tbody>
+        <?php
+        require_once '../../models/vercuenta.modelo.php';
+        $cuenta = ControllerCuenta::verCuentas();
+        foreach ($cuenta as $key => $value) {
+            echo '
+            <tr>
+                <th scope="row">'.$value['id'].'</th>
+                <td>'.$value['Correo_Usuario_2'].'</td>
+                <td width="100">
+                  <button class="btn btn-sm btn-danger btnEliminarCuenta" idCuenta="'.$value["id"].'">
+                    <i class="far fa-trash-alt"></i>
+                  </button>
+                </td>
+              </tr>
+            ';
+        }
+?>
+
         </table>
                         </div>
                         
@@ -124,24 +146,14 @@
                 </div>
             </div>
         </div>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-
-        
-        
+      
         <script src="../js/jquery-3.3.1.min.js"></script>
         <script src="../js/popper.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/fontawesome.min.js"></script>
         <script src="../js/bootstrap-switch.min.js"></script>
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.4/dist/sweetalert2.all.min.js"></script>
         <script src="../js/luces.js"></script>
         
     </body>
