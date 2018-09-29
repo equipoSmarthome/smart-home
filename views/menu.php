@@ -90,7 +90,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/fontawesome.min.js"></script>
     <script src="js/bootstrap-switch.min.js"></script>
-    <script src="js/acciones.js"></script>
+    <script src="js/acciones-menu.js"></script>
     <script src="js/alertify.js"></script>
 </body>
 

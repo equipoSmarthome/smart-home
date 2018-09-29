@@ -39,6 +39,10 @@
                     </ul>
                 </div>
             </nav>
+           
+
+
+
             <div class="col col-md-4 mt-1 alarma">
                 <h4>Alarma</h4>
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
@@ -48,6 +52,12 @@
                 </label>
                 </div>
             </div>
+
+
+
+
+
+
             <div class=" d-none d-md-block logo-header">
                 <img class="" src="../img/logo/logo-pequeño.png" alt="">
             </div>
@@ -64,10 +74,10 @@
                     <div class="col-2 col-md-auto">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <div class="col-6 col-md-auto mt-1 alarma">
+                    <div class="col-6 col-md-auto mt-1 cocina">
                         <div class="custom-switch custom-switch-label-onoff ">   
                             <label class="bs-switch">
-                                 <input type="checkbox" name="alarma" checked>
+                                 <input type="checkbox" name="cocina" >
                             </label>
                         </div>
                     </div>
@@ -83,10 +93,10 @@
                     <div class="col-2 col-md-auto">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <div class="col-6 col-md-auto mt-1 alarma">
+                    <div class="col-6 col-md-auto mt-1 baño">
                 <div class="custom-switch custom-switch-label-onoff ">   
                 <label class="bs-switch">
-                <input type="checkbox" name="alarma" checked>
+                <input type="checkbox" name="baño" checked>
   
                 </label>
                 </div>
@@ -103,10 +113,10 @@
                     <div class="col-2 col-md-auto">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <div class="col-6 col-md-auto mt-1 alarma">
+                    <div class="col-6 col-md-auto mt-1 garage">
                 <div class="custom-switch custom-switch-label-onoff">   
                 <label class="bs-switch">
-                <input type="checkbox" name="alarma" checked>
+                <input type="checkbox" name="garage" checked>
   
                 </label>
                 </div>
@@ -123,10 +133,10 @@
                     <div class="col-2 col-md-auto">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <div class="col-6 col-md-auto mt-1 alarma"> 
+                    <div class="col-6 col-md-auto mt-1 dormitorio1"> 
                 <div class="custom-switch custom-switch-label-onoff ">   
                 <label class="bs-switch">
-                <input type="checkbox" name="alarma" checked>
+                <input type="checkbox" name="dormitorio1" checked>
   
                 </label>
                 </div>
@@ -143,10 +153,10 @@
                     <div class="col-2 col-md-auto">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <div class="col-6 col-md-auto mt-1 alarma">
+                    <div class="col-6 col-md-auto mt-1 dormitorio2">
                 <div class="custom-switch custom-switch-label-onoff ">   
                 <label class="bs-switch">
-                <input type="checkbox" name="alarma" checked>
+                <input type="checkbox" name="dormitorio2" checked>
   
                 </label>
                 </div>
@@ -163,10 +173,10 @@
                     <div class="col-2 col-md-auto">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <div class="col-6 col-md-auto mt-1 alarma">
+                    <div class="col-6 col-md-auto mt-1 dormitorio3">
                 <div class="custom-switch custom-switch-label-onoff ">   
                 <label class="bs-switch">
-                <input type="checkbox" name="alarma" checked>
+                <input type="checkbox" name="dormitorio3" checked>
   
                 </label>
                 </div>
@@ -193,6 +203,6 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/fontawesome.min.js"></script>
     <script src="../js/bootstrap-switch.min.js"></script>
-    <script src="../js/acciones.js"></script>
+    <script src="../js/acciones-menu.js"></script>
 </body>
 </html>

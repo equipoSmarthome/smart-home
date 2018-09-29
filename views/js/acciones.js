@@ -85,6 +85,6 @@ $("#form-login").submit(function(e){
         }
     })
 })
-$("[name='alarma']").bootstrapSwitch();
+
 
 
