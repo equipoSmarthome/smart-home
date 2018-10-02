@@ -5,6 +5,7 @@ function dockOk(){
 function volverMenu(){
 	window.location = "../menu.php"
 }
+
 // Inicializar los Switch
 $("[name='alarma']").bootstrapSwitch();
 $("[name='Cocina']").bootstrapSwitch();
@@ -13,7 +14,7 @@ $("[name='Garage']").bootstrapSwitch();
 $("[name='Dormitorio 1']").bootstrapSwitch();
 $("[name='Dormitorio 2']").bootstrapSwitch();
 $("[name='Dormitorio 3']").bootstrapSwitch();
-
+//////////////////////////////////////////////////////////
 
 // Si el valor de los switch es 1 en la BD estos quedan seleccionados
 // El switch por defecto esta apagado
@@ -38,9 +39,9 @@ if ($("[name='Dormitorio 2']").val() == 1 ) {
 if ($("[name='Dormitorio 3']").val() == 1 ) {
     $('input[name="Dormitorio 3"]').bootstrapSwitch('state', true, true)
 }
+//////////////////////////////////////////////////////////
 
-
-//Alarma
+// Funciones Switch Alarma
 $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
@@ -65,9 +66,8 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
             }
         })
     } 
-  });
-
-  //Cocina
+  })
+  // Funciones Switch Cocina
   $('input[name="Cocina"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
@@ -91,9 +91,8 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
             }
         })
     } 
-  });
-
-  //Baño
+  })
+  // Funciones Switch Baño
   $('input[name="Baño"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
@@ -118,10 +117,8 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
             }
         })
     } 
-  });
-
-
-//Garage
+  })
+// Funciones Switch Garage
   $('input[name="Garage"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
@@ -147,8 +144,7 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
         })
     } 
   })
-
-  //Dormitorio 1
+  // Funciones Switch Dormitorio 1
   $('input[name="Dormitorio 1"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
@@ -174,8 +170,7 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
         })
     } 
   })
-
-  //Dormitorio 2
+  // Funciones Switch Dormitorio 2
   $('input[name="Dormitorio 2"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
@@ -201,8 +196,7 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
         })
     } 
   })
-
-  //Dormitorio 3
+  // Funciones Switch Dormitorio 3
   $('input[name="Dormitorio 3"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
@@ -228,6 +222,8 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
         })
     } 
   })
+  //////////////////////////////////////////////////////////
+
 
 $("#editarCorreo").click(function(e){
     e.preventDefault();
@@ -417,3 +413,49 @@ $("button[name=cerrarPuerta]").on("click", function(){
         })
     })
 })
+
+
+
+
+
+// Modulo Puerta
+$("button[name=TempOn]").on("click", function(){
+    $(this).attr("value","1")
+    $("button[name=TempOff]").attr("value","0")
+    $("button[name=TempOff]").animate({
+        width: "150px",
+    }, 300)
+    $(this).animate({
+        width: "200px",
+    }, 500 , function(){
+        $.ajax({
+            url: '../../controllers/estadoTemp.controller.php',
+            type: 'POST',
+            data: {datos: 'encenderTemp'},
+            success: function(respuesta){
+                console.log(respuesta)
+            }
+        })
+    })
+
+})
+$("button[name=TempOff]").on("click", function(){
+    $(this).attr("value","1")
+    $("button[name=TempOn]").attr("value","0")
+    $("button[name=TempOn]").animate({
+        width: "150px",
+    }, 300)
+    $(this).animate({
+        width: "200px",
+    }, 500, function(){
+        $.ajax({
+            url: '../../controllers/estadoTemp.controller.php',
+            type: 'POST',
+            data: {datos: 'apagarTemp'},
+            success: function(respuesta){
+                console.log(respuesta)
+            }
+        })
+    })
+})
+
