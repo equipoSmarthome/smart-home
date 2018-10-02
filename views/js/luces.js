@@ -314,11 +314,16 @@ $("#formu-nuevaCuenta").submit(function(e){
         data: datos,
         success: function(respuesta){
             if (respuesta == 1){
-                if (respuesta == 1){
-                    swal("Genial", "Ha creado una Nueva Cuenta", "success").then((result) => {
-                        window.location = "../modulos/nueva-cuenta.php"
-                    })
-                }
+                
+                swal("Genial", "Ha creado una Nueva Cuenta", "success").then((result) => {
+                    window.location = "../modulos/nueva-cuenta.php"
+                })        
+            } else if (respuesta == 2){
+                swal("Faltan Campos", "Tienes que completar todos los campos ", "error");        
+            } else if (respuesta == 3){
+                swal("Contraseñas Distintas", "Las Contraseñas deben ser iguales ", "error");        
+            } else if (respuesta == 4){
+                swal("Dato Incorrecto", "El campo correo tiene que tener '@ y .' ", "error");        
             }
 
         }
@@ -328,9 +333,9 @@ $("#formu-nuevaCuenta").submit(function(e){
 
 
 $("body .table-dark").on("click", ".btnEliminarCuenta", function(){
-    var idCuenta = $(this).attr("idCuenta")
+    var idcuenta = $(this).attr("idcuenta")
     var datos = new FormData()
-    datos.append("id_cuenta", idCuenta)
+    datos.append("idcuenta", idcuenta)
     datos.append("tipoOperacion", "eliminarCuenta")
     swal({
       title: '¿Estás seguro de eliminar?',
@@ -350,15 +355,15 @@ $("body .table-dark").on("click", ".btnEliminarCuenta", function(){
             contentType: false,
             success: function(respuesta) {
                 console.log(respuesta)
-                if ( respuesta == "1") {
+                if ( respuesta == 1) {
                     swal(
                       'Eliminado!',
                       'Su cuenta a sido eliminada.',
                       'success'
                     ).then((result) => {
-                      if (result.value) {
+                      
                         window.location = "../modulos/nueva-cuenta.php"
-                      }
+                      
                     })
                 }
             }

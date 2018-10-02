@@ -40,7 +40,7 @@ require_once '../models/switch.modelo.php';
                     </ul>
                 </div>
             </nav>
-            <div class="col-auto col-md-1 nombre-usuario " style="margin-top: 22px">
+            <div class="col-auto col-md-1 nombre-usuario " >
                 <p><?php echo $_SESSION['correo']; ?></p>
             </div>
             <div class="col col-md-4 mt-1 alarma">

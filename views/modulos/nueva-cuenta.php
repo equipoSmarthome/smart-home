@@ -90,7 +90,7 @@ require_once '../../controllers/switch.vista.controller.php';
                             <div class="form-group row">
                                 <h6 class="col-sm-2 col-form-label">Correo</h6>
                                 <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Correo" required name="correo">
+                                <input type="email" class="form-control" placeholder="Correo" required name="correo">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -136,7 +136,7 @@ require_once '../../controllers/switch.vista.controller.php';
                 <th scope="row">'.$value['id'].'</th>
                 <td>'.$value['Correo_Usuario_2'].'</td>
                 <td width="100">
-                  <button class="btn btn-sm btn-danger btnEliminarCuenta" idCuenta="'.$value["id"].'">
+                  <button class="btn btn-sm btn-danger btnEliminarCuenta" idcuenta="'.$value["id"].'">
                     <i class="far fa-trash-alt"></i>
                   </button>
                 </td>
