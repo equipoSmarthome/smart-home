@@ -5,16 +5,40 @@ function dockOk(){
 function volverMenu(){
 	window.location = "../menu.php"
 }
-
-
 // Inicializar los Switch
 $("[name='alarma']").bootstrapSwitch();
-$("[name='cocina']").bootstrapSwitch();
-$("[name='baño']").bootstrapSwitch();
-$("[name='garage']").bootstrapSwitch();
-$("[name='dormitorio1']").bootstrapSwitch();
-$("[name='dormitorio2']").bootstrapSwitch();
-$("[name='dormitorio3']").bootstrapSwitch();
+$("[name='Cocina']").bootstrapSwitch();
+$("[name='Baño']").bootstrapSwitch();
+$("[name='Garage']").bootstrapSwitch();
+$("[name='Dormitorio 1']").bootstrapSwitch();
+$("[name='Dormitorio 2']").bootstrapSwitch();
+$("[name='Dormitorio 3']").bootstrapSwitch();
+
+
+// Si el valor de los switch es 1 en la BD estos quedan seleccionados
+// El switch por defecto esta apagado
+if ($("[name='alarma']").val() == 1 ) {
+    $('input[name="alarma"]').bootstrapSwitch('state', true, true)
+}
+if ($("[name='Cocina']").val() == 1 ) {
+    $('input[name="Cocina"]').bootstrapSwitch('state', true, true)
+}
+if ($("[name='Baño']").val() == 1 ) {
+    $('input[name="Baño"]').bootstrapSwitch('state', true, true)
+}
+if ($("[name='Garage']").val() == 1 ) {
+    $('input[name="Garage"]').bootstrapSwitch('state', true, true)
+}
+if ($("[name='Dormitorio 1']").val() == 1 ) {
+    $('input[name="Dormitorio 1"]').bootstrapSwitch('state', true, true)
+}
+if ($("[name='Dormitorio 2']").val() == 1 ) {
+    $('input[name="Dormitorio 2"]').bootstrapSwitch('state', true, true)
+}
+if ($("[name='Dormitorio 3']").val() == 1 ) {
+    $('input[name="Dormitorio 3"]').bootstrapSwitch('state', true, true)
+}
+
 
 //Alarma
 $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, state) {
@@ -44,7 +68,7 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
   });
 
   //Cocina
-  $('input[name="cocina"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  $('input[name="Cocina"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
         $.ajax({
@@ -70,7 +94,7 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
   });
 
   //Baño
-  $('input[name="baño"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  $('input[name="Baño"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
         var datos = $(this)
@@ -98,7 +122,7 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
 
 
 //Garage
-  $('input[name="garage"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  $('input[name="Garage"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
         var datos = $(this)
@@ -125,7 +149,7 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
   })
 
   //Dormitorio 1
-  $('input[name="dormitorio1"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  $('input[name="Dormitorio 1"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
         var datos = $(this)
@@ -152,7 +176,7 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
   })
 
   //Dormitorio 2
-  $('input[name="dormitorio2"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  $('input[name="Dormitorio 2"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
         var datos = $(this)
@@ -179,7 +203,7 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
   })
 
   //Dormitorio 3
-  $('input[name="dormitorio3"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  $('input[name="Dormitorio 3"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
         var datos = $(this)

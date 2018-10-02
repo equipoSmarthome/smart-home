@@ -1,5 +1,7 @@
 <?php 
-	session_start();
+    require_once '../../controllers/switch.vista.controller.php';
+    require_once '../../models/switch.modelo.php';
+	
 	if (!isset($_SESSION['correo'])) {
 	 	header('Location: ../index.php');
 	}
@@ -39,11 +41,24 @@
                     </ul>
                 </div>
             </nav>
+
+
+
             <div class="col col-md-4 mt-1 alarma">
                 <h4>Alarma</h4>
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
                 <label class="bs-switch">
-                <input type="checkbox" name="alarma" checked>
+                <?php 
+          
+          $alarma = ControllerSwitch::mostrarSwitchAlarma();
+
+          foreach ($alarma as $key => $value) {
+            echo '
+            <input type="checkbox" name="alarma" value="'.$value["Estado_Dispositivo"].'">
+            ';
+          }
+          ?>
+
   
                 </label>
                 </div>
@@ -64,124 +79,41 @@
             <div class="col-12">
                 <fieldset class="menu-principal">
                     <legend>Menu</legend>
+
+
+
+            <?php 
+          
+          $luces = ControllerSwitch::mostrarSwitch();
+
+          foreach ($luces as $key => $value) {
+            echo '
             <div class="luz">
-                <h6>Cocina</h6>
-                <div class="row justify-content-around">
-                    <div class="col-2 col-md-auto">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <div class="col-6 col-md-auto mt-1 cocina">
-                        <div class="custom-switch custom-switch-label-onoff ">   
-                            <label class="bs-switch">
-                                 <input type="checkbox" name="cocina" >
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-2 col-md-auto">
-                    <i class="far fa-lightbulb"></i>
-                    </div>
-                </div>
-            </div>
 
-             <div class="luz">
-                <h6>Baño</h6>
-                <div class="row justify-content-around">
-                    <div class="col-2 col-md-auto">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <div class="col-6 col-md-auto mt-1 baño">
-                <div class="custom-switch custom-switch-label-onoff ">   
-                <label class="bs-switch">
-                <input type="checkbox" name="baño" checked>
-  
-                </label>
-                </div>
-            </div>
-                    <div class="col-2 col-md-auto">
-                    <i class="far fa-lightbulb"></i>
-                    </div>
-                </div>
-            </div>
 
-             <div class="luz">
-                <h6>Garage</h6>
-                <div class="row justify-content-around">
-                    <div class="col-2 col-md-auto">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <div class="col-6 col-md-auto mt-1 garage">
-                <div class="custom-switch custom-switch-label-onoff">   
-                <label class="bs-switch">
-                <input type="checkbox" name="garage" checked>
-  
-                </label>
+            <h6>'.$value["Nombre"].'</h6>
+            <div class="row justify-content-around">
+                <div class="col-2 col-md-auto">
+                    <i class="fas fa-lightbulb"></i>
                 </div>
-            </div>
-                    <div class="col-2 col-md-auto">
-                    <i class="far fa-lightbulb"></i>
+                <div class="col-6 col-md-auto mt-1 '.$value["Nombre"].'">
+                    <div class="custom-switch custom-switch-label-onoff ">   
+                        <label class="bs-switch">
+                             <input type="checkbox" name="'.$value["Nombre"].'" value="'.$value["Estado_Dispositivo"].'">
+                        </label>
                     </div>
                 </div>
+                <div class="col-2 col-md-auto">
+                <i class="far fa-lightbulb"></i>
+                </div>
             </div>
+        </div>
 
-             <div class="luz">
-                <h6>Dormitorio 1</h6>
-                <div class="row justify-content-around">
-                    <div class="col-2 col-md-auto">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <div class="col-6 col-md-auto mt-1 dormitorio1"> 
-                <div class="custom-switch custom-switch-label-onoff ">   
-                <label class="bs-switch">
-                <input type="checkbox" name="dormitorio1" checked>
-  
-                </label>
-                </div>
-            </div>
-                    <div class="col-2 col-md-auto">
-                    <i class="far fa-lightbulb"></i>
-                    </div>
-                </div>
-            </div>
 
-             <div class="luz">
-                <h6>Dormitorio 2</h6>
-                <div class="row justify-content-around">
-                    <div class="col-2 col-md-auto">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <div class="col-6 col-md-auto mt-1 dormitorio2">
-                <div class="custom-switch custom-switch-label-onoff ">   
-                <label class="bs-switch">
-                <input type="checkbox" name="dormitorio2" checked>
-  
-                </label>
-                </div>
-            </div>
-                    <div class="col-2 col-md-auto">
-                    <i class="far fa-lightbulb"></i>
-                    </div>
-                </div>
-            </div>
-
-             <div class="luz">
-                <h6>Dormitorio 3</h6>
-                <div class="row justify-content-around">
-                    <div class="col-2 col-md-auto">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <div class="col-6 col-md-auto mt-1 dormitorio3">
-                <div class="custom-switch custom-switch-label-onoff ">   
-                <label class="bs-switch">
-                <input type="checkbox" name="dormitorio3" checked>
-  
-                </label>
-                </div>
-            </div>
-                    <div class="col-2 col-md-auto">
-                    <i class="far fa-lightbulb"></i>
-                    </div>
-                </div>
-            </div>
+            ';
+          }
+          ?>
+            
                 </fieldset>
 
                 <div class="row justify-content-end ">
@@ -199,7 +131,6 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/fontawesome.min.js"></script>
     <script src="../js/bootstrap-switch.min.js"></script>
-    <script src="../js/acciones-menu.js"></script>
     <script src="../js/luces.js"></script>
 </body>
 </html>
