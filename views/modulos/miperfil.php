@@ -1,4 +1,6 @@
 <?php 
+require_once '../../controllers/switch.vista.controller.php';
+require_once '../../models/switch.modelo.php';
 	session_start();
 	if (!isset($_SESSION['correo'])) {
 	 	header('Location: ../index.php');
