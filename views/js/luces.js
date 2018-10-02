@@ -371,3 +371,49 @@ $("body .table-dark").on("click", ".btnEliminarCuenta", function(){
       }
     })
 })
+if ($("button[name=abrirPuerta]").val() == 1) {
+    $(this).css("width" , "250px")
+} else if ($("button[name=cerrarPuerta]").val() == 1) {
+    $(this).css("width" , "250px")
+}
+
+// Modulo Puerta
+$("button[name=abrirPuerta]").on("click", function(){
+    $(this).attr("value","1")
+    $("button[name=cerrarPuerta]").attr("value","0")
+    $("button[name=cerrarPuerta]").animate({
+        width: "150px",
+    }, 300)
+    $(this).animate({
+        width: "200px",
+    }, 500 , function(){
+        $.ajax({
+            url: '../../controllers/estadopuerta.controller.php',
+            type: 'POST',
+            data: {datos: 'abrirPuerta'},
+            success: function(respuesta){
+                console.log(respuesta)
+            }
+        })
+    })
+
+})
+$("button[name=cerrarPuerta]").on("click", function(){
+    $(this).attr("value","1")
+    $("button[name=abrirPuerta]").attr("value","0")
+    $("button[name=abrirPuerta]").animate({
+        width: "150px",
+    }, 300)
+    $(this).animate({
+        width: "200px",
+    }, 500, function(){
+        $.ajax({
+            url: '../../controllers/estadopuerta.controller.php',
+            type: 'POST',
+            data: {datos: 'cerrarPuerta'},
+            success: function(respuesta){
+                console.log(respuesta)
+            }
+        })
+    })
+})
