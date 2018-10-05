@@ -83,7 +83,7 @@ $("#form-login").submit(function(e){
                 swal("Datos Incorrectos", "Correo y/o contraseña incorrectos");
             }
             else if (respuesta == 4){
-                swal("Datos Incorrectos", "Debes Ingresar un correo que tenga '@ y .'");
+                swal("Datos Incorrectos", "Debes Ingresar un correo Valido");
             }
         }
     })

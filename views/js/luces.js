@@ -254,6 +254,10 @@ $("#editarCorreo").click(function(e){
                               })
                     } else if (respuesta == 2){
                         swal("Faltan Campos", "Tienes que completar todos los campos ", "error");
+                    } else if (respuesta == 3){
+                        swal("Contraseñas Incorrectas", "Las Contraseñas deben ser iguales", "error");
+                    } else if (respuesta == 4){
+                        swal("Correo Incorrecto", "Debes Ingresar un correo Valido", "error");
                     }
                 }
             })
@@ -292,6 +296,12 @@ $("#editarPass").click(function(e){
                         swal("Genial", "Su Contraseña a sido Modificada. Por Favor Inicie Sesión Nuevamente", "success").then((result) => {
                             window.location = "login.php"
                         })
+                    } else if (respuesta == 2){
+                        swal("Faltan Campos", "Tienes que completar todos los campos ", "error");
+                    } else if (respuesta == 3){
+                        swal("Contraseñas Incorrectas", "Las Contraseñas deben ser iguales", "error");
+                    } else if (respuesta == 4){
+                        swal("Correo Incorrecto", "Debes Ingresar un correo Valido", "error");
                     }
                 }
             })            
@@ -319,7 +329,7 @@ $("#formu-nuevaCuenta").submit(function(e){
             } else if (respuesta == 3){
                 swal("Contraseñas Distintas", "Las Contraseñas deben ser iguales ", "error");        
             } else if (respuesta == 4){
-                swal("Dato Incorrecto", "El campo correo tiene que tener '@ y .' ", "error");        
+                swal("Correo Incorrecto", "Debes Ingresar un correo Valido", "error")       
             }
 
         }
