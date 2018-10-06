@@ -75,8 +75,32 @@
                     <legend>Informacion General</legend>
                     <div class="row">
                         <div class="col-12 mt-3 mb-5">
-                            <h1>Temperatura Actual</h1>
-                            <p class="h1 texto-temperatura">5,0° C</p>                 
+                            <h2>Temperatura Actual</h2>
+                            <?php 
+          
+            $tempActual = ControllerTemperatura::mostrarTempActual();
+
+          foreach ($tempActual as $key => $value) {
+            echo '
+            <p class="h1 texto-temperatura">'.$value[2].' °C
+            ';
+          }
+          ?>
+                                            
+                        </div>
+                        <div class="col-12 mt-3 mb-5">
+                            <h2>Humedad Actual</h2>
+                            <?php 
+          
+            $humedad = ControllerTemperatura::mostrarHumedad();
+
+          foreach ($humedad as $key => $value) {
+            echo '
+            <p class="h1 texto-temperatura">'.$value[2].' %
+            ';
+          }
+          ?>
+                                            
                         </div>
                     </div>
                 </fieldset>
