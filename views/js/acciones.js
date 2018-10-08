@@ -82,6 +82,9 @@ $("#form-login").submit(function(e){
             }else if (respuesta == 3){
                 swal("Datos Incorrectos", "Correo y/o contraseña incorrectos");
             }
+            else if (respuesta == 4){
+                swal("Datos Incorrectos", "Debes Ingresar un correo Valido");
+            }
         }
     })
 })

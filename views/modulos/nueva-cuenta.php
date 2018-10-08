@@ -1,5 +1,7 @@
 <?php 
 require_once '../../controllers/vercuentas.controller.php';
+require_once '../../controllers/switch.vista.controller.php';
+    require_once '../../models/switch.modelo.php';
 	session_start();
 	if (!isset($_SESSION['correo'])) {
 	 	header('Location: ../index.php');
@@ -46,7 +48,17 @@ require_once '../../controllers/vercuentas.controller.php';
                 <h4>Alarma</h4>
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
                 <label class="bs-switch">
-                <input type="checkbox" name="alarma" checked>
+                
+                <?php 
+          
+          $alarma = ControllerSwitch::mostrarSwitchAlarma();
+
+          foreach ($alarma as $key => $value) {
+            echo '
+            <input type="checkbox" name="alarma" value="'.$value["Estado_Dispositivo"].'">
+            ';
+          }
+          ?>
   
                 </label>
                 </div>
@@ -78,7 +90,7 @@ require_once '../../controllers/vercuentas.controller.php';
                             <div class="form-group row">
                                 <h6 class="col-sm-2 col-form-label">Correo</h6>
                                 <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Correo" required name="correo">
+                                <input type="email" class="form-control" placeholder="Correo" required name="correo">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -124,7 +136,7 @@ require_once '../../controllers/vercuentas.controller.php';
                 <th scope="row">'.$value['id'].'</th>
                 <td>'.$value['Correo_Usuario_2'].'</td>
                 <td width="100">
-                  <button class="btn btn-sm btn-danger btnEliminarCuenta" idCuenta="'.$value["id"].'">
+                  <button class="btn btn-sm btn-danger btnEliminarCuenta" idcuenta="'.$value["id"].'">
                     <i class="far fa-trash-alt"></i>
                   </button>
                 </td>

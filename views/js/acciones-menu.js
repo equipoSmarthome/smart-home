@@ -25,7 +25,10 @@ function irEventos(){
 function volverMenu(){
 	window.location = "../menu.php"
 }
-$("[name='alarma']").bootstrapSwitch();
+$("[name='alarma']").bootstrapSwitch()
+if ($("[name='alarma']").val() == 1 ) {
+    $('input[name="alarma"]').bootstrapSwitch('state', true, true)
+};
 //Alarma
 $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){

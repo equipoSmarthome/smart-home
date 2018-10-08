@@ -1,4 +1,6 @@
 <?php 
+require_once '../../controllers/switch.vista.controller.php';
+require_once '../../models/switch.modelo.php';
 	session_start();
 	if (!isset($_SESSION['correo'])) {
 	 	header('Location: ../index.php');
@@ -48,7 +50,17 @@
                 <h4>Alarma</h4>
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
                 <label class="bs-switch">
-                <input type="checkbox" name="alarma" checked>
+
+                <?php 
+          
+          $alarma = ControllerSwitch::mostrarSwitchAlarma();
+
+          foreach ($alarma as $key => $value) {
+            echo '
+            <input type="checkbox" name="alarma" value="'.$value["Estado_Dispositivo"].'">
+            ';
+          }
+          ?>
   
                 </label>
                 </div>

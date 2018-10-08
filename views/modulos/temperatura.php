@@ -1,7 +1,12 @@
 <?php 
-	session_start();
+    require_once '../../controllers/switch.vista.controller.php';
+    require_once '../../models/switch.modelo.php';
+    require_once '../../controllers/temp.controller.php';
+    require_once '../../models/temp.modelo.php';
+    
 	if (!isset($_SESSION['correo'])) {
-	 	header('Location: ../index.php');
+         header('Location: ../index.php');
+         
 	}
 ?> 
 <!DOCTYPE html>
@@ -43,7 +48,17 @@
                 <h4>Alarma</h4>
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
                 <label class="bs-switch">
-                <input type="checkbox" name="alarma" checked>
+                
+                <?php 
+          
+          $alarma = ControllerSwitch::mostrarSwitchAlarma();
+
+          foreach ($alarma as $key => $value) {
+            echo '
+            <input type="checkbox" name="alarma" value="'.$value["Estado_Dispositivo"].'">
+            ';
+          }
+          ?>
   
                 </label>
                 </div>
@@ -60,8 +75,32 @@
                     <legend>Informacion General</legend>
                     <div class="row">
                         <div class="col-12 mt-3 mb-5">
-                            <h1>Temperatura Actual</h1>
-                            <p class="h1 texto-temperatura">5,0° C</p>                 
+                            <h2>Temperatura Actual</h2>
+                            <?php 
+          
+            $tempActual = ControllerTemperatura::mostrarTempActual();
+
+          foreach ($tempActual as $key => $value) {
+            echo '
+            <p class="h1 texto-temperatura">'.$value[2].' °C
+            ';
+          }
+          ?>
+                                            
+                        </div>
+                        <div class="col-12 mt-3 mb-5">
+                            <h2>Humedad Actual</h2>
+                            <?php 
+          
+            $humedad = ControllerTemperatura::mostrarHumedad();
+
+          foreach ($humedad as $key => $value) {
+            echo '
+            <p class="h1 texto-temperatura">'.$value[2].' %
+            ';
+          }
+          ?>
+                                            
                         </div>
                     </div>
                 </fieldset>
@@ -80,15 +119,34 @@
                         
                         <div class="col-12 mt-3 mb-3">
                             <h6 class="mb-3">Definido por el usuario</h6>
-                                <div class="row">
-                                    <div class="col-6 col-md-6 boton-usuario">
-                                        <button class="btn btn-primary" id="luz"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-apagado.png" alt=""><p class="mt-2">Desactivado</p></button>
-                                    </div>         
-
-                                    <div class="col-6 col-md-6 boton-usuario">
-                                        <button class="btn btn-primary" id="luz"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-encendido.png" alt=""><p class="mt-2">Activado</p></button>
-                                    </div>                        
-                                </div>
+                            <div class="row">
+                                <?php 
+          
+                                $temperatura = ControllerTemperatura::mostrarTemperatura();
+                                foreach ($temperatura as $key => $value) {
+                                    if ($value["Estado_Dispositivo"] == 1) {
+                                        echo ' 
+                                        <div class="col-6 col-md-6 boton-usuario">
+                                            <button class="btn btn-primary" name="TempOff" value=0><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-apagado.png" alt=""><p class="mt-2">Desactivar</p></button>
+                                        </div> 
+                                        <div class="col-6 col-md-6 boton-usuario">
+                                            <button class="btn btn-primary" id="temperatura" name="TempOn" value=1 style="width:200px"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-encendido.png" alt=""><p class="mt-2">Activado</p></button>
+                                        </div>  
+                                        ';
+                                    } else {
+                                        echo ' 
+                                        <div class="col-6 col-md-6 boton-usuario">
+                                            <button class="btn btn-primary" name="TempOff" value=1 style="width:200px"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-apagado.png" alt=""><p class="mt-2">Desactivar</p></button>
+                                        </div> 
+                                        <div class="col-6 col-md-6 boton-usuario">
+                                            <button class="btn btn-primary" id="temperatura" name="TempOn" value=0><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-encendido.png" alt=""><p class="mt-2">Activado</p></button>
+                                        </div>  
+                                        ';
+                                    }
+                                    
+                                }
+                                 ?>                                                    
+                            </div>
                         </div>
                     </div>
                 </fieldset>

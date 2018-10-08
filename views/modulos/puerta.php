@@ -1,5 +1,9 @@
 <?php 
-	session_start();
+    require_once '../../controllers/switch.vista.controller.php';
+    require_once '../../models/switch.modelo.php';
+    require_once '../../controllers/puerta.controller.php';
+    require_once '../../models/puerta.modelo.php';
+    
 	if (!isset($_SESSION['correo'])) {
 	 	header('Location: ../index.php');
 	}
@@ -46,7 +50,17 @@
                 <h4>Alarma</h4>
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
                 <label class="bs-switch">
-                <input type="checkbox" name="alarma" checked>
+                
+                <?php 
+          
+          $alarma = ControllerSwitch::mostrarSwitchAlarma();
+
+          foreach ($alarma as $key => $value) {
+            echo '
+            <input type="checkbox" name="alarma" value="'.$value["Estado_Dispositivo"].'">
+            ';
+          }
+          ?>
   
                 </label>
                 </div>
@@ -58,12 +72,22 @@
     </header>
     <div class="container principal">
         <div class="row">
-            <div class="col-12 col-md-6">
+            
+
+            
+                        <?php 
+          
+          $puertaOn = ControllerPuerta::mostrarPuerta();
+
+          foreach ($puertaOn as $key => $value) {
+              if ($value["Estado_Dispositivo"] == 0 ) {
+                  echo '
+                  <div class="col-12 col-md-6">
                 <fieldset class="menu-principal">
                     <legend>Puerta Principal</legend>
                     <div class="row">
                         <div class="col-12 mt-3 mb-5 boton-desbloqueo">
-                            <button class="btn btn-primary"><img class="iconos-menu mt-3" src="../img/iconos/unlock.png" alt=""><p class="mt-4">Desbloquear</p></button>
+                            <button class="btn btn-primary" ><img class="iconos-menu mt-3" src="../img/iconos/unlock.png" alt=""><p class="mt-4">Desbloquear</p></button>
                         </div>
                     </div>
                 </fieldset>
@@ -74,16 +98,66 @@
                     <legend>Puerta Garage</legend>
                     <div class="row">
                         <div class="col-12 boton-garage ">
-                            <button class="btn btn-primary"><img class="iconos-menu mt-2" src="../img/iconos/abrir-puerta.png" alt=""><p class="mt-4">Abrir</p></button>
+                            <button class="btn btn-primary" value=0 name="abrirPuerta"><img class="iconos-menu mt-2" src="../img/iconos/abrir-puerta.png" alt=""><p class="mt-4">Abrir</p></button>
                         </div>
 
                         <div class="col-12 boton-garage">
-                            <button class="btn btn-primary"><img class="iconos-menu mt-2" src="../img/iconos/bajar-puerta.png" alt=""><p class="mt-4">Cerrar</p></button>
+                            <button class="btn btn-primary" value=1 name="cerrarPuerta" style="width: 200px;"><img class="iconos-menu mt-2" src="../img/iconos/bajar-puerta.png" alt=""><p class="mt-4" >Cerrado</p></button>
                         </div>
 
                         
                     </div>
                 </fieldset>
+                
+                  
+                  
+                  
+                  ';
+                  
+              } else {
+                echo '
+                <div class="col-12 col-md-6">
+              <fieldset class="menu-principal">
+                  <legend>Puerta Principal</legend>
+                  <div class="row">
+                      <div class="col-12 mt-3 mb-5 boton-desbloqueo">
+                          <button class="btn btn-primary" ><img class="iconos-menu mt-3" src="../img/iconos/unlock.png" alt=""><p class="mt-4">Desbloquear</p></button>
+                      </div>
+                  </div>
+              </fieldset>
+          </div>
+
+          <div class="col-12 col-md-6">
+              <fieldset class="menu-principal">
+                  <legend>Puerta Garage</legend>
+                  <div class="row">
+                      <div class="col-12 boton-garage ">
+                          <button class="btn btn-primary" value=1 name="abrirPuerta" style="width: 200px"><img class="iconos-menu mt-2" src="../img/iconos/abrir-puerta.png" alt=""><p class="mt-4">Abierto</p></button>
+                      </div>
+
+                      <div class="col-12 boton-garage-cerrar">
+                          <button class="btn btn-primary"  value=0 name="cerrarPuerta"><img class="iconos-menu mt-2" src="../img/iconos/bajar-puerta.png" alt=""><p class="mt-4" >Cerrar</p></button>
+                      </div>
+
+                      
+                  </div>
+              </fieldset>
+              
+                
+                
+                
+                ';
+              }
+            
+            }
+          ?>
+
+
+
+                            
+                        
+
+                        
 
                 <div class="row justify-content-end ">
                     <div class="col-auto">

@@ -6,17 +6,42 @@ function volverMenu(){
 	window.location = "../menu.php"
 }
 
-
 // Inicializar los Switch
 $("[name='alarma']").bootstrapSwitch();
-$("[name='cocina']").bootstrapSwitch();
-$("[name='baño']").bootstrapSwitch();
-$("[name='garage']").bootstrapSwitch();
-$("[name='dormitorio1']").bootstrapSwitch();
-$("[name='dormitorio2']").bootstrapSwitch();
-$("[name='dormitorio3']").bootstrapSwitch();
+$("[name='Cocina']").bootstrapSwitch();
+$("[name='Baño']").bootstrapSwitch();
+$("[name='Garage']").bootstrapSwitch();
+$("[name='Dormitorio 1']").bootstrapSwitch();
+$("[name='Dormitorio 2']").bootstrapSwitch();
+$("[name='Dormitorio 3']").bootstrapSwitch();
+//////////////////////////////////////////////////////////
 
-//Alarma
+// Si el valor de los switch es 1 en la BD estos quedan seleccionados
+// El switch por defecto esta apagado
+if ($("[name='alarma']").val() == 1 ) {
+    $('input[name="alarma"]').bootstrapSwitch('state', true, true)
+}
+if ($("[name='Cocina']").val() == 1 ) {
+    $('input[name="Cocina"]').bootstrapSwitch('state', true, true)
+}
+if ($("[name='Baño']").val() == 1 ) {
+    $('input[name="Baño"]').bootstrapSwitch('state', true, true)
+}
+if ($("[name='Garage']").val() == 1 ) {
+    $('input[name="Garage"]').bootstrapSwitch('state', true, true)
+}
+if ($("[name='Dormitorio 1']").val() == 1 ) {
+    $('input[name="Dormitorio 1"]').bootstrapSwitch('state', true, true)
+}
+if ($("[name='Dormitorio 2']").val() == 1 ) {
+    $('input[name="Dormitorio 2"]').bootstrapSwitch('state', true, true)
+}
+if ($("[name='Dormitorio 3']").val() == 1 ) {
+    $('input[name="Dormitorio 3"]').bootstrapSwitch('state', true, true)
+}
+//////////////////////////////////////////////////////////
+
+// Funciones Switch Alarma
 $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
@@ -41,10 +66,9 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
             }
         })
     } 
-  });
-
-  //Cocina
-  $('input[name="cocina"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  })
+  // Funciones Switch Cocina
+  $('input[name="Cocina"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
         $.ajax({
@@ -67,10 +91,9 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
             }
         })
     } 
-  });
-
-  //Baño
-  $('input[name="baño"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  })
+  // Funciones Switch Baño
+  $('input[name="Baño"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
         var datos = $(this)
@@ -94,11 +117,9 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
             }
         })
     } 
-  });
-
-
-//Garage
-  $('input[name="garage"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  })
+// Funciones Switch Garage
+  $('input[name="Garage"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
         var datos = $(this)
@@ -123,9 +144,8 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
         })
     } 
   })
-
-  //Dormitorio 1
-  $('input[name="dormitorio1"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  // Funciones Switch Dormitorio 1
+  $('input[name="Dormitorio 1"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
         var datos = $(this)
@@ -150,9 +170,8 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
         })
     } 
   })
-
-  //Dormitorio 2
-  $('input[name="dormitorio2"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  // Funciones Switch Dormitorio 2
+  $('input[name="Dormitorio 2"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
         var datos = $(this)
@@ -177,9 +196,8 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
         })
     } 
   })
-
-  //Dormitorio 3
-  $('input[name="dormitorio3"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  // Funciones Switch Dormitorio 3
+  $('input[name="Dormitorio 3"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
         var datos = $(this)
@@ -204,6 +222,8 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
         })
     } 
   })
+  //////////////////////////////////////////////////////////
+
 
 $("#editarCorreo").click(function(e){
     e.preventDefault();
@@ -234,6 +254,10 @@ $("#editarCorreo").click(function(e){
                               })
                     } else if (respuesta == 2){
                         swal("Faltan Campos", "Tienes que completar todos los campos ", "error");
+                    } else if (respuesta == 3){
+                        swal("Contraseñas Incorrectas", "Las Contraseñas deben ser iguales", "error");
+                    } else if (respuesta == 4){
+                        swal("Correo Incorrecto", "Debes Ingresar un correo Valido", "error");
                     }
                 }
             })
@@ -272,6 +296,12 @@ $("#editarPass").click(function(e){
                         swal("Genial", "Su Contraseña a sido Modificada. Por Favor Inicie Sesión Nuevamente", "success").then((result) => {
                             window.location = "login.php"
                         })
+                    } else if (respuesta == 2){
+                        swal("Faltan Campos", "Tienes que completar todos los campos ", "error");
+                    } else if (respuesta == 3){
+                        swal("Contraseñas Incorrectas", "Las Contraseñas deben ser iguales", "error");
+                    } else if (respuesta == 4){
+                        swal("Correo Incorrecto", "Debes Ingresar un correo Valido", "error");
                     }
                 }
             })            
@@ -290,11 +320,16 @@ $("#formu-nuevaCuenta").submit(function(e){
         data: datos,
         success: function(respuesta){
             if (respuesta == 1){
-                if (respuesta == 1){
-                    swal("Genial", "Ha creado una Nueva Cuenta", "success").then((result) => {
-                        window.location = "../modulos/nueva-cuenta.php"
-                    })
-                }
+                
+                swal("Genial", "Ha creado una Nueva Cuenta", "success").then((result) => {
+                    window.location = "../modulos/nueva-cuenta.php"
+                })        
+            } else if (respuesta == 2){
+                swal("Faltan Campos", "Tienes que completar todos los campos ", "error");        
+            } else if (respuesta == 3){
+                swal("Contraseñas Distintas", "Las Contraseñas deben ser iguales ", "error");        
+            } else if (respuesta == 4){
+                swal("Correo Incorrecto", "Debes Ingresar un correo Valido", "error")       
             }
 
         }
@@ -304,9 +339,9 @@ $("#formu-nuevaCuenta").submit(function(e){
 
 
 $("body .table-dark").on("click", ".btnEliminarCuenta", function(){
-    var idCuenta = $(this).attr("idCuenta")
+    var idcuenta = $(this).attr("idcuenta")
     var datos = new FormData()
-    datos.append("id_cuenta", idCuenta)
+    datos.append("idcuenta", idcuenta)
     datos.append("tipoOperacion", "eliminarCuenta")
     swal({
       title: '¿Estás seguro de eliminar?',
@@ -326,15 +361,15 @@ $("body .table-dark").on("click", ".btnEliminarCuenta", function(){
             contentType: false,
             success: function(respuesta) {
                 console.log(respuesta)
-                if ( respuesta == "1") {
+                if ( respuesta == 1) {
                     swal(
                       'Eliminado!',
                       'Su cuenta a sido eliminada.',
                       'success'
                     ).then((result) => {
-                      if (result.value) {
+                      
                         window.location = "../modulos/nueva-cuenta.php"
-                      }
+                      
                     })
                 }
             }
@@ -342,3 +377,95 @@ $("body .table-dark").on("click", ".btnEliminarCuenta", function(){
       }
     })
 })
+if ($("button[name=abrirPuerta]").val() == 1) {
+    $(this).css("width" , "250px")
+} else if ($("button[name=cerrarPuerta]").val() == 1) {
+    $(this).css("width" , "250px")
+}
+
+// Modulo Puerta
+$("button[name=abrirPuerta]").on("click", function(){
+    $(this).attr("value","1")
+    $("button[name=cerrarPuerta]").attr("value","0")
+    $("button[name=cerrarPuerta]").animate({
+        width: "150px",
+    }, 300)
+    $(this).animate({
+        width: "200px",
+    }, 500 , function(){
+        $.ajax({
+            url: '../../controllers/estadopuerta.controller.php',
+            type: 'POST',
+            data: {datos: 'abrirPuerta'},
+            success: function(respuesta){
+                console.log(respuesta)
+            }
+        })
+    })
+
+})
+$("button[name=cerrarPuerta]").on("click", function(){
+    $(this).attr("value","1")
+    $("button[name=abrirPuerta]").attr("value","0")
+    $("button[name=abrirPuerta]").animate({
+        width: "150px",
+    }, 300)
+    $(this).animate({
+        width: "200px",
+    }, 500, function(){
+        $.ajax({
+            url: '../../controllers/estadopuerta.controller.php',
+            type: 'POST',
+            data: {datos: 'cerrarPuerta'},
+            success: function(respuesta){
+                console.log(respuesta)
+            }
+        })
+    })
+})
+
+
+
+
+
+// Modulo Puerta
+$("button[name=TempOn]").on("click", function(){
+    $(this).attr("value","1")
+    $("button[name=TempOff]").attr("value","0")
+    $("button[name=TempOff]").animate({
+        width: "150px",
+    }, 300)
+    $(this).animate({
+        width: "200px",
+    }, 500 , function(){
+        $.ajax({
+            url: '../../controllers/estadoTemp.controller.php',
+            type: 'POST',
+            data: {datos: 'encenderTemp'},
+            success: function(respuesta){
+                console.log(respuesta)
+            }
+        })
+    })
+
+})
+$("button[name=TempOff]").on("click", function(){
+    $(this).attr("value","1")
+    $("button[name=TempOn]").attr("value","0")
+    $("button[name=TempOn]").animate({
+        width: "150px",
+    }, 300)
+    $(this).animate({
+        width: "200px",
+    }, 500, function(){
+        $.ajax({
+            url: '../../controllers/estadoTemp.controller.php',
+            type: 'POST',
+            data: {datos: 'apagarTemp'},
+            success: function(respuesta){
+                console.log(respuesta)
+            }
+        })
+    })
+})
+
