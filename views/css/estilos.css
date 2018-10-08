@@ -257,7 +257,8 @@ margin-top: 14px !important;
 
 .nombre-usuario{
     vertical-align: center;
-    top: 21px;
+    font-size: 14px;
+    top: 30px;
     left: 200px;
     color: #ccc;
     font-weight: bold;

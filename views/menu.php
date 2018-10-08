@@ -19,7 +19,7 @@
 <body>
     <div class="opacidad"></div>
     <header>
-       <div class="col-12 nav fixed-top" >
+       <div class="col-12 nav fixed-top" id="nav" >
             <nav class="col-5 col-md-3 navbar navbar-expand-xs navbar-dark">
                 <button class="navbar-toggler boton-nav mb-4 ml-5" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -94,6 +94,7 @@
     <script src="js/bootstrap-switch.min.js"></script>
     <script src="js/acciones-menu.js"></script>
     <script src="js/alertify.js"></script>
+    <script src="js/blur.js"></script>
 </body>
 
 </html>
