@@ -377,21 +377,19 @@ $("body .table-dark").on("click", ".btnEliminarCuenta", function(){
       }
     })
 })
-if ($("button[name=abrirPuerta]").val() == 1) {
-    $(this).css("width" , "250px")
-} else if ($("button[name=cerrarPuerta]").val() == 1) {
-    $(this).css("width" , "250px")
-}
+
 
 // Modulo Puerta
 $("button[name=abrirPuerta]").on("click", function(){
     $(this).attr("value","1")
     $("button[name=cerrarPuerta]").attr("value","0")
-    $("button[name=cerrarPuerta]").animate({
-        width: "150px",
+    $("button[name=cerrarPuerta]").css({
+        background: "#0069D9",
+        
     }, 300)
-    $(this).animate({
-        width: "200px",
+    $(this).css({
+        background: "#69d900",
+        borderColor: "transparent",
     }, 500 , function(){
         $.ajax({
             url: '../../controllers/estadopuerta.controller.php',
@@ -407,11 +405,12 @@ $("button[name=abrirPuerta]").on("click", function(){
 $("button[name=cerrarPuerta]").on("click", function(){
     $(this).attr("value","1")
     $("button[name=abrirPuerta]").attr("value","0")
-    $("button[name=abrirPuerta]").animate({
-        width: "150px",
+    $("button[name=abrirPuerta]").css({
+        background: "#0069D9",
     }, 300)
-    $(this).animate({
-        width: "200px",
+    $(this).css({
+        background: "#69d900",
+        borderColor: "transparent",
     }, 500, function(){
         $.ajax({
             url: '../../controllers/estadopuerta.controller.php',
@@ -432,11 +431,12 @@ $("button[name=cerrarPuerta]").on("click", function(){
 $("button[name=TempOn]").on("click", function(){
     $(this).attr("value","1")
     $("button[name=TempOff]").attr("value","0")
-    $("button[name=TempOff]").animate({
-        width: "150px",
+    $("button[name=TempOff]").css({
+        background: "#0069D9",
     }, 300)
-    $(this).animate({
-        width: "200px",
+    $(this).css({
+        background: "#69d900",
+        borderColor: "transparent",
     }, 500 , function(){
         $.ajax({
             url: '../../controllers/estadoTemp.controller.php',
@@ -452,11 +452,13 @@ $("button[name=TempOn]").on("click", function(){
 $("button[name=TempOff]").on("click", function(){
     $(this).attr("value","1")
     $("button[name=TempOn]").attr("value","0")
-    $("button[name=TempOn]").animate({
-        width: "150px",
+    $("button[name=TempOn]").css({
+        background: "#0069D9",
+        
     }, 300)
-    $(this).animate({
-        width: "200px",
+    $(this).css({
+        background: "#69d900",
+        borderColor: "transparent",
     }, 500, function(){
         $.ajax({
             url: '../../controllers/estadoTemp.controller.php',
@@ -468,4 +470,5 @@ $("button[name=TempOff]").on("click", function(){
         })
     })
 })
+
 

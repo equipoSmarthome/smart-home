@@ -46,6 +46,11 @@
                     </ul>
                 </div>
             </nav>
+
+            <div class="col-auto col-md-1 nombre-usuario " >
+                <p><?php echo $_SESSION['correo']; ?></p>
+            </div>
+            
             <div class="col col-md-4 mt-1 alarma">
                 <h4>Alarma</h4>
                 <div class="custom-switch custom-switch-label-onoff actAlarma">   
@@ -102,7 +107,7 @@
                         </div>
 
                         <div class="col-12 boton-garage">
-                            <button class="btn btn-primary" value=1 name="cerrarPuerta" style="width: 200px;"><img class="iconos-menu mt-2" src="../img/iconos/bajar-puerta.png" alt=""><p class="mt-4" >Cerrado</p></button>
+                            <button class="btn btn-primary" value=1 name="cerrarPuerta"><img class="iconos-menu mt-2" src="../img/iconos/bajar-puerta.png" alt=""><p class="mt-4" >Cerrado</p></button>
                         </div>
 
                         

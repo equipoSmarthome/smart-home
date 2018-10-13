@@ -257,8 +257,8 @@ margin-top: 14px !important;
 
 .nombre-usuario{
     vertical-align: center;
-    font-size: 14px;
-    top: 30px;
+    font-size: 20px;
+    top: 25px;
     left: 200px;
     color: #ccc;
     font-weight: bold;
@@ -405,6 +405,7 @@ margin-top: 14px !important;
 
 .alarma h4{
     font-size: 15px;
+    right: 10px;
     margin-top: 0;
     position: absolute;
 
@@ -432,7 +433,7 @@ margin-top: 14px !important;
     .nombre-usuario{
         font-size: 14px;
         top:30px;
-        left: 70px;
+        left: 90px;
         font-weight: bold;
         position: absolute;
     }

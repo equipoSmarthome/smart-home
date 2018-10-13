@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Usuarios Pendientes</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:300,400,500" rel="stylesheet">
+	
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="barra-lateral col-12 col-sm-auto">
+				<div class="logo">
+					<h2>Administrador</h2>
+				</div>
+				<nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
+					<a href="usuarios-activos.html"><i class="fas fa-user"></i><span>Usuarios Activos</span></a>
+					<a href="usuarios-pendientes.html" class="active"><i class="fas fa-question-circle"></i><span>Usuarios Pendientes</span></a>
+					<a href="#"><i class="fas fa-times-circle"></i><span>Salir</span></a>
+				</nav>
+			</div>
+
+			<main class="main col">
+				<div class="row justify-content-center">
+					<div class="col-auto mb-2">
+						<h2>Usuarios Pendientes</h2>
+					</div>
+					<div class="col-10 table-responsive">
+						<table class="table table-inverse table-hover">
+ 							 <thead>
+					            <tr>
+					              <th scope="col">Fecha</th>
+					              <th scope="col">Usuario</th>
+					              <th scope="col">Estado</th>
+					              <th scope="col">Opciones</th>
+					            </tr>
+          					 </thead>
+          						<tbody>
+						            <tr>
+						              <th scope="row">12-10-2018</th>
+						              <td>alguien@gmail.com</td>
+						              <td>Pendiente</td>
+						              <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editar-estado">
+						                Editar
+						              </button></td>
+						            </tr>
+
+						            <tr>
+						              <th scope="row">12-10-2018</th>
+						              <td>alguien@gmail.com</td>
+						              <td>Pendiente</td>
+						              <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editar-estado">
+						                Editar
+						              </button></td>
+						            </tr>
+
+						            <tr>
+						              <th scope="row">12-10-2018</th>
+						              <td>alguien@gmail.com</td>
+						              <td>Pendiente</td>
+						              <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editar-estado">
+						                Editar
+						              </button></td>
+						            </tr>
+           						</tbody>
+						</table>
+					</div>
+				</div>
+			</main>
+
+			<!-- --------------------------Modal----------------------- -->
+			<div class="modal fade" id="editar-estado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h4 class="modal-title" id="exampleModalLabel">Activacion Usuarios</h4>
+			      </div>
+			      <div class="modal-body">
+			      	<form action="" class="app" id="app">
+			      		<div class="row justify-content-center">
+				        	<div class="col">
+				        		<div class="input-group mb-3">
+								  <span class="input-group-addon" id="basic-addon1"><i class="fas fa-user"></i></span>
+								  <input type="text" class="form-control" placeholder="Correo" aria-describedby="basic-addon1">
+								</div>
+
+								<div class="input-group mb-3">
+								  <span class="input-group-addon" id="basic-addon1"><i class="fas fa-laptop"></i></span>
+								  <input type="text" class="form-control" placeholder="Mac" aria-describedby="basic-addon1" readonly>
+								</div>
+
+			                  <div class="fila numero-caracteres">
+				                <div>
+				                  <input type="hidden" id="numero-caracteres" readonly value="6">
+				                </div>
+			                  </div>
+
+			                  <div class="fila simbolos">
+			                    <div class="col">
+			                      <button class="botones-ocultos" id="btn-simbolos"></button>
+			                    </div>
+			                  </div>
+
+			                  <div class="fila numeros">
+			                    <div class="col">
+			                      <button class="botones-ocultos" id="btn-numeros"></i></button>
+			                    </div>
+			                  </div>
+
+			                  <div class="fila mayusculas">
+			                    <div class="col">
+			                      <button class="botones-ocultos" id="btn-mayusculas"></button>
+			                    </div>
+			                  </div>
+
+			                  <div class="fila generar row justify-content-center mb-3">
+			                    <div class="input-group mb-3 col-auto">
+			                      <span class="input-group-addon" id="basic-addon1"><i class="fas fa-key"></i></span>
+			                      <input type="text" class="form-control" id="input-password" placeholder="Generador de contraseña" aria-describedby="basic-addon1" readonly>
+			                    </div>
+
+			                    <div class="col-12">
+			                      <button class="btn btn-primary btn-lg btn-block btn-sm btn-generar" id="btn-generar">Generar <i class="fas fa-lock"></i></button>
+			                    </div>
+			                  </div>
+
+			                  <div class="row">
+			                    <div class="col-4">
+			                    	<h5 class="">Estado:</h5>
+			                    </div>
+
+			                    <div class="form-check col-4">
+							      <label class="form-check-label">
+							        <input type="radio" class="form-check-input" name="estado" id="activo" value="1">
+							        Activo
+							      </label>
+							    </div>
+
+							    <div class="form-check col-4">
+							      <label class="form-check-label">
+							        <input type="radio" class="form-check-input" name="estado" id="estado" value="0">
+							        Pendiente
+							      </label>
+							    </div>
+
+			                  </div>
+				        	</div>
+				        </div>
+			      	</form>
+			        
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-success">Activar</button>
+			        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- --------------------------Modal----------------------- -->
+		</div>
+	</div>
+	
+	<!-- Usar la CDN requiere acceso a Internet -->
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
