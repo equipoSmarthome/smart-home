@@ -1,6 +1,6 @@
 body {
 	background: #f2f2f2;
-	font-size: 16px;
+	font-size: 14px;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -57,7 +57,7 @@ body {
 
 /* --- --- MAIN --- --- */
 .main {
-	padding-top: 40px;
+	padding-top: 20px;
 }
 
 .main .columna {
@@ -96,7 +96,23 @@ body {
 	}
 }
 
-@media screen and (max-width: 575px) {
+@media(max-width: 575px) {
+	body{
+		font-size: 11px;
+	}
+
+	.table button{
+		font-size: 11px;
+	}
+	
+	.modal-title{
+		font-size: 13px;
+	}
+
+	.input-group{
+		font-size: 11px !important ;
+		height: 30px;
+	}
 	.barra-lateral {
 		min-height: auto;
 	}
@@ -105,19 +121,5 @@ body {
 		display: inline-block;
 		border-bottom: none;
 	}
-
-	.main .widget form button {
-		width: 100%;
-	}
 }
 
-@media screen and (max-width: 320px) {
-	.main .comentarios .comentario .foto {
-		width: 30px;
-		height: 30px;
-	}
-
-	.main .comentarios .comentario .botones button {
-		width: 100%;
-	}
-}
