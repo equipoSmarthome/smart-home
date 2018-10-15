@@ -137,10 +137,10 @@
                   <legend>Puerta Garage</legend>
                   <div class="row">
                       <div class="col-12 boton-garage ">
-                          <button class="btn btn-primary" value=1 name="abrirPuerta" style="width: 200px"><img class="iconos-menu mt-2" src="../img/iconos/abrir-puerta.png" alt=""><p class="mt-4">Abierto</p></button>
+                          <button class="btn btn-primary" value=1 name="abrirPuerta"><img class="iconos-menu mt-2" src="../img/iconos/abrir-puerta.png" alt=""><p class="mt-4">Abierto</p></button>
                       </div>
 
-                      <div class="col-12 boton-garage-cerrar">
+                      <div class="col-12 boton-garage-cerrar mb-5">
                           <button class="btn btn-primary"  value=0 name="cerrarPuerta"><img class="iconos-menu mt-2" src="../img/iconos/bajar-puerta.png" alt=""><p class="mt-4" >Cerrar</p></button>
                       </div>
 
