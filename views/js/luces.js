@@ -11,9 +11,9 @@ $("[name='alarma']").bootstrapSwitch();
 $("[name='Cocina']").bootstrapSwitch();
 $("[name='Baño']").bootstrapSwitch();
 $("[name='Garage']").bootstrapSwitch();
-$("[name='Living/Comedor']").bootstrapSwitch();
 $("[name='Dormitorio 1']").bootstrapSwitch();
 $("[name='Dormitorio 2']").bootstrapSwitch();
+$("[name='Dormitorio 3']").bootstrapSwitch();
 //////////////////////////////////////////////////////////
 
 // Si el valor de los switch es 1 en la BD estos quedan seleccionados
@@ -30,14 +30,14 @@ if ($("[name='Baño']").val() == 1 ) {
 if ($("[name='Garage']").val() == 1 ) {
     $('input[name="Garage"]').bootstrapSwitch('state', true, true)
 }
-if ($("[name='Living/Comedor']").val() == 1 ) {
-    $('input[name="Living/Comedor"]').bootstrapSwitch('state', true, true)
-}
 if ($("[name='Dormitorio 1']").val() == 1 ) {
     $('input[name="Dormitorio 1"]').bootstrapSwitch('state', true, true)
 }
 if ($("[name='Dormitorio 2']").val() == 1 ) {
     $('input[name="Dormitorio 2"]').bootstrapSwitch('state', true, true)
+}
+if ($("[name='Dormitorio 3']").val() == 1 ) {
+    $('input[name="Dormitorio 3"]').bootstrapSwitch('state', true, true)
 }
 //////////////////////////////////////////////////////////
 
@@ -145,7 +145,7 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
     } 
   })
   // Funciones Switch Dormitorio 1
-  $('input[name="Living/Comedor"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  $('input[name="Dormitorio 1"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
         var datos = $(this)
@@ -171,7 +171,7 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
     } 
   })
   // Funciones Switch Dormitorio 2
-  $('input[name="Dormitorio 1"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  $('input[name="Dormitorio 2"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
         var datos = $(this)
@@ -197,7 +197,7 @@ $('input[name="alarma"]').on('switchChange.bootstrapSwitch', function(event, sta
     } 
   })
   // Funciones Switch Dormitorio 3
-  $('input[name="Dormitorio 2"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  $('input[name="Dormitorio 3"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
         var datos = $(this)

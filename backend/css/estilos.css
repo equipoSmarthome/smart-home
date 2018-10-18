@@ -19,8 +19,8 @@ body {
 
 /* --- LOGO --- */
 .barra-lateral .logo {
-	background: #0275db;
 	margin-bottom: 2px;
+	width: 300px;
 }
 
 .barra-lateral .logo h2 {
