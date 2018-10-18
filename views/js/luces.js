@@ -390,7 +390,7 @@ $("button[name=abrirPuerta]").on("click", function(){
     $(this).css({
         background: "#35AE6B",
         borderColor: "transparent",
-    }, 500 , function(){
+    })
         $.ajax({
             url: '../../controllers/estadopuerta.controller.php',
             type: 'POST',
@@ -399,7 +399,7 @@ $("button[name=abrirPuerta]").on("click", function(){
                 console.log(respuesta)
             }
         })
-    })
+    
 
 })
 $("button[name=cerrarPuerta]").on("click", function(){
@@ -411,7 +411,7 @@ $("button[name=cerrarPuerta]").on("click", function(){
     $(this).css({
         background: "#35AE6B",
         borderColor: "transparent",
-    }, 500, function(){
+    })
         $.ajax({
             url: '../../controllers/estadopuerta.controller.php',
             type: 'POST',
@@ -420,7 +420,7 @@ $("button[name=cerrarPuerta]").on("click", function(){
                 console.log(respuesta)
             }
         })
-    })
+    
 })
 
 
@@ -437,7 +437,7 @@ $("button[name=TempOn]").on("click", function(){
     $(this).css({
         background: "#35AE6B",
         borderColor: "transparent",
-    }, 500 , function(){
+    })
         $.ajax({
             url: '../../controllers/estadoTemp.controller.php',
             type: 'POST',
@@ -446,7 +446,7 @@ $("button[name=TempOn]").on("click", function(){
                 console.log(respuesta)
             }
         })
-    })
+    
 
 })
 $("button[name=TempOff]").on("click", function(){
@@ -459,7 +459,7 @@ $("button[name=TempOff]").on("click", function(){
     $(this).css({
         background: "#35AE6B",
         borderColor: "transparent",
-    }, 500, function(){
+    })
         $.ajax({
             url: '../../controllers/estadoTemp.controller.php',
             type: 'POST',
@@ -468,7 +468,7 @@ $("button[name=TempOff]").on("click", function(){
                 console.log(respuesta)
             }
         })
-    })
+    
 })
 
 

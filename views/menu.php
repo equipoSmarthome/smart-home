@@ -43,26 +43,8 @@ require_once '../models/switch.modelo.php';
             <div class="col-auto col-md-1 nombre-usuario " >
                 <p><?php echo $_SESSION['correo']; ?></p>
             </div>
-            <div class="col col-md-8 col-lg-4 mt-1 alarma">
-                <h4>Alarma</h4>
-                <div class="custom-switch custom-switch-label-onoff actAlarma">   
-                <label class="bs-switch">
-                
-                <?php 
-          
-          $alarma = ControllerSwitch::mostrarSwitchAlarma();
-
-          foreach ($alarma as $key => $value) {
-            echo '
-            <input type="checkbox" name="alarma" value="'.$value["Estado_Dispositivo"].'">
-            ';
-          }
-          ?>
-  
-                </label>
-                </div>
-            </div>
-            <div class="col d-none d-lg-block logo-header">
+            
+            <div class=" d-none d-md-block logo-header">
                 <img class="" src="img/logo/logo-pequeño.png" alt="">
             </div>
         </div>

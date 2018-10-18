@@ -49,25 +49,6 @@
                 <p><?php echo $_SESSION['correo']; ?></p>
             </div>
             
-            <div class="col col-md-4 mt-1 alarma">
-                <h4>Alarma</h4>
-                <div class="custom-switch custom-switch-label-onoff actAlarma">   
-                <label class="bs-switch">
-                
-                <?php 
-          
-          $alarma = ControllerSwitch::mostrarSwitchAlarma();
-
-          foreach ($alarma as $key => $value) {
-            echo '
-            <input type="checkbox" name="alarma" value="'.$value["Estado_Dispositivo"].'">
-            ';
-          }
-          ?>
-  
-                </label>
-                </div>
-            </div>
             <div class="d-none d-md-block logo-header">
                 <img class="" src="../img/logo/logo-pequeño.png" alt="">
             </div>
@@ -135,13 +116,13 @@
                                             <button class="btn btn-primary" name="TempOff" value=0><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-apagado.png" alt=""><p class="mt-2">Desactivar</p></button>
                                         </div> 
                                         <div class="col-6 col-md-6 boton-usuario">
-                                            <button class="btn btn-primary" id="temperatura" name="TempOn" value=1"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-encendido.png" alt=""><p class="mt-2">Activado</p></button>
+                                            <button class="btn btn-primary" id="temperatura" name="TempOn" value=1" style="background: #35AE6B;  border-color: transparent"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-encendido.png" alt=""><p class="mt-2">Activado</p></button>
                                         </div>  
                                         ';
                                     } else {
                                         echo ' 
                                         <div class="col-6 col-md-6 boton-usuario">
-                                            <button class="btn btn-primary" name="TempOff" value=1"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-apagado.png" alt=""><p class="mt-2">Desactivar</p></button>
+                                            <button class="btn btn-primary" name="TempOff" value=1" style="background: #35AE6B;  border-color: transparent"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-apagado.png" alt=""><p class="mt-2">Desactivar</p></button>
                                         </div> 
                                         <div class="col-6 col-md-6 boton-usuario">
                                             <button class="btn btn-primary" id="temperatura" name="TempOn" value=0><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-encendido.png" alt=""><p class="mt-2">Activado</p></button>

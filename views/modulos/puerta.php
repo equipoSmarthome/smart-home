@@ -51,25 +51,7 @@
                 <p><?php echo $_SESSION['correo']; ?></p>
             </div>
             
-            <div class="col col-md-4 mt-1 alarma">
-                <h4>Alarma</h4>
-                <div class="custom-switch custom-switch-label-onoff actAlarma">   
-                <label class="bs-switch">
-                
-                <?php 
-          
-          $alarma = ControllerSwitch::mostrarSwitchAlarma();
-
-          foreach ($alarma as $key => $value) {
-            echo '
-            <input type="checkbox" name="alarma" value="'.$value["Estado_Dispositivo"].'">
-            ';
-          }
-          ?>
-  
-                </label>
-                </div>
-            </div>
+            
             <div class="d-none d-md-block logo-header">
                 <img class="" src="../img/logo/logo-pequeño.png" alt="">
             </div>
@@ -107,7 +89,7 @@
                         </div>
 
                         <div class="col-12 boton-garage">
-                            <button class="btn btn-primary" value=1 name="cerrarPuerta"><img class="iconos-menu mt-2" src="../img/iconos/bajar-puerta.png" alt=""><p class="mt-4" >Cerrado</p></button>
+                            <button class="btn btn-primary" value=1 name="cerrarPuerta" style="background: #35AE6B; border-color: transparent"><img class="iconos-menu mt-2" src="../img/iconos/bajar-puerta.png" alt=""><p class="mt-4" >Cerrado</p></button>
                         </div>
 
                         
@@ -137,7 +119,7 @@
                   <legend>Puerta Garage</legend>
                   <div class="row">
                       <div class="col-12 boton-garage ">
-                          <button class="btn btn-primary" value=1 name="abrirPuerta"><img class="iconos-menu mt-2" src="../img/iconos/abrir-puerta.png" alt=""><p class="mt-4">Abierto</p></button>
+                          <button class="btn btn-primary" value=1 name="abrirPuerta" style="background: #35AE6B; border-color: transparent"><img class="iconos-menu mt-2" src="../img/iconos/abrir-puerta.png" alt=""><p class="mt-4">Abierto</p></button>
                       </div>
 
                       <div class="col-12 boton-garage-cerrar mb-5">
