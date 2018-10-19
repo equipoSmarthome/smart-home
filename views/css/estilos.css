@@ -29,6 +29,9 @@ body{
   bottom: 0;
     
 }
+.lock {
+    width: 100px;
+}
 /*---------Fin Estilos Fondo---------*/
 /*--------Inicio Estilos Generales---------*/
 @font-face{

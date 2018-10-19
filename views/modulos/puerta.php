@@ -59,7 +59,25 @@
     </header>
     <div class="container principal">
         <div class="row">
-            
+        <div class="col-12 col-md-6">
+                <fieldset class="menu-principal">
+                    <legend>Puerta Principal</legend>
+                    <div class="row">
+                        <div class="col-12 mt-3 mb-5 boton-desbloqueo">
+                            <button class="btn btn-primary" name="puertaPrincipal"><i class="fas fa-lock mt-3 lock fa-3x"></i><p class="mt-4">Desbloquear</p></button>
+                            <br>
+                            <br>
+                            <div class="progress" style="display: none">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p>* Al presionar. Desbloqueras la chapa por 5 seg. Despues se volvera a bloquear</p>
+                        </div>
+                    </div>
+                </fieldset>
+            </div> 
 
             
                         <?php 
@@ -67,18 +85,9 @@
           $puertaOn = ControllerPuerta::mostrarPuerta();
 
           foreach ($puertaOn as $key => $value) {
-              if ($value["Estado_Dispositivo"] == 0 ) {
+              if ($value["Estado_Dispositivo"] == 0 || $value["Estado_Dispositivo"] == 4) {
                   echo '
-                  <div class="col-12 col-md-6">
-                <fieldset class="menu-principal">
-                    <legend>Puerta Principal</legend>
-                    <div class="row">
-                        <div class="col-12 mt-3 mb-5 boton-desbloqueo">
-                            <button class="btn btn-primary" ><img class="iconos-menu mt-3" src="../img/iconos/unlock.png" alt=""><p class="mt-4">Desbloquear</p></button>
-                        </div>
-                    </div>
-                </fieldset>
-            </div>
+                  
 
             <div class="col-12 col-md-6">
                 <fieldset class="menu-principal">
@@ -89,7 +98,7 @@
                         </div>
 
                         <div class="col-12 boton-garage">
-                            <button class="btn btn-primary" value=1 name="cerrarPuerta" style="background: #35AE6B; border-color: transparent"><img class="iconos-menu mt-2" src="../img/iconos/bajar-puerta.png" alt=""><p class="mt-4" >Cerrado</p></button>
+                            <button class="btn btn-primary" value=1 name="cerrarPuerta" style="background: #35AE6B; border-color: transparent;"><img class="iconos-menu mt-2" src="../img/iconos/bajar-puerta.png" alt=""><p class="mt-4" >Cerrado</p></button>
                         </div>
 
                         
@@ -103,23 +112,14 @@
                   
               } else {
                 echo '
-                <div class="col-12 col-md-6">
-              <fieldset class="menu-principal">
-                  <legend>Puerta Principal</legend>
-                  <div class="row">
-                      <div class="col-12 mt-3 mb-5 boton-desbloqueo">
-                          <button class="btn btn-primary" ><img class="iconos-menu mt-3" src="../img/iconos/unlock.png" alt=""><p class="mt-4">Desbloquear</p></button>
-                      </div>
-                  </div>
-              </fieldset>
-          </div>
+               
 
           <div class="col-12 col-md-6">
               <fieldset class="menu-principal">
                   <legend>Puerta Garage</legend>
                   <div class="row">
                       <div class="col-12 boton-garage ">
-                          <button class="btn btn-primary" value=1 name="abrirPuerta" style="background: #35AE6B; border-color: transparent"><img class="iconos-menu mt-2" src="../img/iconos/abrir-puerta.png" alt=""><p class="mt-4">Abierto</p></button>
+                          <button class="btn btn-primary" value=1 name="abrirPuerta" style="background: #35AE6B; border-color: transparent;"><img class="iconos-menu mt-2" src="../img/iconos/abrir-puerta.png" alt=""><p class="mt-4">Abierto</p></button>
                       </div>
 
                       <div class="col-12 boton-garage-cerrar mb-5">

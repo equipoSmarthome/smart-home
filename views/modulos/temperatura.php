@@ -99,7 +99,21 @@
                     <h6 class="mb-3">Definido por el sensor de T°</h6>
                     <div class="row">
                         <div class="col-12 boton-automatico ">
+                            
                             <button class="btn btn-primary"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/rayo.png" alt=""><p class="mt-2">Automatico</p></button>
+                            <br>
+                            
+                            <select class=" form-control col-4" name="" id="">
+                                <option value="1">10°</option>
+                                <option value="2">12°</option>
+                                <option value="3">15°</option>
+                                <option value="4">17°</option>
+                                <option value="5">20°</option>
+                                <option value="6">22°</option>
+                                <option value="7">25°</option>
+                            </select>
+                            
+                            
                         </div>
 
                         
