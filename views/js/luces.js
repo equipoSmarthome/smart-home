@@ -61,7 +61,7 @@ $("[name='Baño']").bootstrapSwitch();
 $("[name='Garage']").bootstrapSwitch();
 $("[name='Dormitorio 1']").bootstrapSwitch();
 $("[name='Dormitorio 2']").bootstrapSwitch();
-$("[name='Dormitorio 3']").bootstrapSwitch();
+$("[name='Living Comedor']").bootstrapSwitch();
 
 // Si el valor de los switch es 1 en la BD estos quedan seleccionados
 // El switch por defecto esta apagado
@@ -80,8 +80,8 @@ if ($("[name='Dormitorio 1']").val() == 1 ) {
 if ($("[name='Dormitorio 2']").val() == 1 ) {
     $('input[name="Dormitorio 2"]').bootstrapSwitch('state', true, true)
 }
-if ($("[name='Dormitorio 3']").val() == 1 ) {
-    $('input[name="Dormitorio 3"]').bootstrapSwitch('state', true, true)
+if ($("[name='Living Comedor']").val() == 1 ) {
+    $('input[name="Living Comedor"]').bootstrapSwitch('state', true, true)
 }
 // Funciones Switch Cocina
 $('input[name="Cocina"]').on('switchChange.bootstrapSwitch', function(event, state) {
@@ -212,8 +212,8 @@ $('input[name="Dormitorio 2"]').on('switchChange.bootstrapSwitch', function(even
         })
     } 
 })
-// Funciones Switch Dormitorio 3
-$('input[name="Dormitorio 3"]').on('switchChange.bootstrapSwitch', function(event, state) {
+// Funciones Switch Living Comedor
+$('input[name="Living Comedor"]').on('switchChange.bootstrapSwitch', function(event, state) {
     if (state){
         $(this).attr("value", 1)
         var datos = $(this)
