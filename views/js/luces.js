@@ -286,13 +286,14 @@ $("button[name=puertaPrincipal]").on("click", function(){
 $("button[name=abrirPuerta]").on("click", function(){
     $(this).attr("value","1")
     $("button[name=cerrarPuerta]").attr("value","0")
-    $("button[name=cerrarPuerta]").css({
-        background: "#0069D9",
-    })
     $(this).css({
         background: "#35AE6B",
         borderColor: "transparent",
     })
+    $("button[name=cerrarPuerta]").css({
+        background: "#0069D9",
+    })
+    
     $.ajax({
         url: '../../controllers/estadopuerta.controller.php',
         type: 'POST',
@@ -316,13 +317,14 @@ $("button[name=abrirPuerta]").on("click", function(){
 $("button[name=cerrarPuerta]").on("click", function(){
     $(this).attr("value","0")
     $("button[name=abrirPuerta]").attr("value","0")
-    $("button[name=abrirPuerta]").css({
-        background: "#0069D9",
-    })
     $(this).css({
         background: "#35AE6B",
         borderColor: "transparent",
     })
+    $("button[name=abrirPuerta]").css({
+        background: "#0069D9",
+    })
+    
     $.ajax({
         url: '../../controllers/estadopuerta.controller.php',
         type: 'POST',
@@ -401,20 +403,36 @@ $("#mas").click(function(e){
     e.preventDefault()
     num++;
     $(".total").html(num)
-    var precioTotal=num*15000
-    $("#ptotal").html(precioTotal)
-    $(".aa").html(precioTotal)
+    $.ajax({
+        url: '../../controllers/estadoTemp.controller.php',
+        type: 'POST',
+        data: {
+            datos: 'tempVentiladorAuto',
+            valor: $(".total").html()
+        },
+        success: function(respuesta){
+            console.log(respuesta)
+        }
+    })
 })
 // Fin Suma Producto
 // Inicio Resta Producto
 $("#menos").click(function(e){
     e.preventDefault()
     if (num>=2){
-    num-=1;
-     $(".total").text(num)
-     var precioTotal=num*15000
-    $("#ptotal").html(precioTotal)	
-    $(".aa").html(precioTotal)		
+        num-=1;
+        $(".total").text(num)
+        $.ajax({
+            url: '../../controllers/estadoTemp.controller.php',
+            type: 'POST',
+            data: {
+                datos: 'tempVentiladorAuto',
+                valor: $(".total").html()
+            },
+            success: function(respuesta){
+                console.log(respuesta)
+            }
+        })		
     }
 })
 

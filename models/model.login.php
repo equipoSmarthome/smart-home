@@ -21,6 +21,7 @@
                     $_SESSION['iduser'] = $fila[0];
                     $_SESSION['correo'] = $fila[1];
                     $_SESSION['pass'] = $fila[2];
+                    $_SESSION['nivel'] = $fila[5];
                     echo "1";
                 } else {
                     echo 3;
@@ -33,6 +34,7 @@
                     $_SESSION['iduser'] = $fila[3];
                     $_SESSION['correo'] = $fila[1];
                     $_SESSION['pass'] = $fila[2];
+                    $_SESSION['nivel'] = $fila[4];
                     echo "1";
                 } else {
                     echo 3;

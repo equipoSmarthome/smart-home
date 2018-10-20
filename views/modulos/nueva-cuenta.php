@@ -34,7 +34,15 @@ require_once '../../controllers/switch.vista.controller.php';
                             <a class="nav-link" href="miperfil.php">Mi Perfil</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="nueva-cuenta.php">Añadir Cuenta</a>
+                        <?php
+                            if ($_SESSION['nivel'] == 1 ) {
+                                echo '
+                                <a class="nav-link" href="nueva-cuenta.php">Añadir Cuenta</a>
+                                ';
+                            }
+                            ?>
+
+                            
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="salir.php">Cerrar Sesion</a>

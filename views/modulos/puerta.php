@@ -38,7 +38,13 @@
                             <a class="nav-link" href="miperfil.php">Mi Perfil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="nueva-cuenta.php">Añadir Perfil</a>
+                        <?php
+                            if ($_SESSION['nivel'] == 1 ) {
+                                echo '
+                                <a class="nav-link" href="nueva-cuenta.php">Añadir Cuenta</a>
+                                ';
+                            }
+                            ?>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="salir.php">Cerrar Sesion</a>

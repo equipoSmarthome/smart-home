@@ -32,7 +32,13 @@ require_once '../models/switch.modelo.php';
                             <a class="nav-link" href="modulos/miperfil.php">Mi Perfil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="modulos/nueva-cuenta.php">Añadir Cuenta</a>
+                        <?php
+                            if ($_SESSION['nivel'] == 1 ) {
+                                echo '
+                                <a class="nav-link" href="modulos/nueva-cuenta.php">Añadir Cuenta</a>
+                                ';
+                            }
+                            ?>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="modulos/salir.php">Cerrar Sesion</a>

@@ -8,6 +8,13 @@ class ModeloCuenta {
 		$sql -> execute();
 		return $sql -> fetchAll();   
     }
+    static public function misPerfiles ($tabla){
+        
+        $correo = $_SESSION['correo'];
+        $sql = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE Correo_Usuario_2 ='$correo' ");
+		$sql -> execute();
+		return $sql -> fetchAll();   
+    }
 }
 
 

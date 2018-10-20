@@ -14,5 +14,10 @@ if ($dato == 'encenderTemp'){
     $tabla = 'dispositivos_casa';
     $respuesta = TemperaturaModeloo::ventiladorAuto($tabla, $valor);
     return ($respuesta);
+} else if ($dato == 'tempVentiladorAuto'){
+    $valor = $_POST['valor'];
+    $tabla = 'dispositivos_casa';
+    $respuesta = TemperaturaModeloo::tempVentiladorAuto($tabla, $valor);
+    return ($respuesta);
 }
 ?>
