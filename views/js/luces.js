@@ -278,7 +278,7 @@ $("button[name=puertaPrincipal]").on("click", function(){
                         }
                     })
                 }
-            },50);
+            },100);
         }
     })
 })

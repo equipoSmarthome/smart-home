@@ -73,7 +73,7 @@
                             </div>
                         </div>
                         <div>
-                            <p>* Al presionar. Desbloqueras la chapa por 5 seg. Despues se volvera a bloquear</p>
+                            <p>* Al presionar. Desbloqueras la chapa por 10 seg. Despues se volvera a bloquear</p>
                         </div>
                     </div>
                 </fieldset>
