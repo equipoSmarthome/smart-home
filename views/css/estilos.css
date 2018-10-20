@@ -29,8 +29,29 @@ body{
   bottom: 0;
     
 }
-.lock {
-    width: 100px;
+.cantidad { 
+	width: auto;
+    text-align: center;
+    background: #ccc;
+    border-radius: 10px;
+}
+.cantidad h3, div, .total {
+	display: inline-block;
+}
+.cantidad div#menos, div#mas {
+    background: #0069D9;
+    width: auto;
+	border-radius: 5px;
+	text-align: center;
+}
+.cantidad #menos, .cantidad #mas {
+    color: rgb(255, 255, 255);
+    padding: .4em;
+}
+.cantidad div {
+	width: auto;
+    text-align: center;
+    color: #000;
 }
 /*---------Fin Estilos Fondo---------*/
 /*--------Inicio Estilos Generales---------*/

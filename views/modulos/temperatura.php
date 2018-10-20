@@ -97,35 +97,40 @@
                     <legend>Configuracion Ventilador</legend>
                     <label>Funciones Ventilador</label>
                     <h6 class="mb-3">Definido por el sensor de T°</h6>
+                    <div class="cantidad">
+                        <div id="menos" class="col-7"><i class="fa fa-minus" aria-hidden="true"></i></div>
+
+                        <?php 
+          
+          $ventiladorAuto = ControllerTemperatura::mostrartempIdeal();
+
+        foreach ($ventiladorAuto as $key => $value) {
+          echo '
+          <div class="total" value="lala">'.$value[2].'</div>
+          ';
+        }
+        ?>
+
+
+                        
+                        <div id="mas" class="col-7"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                    </div>
+                    <br>
+                            <br>
                     <div class="row">
                         <div class="col-12 boton-automatico ">
                             
-                            <button class="btn btn-primary"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/rayo.png" alt=""><p class="mt-2">Automatico</p></button>
-                            <br>
-                            
-                            <select class=" form-control col-4" name="" id="">
-                                <option value="1">10°</option>
-                                <option value="2">12°</option>
-                                <option value="3">15°</option>
-                                <option value="4">17°</option>
-                                <option value="5">20°</option>
-                                <option value="6">22°</option>
-                                <option value="7">25°</option>
-                            </select>
-                            
-                            
-                        </div>
-
-                        
-                        <div class="col-12 mt-3 mb-3">
-                            <h6 class="mb-3">Definido por el usuario</h6>
-                            <div class="row">
                                 <?php 
           
                                 $temperatura = ControllerTemperatura::mostrarTemperatura();
                                 foreach ($temperatura as $key => $value) {
                                     if ($value["Estado_Dispositivo"] == 1) {
-                                        echo ' 
+                                        echo '
+                                        <button class="btn btn-primary ventiladorAuto"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/rayo.png" alt=""><p class="mt-2">Automatico</p></button> 
+                        </div>                    
+                        <div class="col-12 mt-3 mb-3">
+                            <h6 class="mb-3">Definido por el usuario</h6>
+                            <div class="row">
                                         <div class="col-6 col-md-6 boton-usuario">
                                             <button class="btn btn-primary" name="TempOff" value=0><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-apagado.png" alt=""><p class="mt-2">Desactivar</p></button>
                                         </div> 
@@ -133,10 +138,29 @@
                                             <button class="btn btn-primary" id="temperatura" name="TempOn" value=1" style="background: #35AE6B;  border-color: transparent"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-encendido.png" alt=""><p class="mt-2">Activado</p></button>
                                         </div>  
                                         ';
-                                    } else {
+                                    } else if ($value["Estado_Dispositivo"] == 0){
                                         echo ' 
+                                        <button class="btn btn-primary ventiladorAuto"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/rayo.png" alt=""><p class="mt-2">Automatico</p></button> 
+                        </div>                    
+                        <div class="col-12 mt-3 mb-3">
+                            <h6 class="mb-3">Definido por el usuario</h6>
+                            <div class="row">
                                         <div class="col-6 col-md-6 boton-usuario">
                                             <button class="btn btn-primary" name="TempOff" value=1" style="background: #35AE6B;  border-color: transparent"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-apagado.png" alt=""><p class="mt-2">Desactivar</p></button>
+                                        </div> 
+                                        <div class="col-6 col-md-6 boton-usuario">
+                                            <button class="btn btn-primary" id="temperatura" name="TempOn" value=0><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-encendido.png" alt=""><p class="mt-2">Activado</p></button>
+                                        </div>  
+                                        ';
+                                    } else if ($value["Estado_Dispositivo"] == 3){
+                                        echo ' 
+                                        <button class="btn btn-primary ventiladorAuto" style="background: #35AE6B;  border-color: transparent"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/rayo.png" alt=""><p class="mt-2">Automatico</p></button> 
+                        </div>                    
+                        <div class="col-12 mt-3 mb-3">
+                            <h6 class="mb-3">Definido por el usuario</h6>
+                            <div class="row">
+                                        <div class="col-6 col-md-6 boton-usuario">
+                                            <button class="btn btn-primary" name="TempOff" value=0" ><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-apagado.png" alt=""><p class="mt-2">Desactivar</p></button>
                                         </div> 
                                         <div class="col-6 col-md-6 boton-usuario">
                                             <button class="btn btn-primary" id="temperatura" name="TempOn" value=0><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-encendido.png" alt=""><p class="mt-2">Activado</p></button>

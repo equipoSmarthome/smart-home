@@ -16,6 +16,11 @@ class ControllerTemperatura {
         $respuesta = TemperaturaModelo::mostrarHumedad($tabla);
         return $respuesta;
     }
+    public function mostrartempIdeal(){
+        $tabla = "dispositivos_casa";
+        $respuesta = TemperaturaModelo::mostrartempIdeal($tabla);
+        return $respuesta;
+    }
 
 }
 

@@ -19,6 +19,12 @@ class TemperaturaModelo {
 		$sql -> execute();
 		return $sql -> fetchAll();
     }
+    static public function mostrartempIdeal($tabla){
+        $id = $_SESSION['iduser'];
+		$sql = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE id_Dispositivo = 13 AND id_Usuario = '$id'  ");
+		$sql -> execute();
+		return $sql -> fetchAll();
+    }
 }
 
 

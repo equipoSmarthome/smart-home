@@ -282,7 +282,6 @@ $("button[name=puertaPrincipal]").on("click", function(){
         }
     })
 })
-
 // Abrir Puerta Garage
 $("button[name=abrirPuerta]").on("click", function(){
     $(this).attr("value","1")
@@ -343,8 +342,113 @@ $("button[name=cerrarPuerta]").on("click", function(){
         }
     })
 })
-
 //////////////////////////////////////////////////////////
+///////////////  MODULO  TEMPERATURA  ////////////////////
+// Encender Ventilador
+$("button[name=TempOn]").on("click", function(){
+    $(this).attr("value","1")
+    $("button[name=TempOff]").attr("value","0")
+    $(".ventiladorAuto").attr("value","0")
+    $("button[name=TempOff]").css({
+        background: "#0069D9",
+    })
+    $(".ventiladorAuto").css({
+        background: "#0069D9",
+    })
+    $(this).css({
+        background: "#35AE6B",
+        borderColor: "transparent",
+    })
+    $.ajax({
+        url: '../../controllers/estadoTemp.controller.php',
+        type: 'POST',
+        data: {datos: 'encenderTemp'},
+        success: function(respuesta){
+            console.log(respuesta)
+        }    
+    })
+})
+// Apagar Ventilador
+$("button[name=TempOff]").on("click", function(){
+    $(this).attr("value","1")
+    $("button[name=TempOn]").attr("value","0")
+    $(".ventiladorAuto").attr("value","0")
+    $("button[name=TempOn]").css({
+        background: "#0069D9",   
+    })
+    $(".ventiladorAuto").css({
+        background: "#0069D9",
+    })
+    $(this).css({
+        background: "#35AE6B",
+        borderColor: "transparent",
+    })
+    $.ajax({
+        url: '../../controllers/estadoTemp.controller.php',
+        type: 'POST',
+        data: {datos: 'apagarTemp'},
+        success: function(respuesta){
+            console.log(respuesta)
+        }
+    })
+    
+})
+// Ventilador Automatico
+
+var num = $(".total").text()
+console.log(num)
+$("#mas").click(function(e){
+    e.preventDefault()
+    num++;
+    $(".total").html(num)
+    var precioTotal=num*15000
+    $("#ptotal").html(precioTotal)
+    $(".aa").html(precioTotal)
+})
+// Fin Suma Producto
+// Inicio Resta Producto
+$("#menos").click(function(e){
+    e.preventDefault()
+    if (num>=2){
+    num-=1;
+     $(".total").text(num)
+     var precioTotal=num*15000
+    $("#ptotal").html(precioTotal)	
+    $(".aa").html(precioTotal)		
+    }
+})
+
+$(".ventiladorAuto").on("click", function(){
+    var tempAuto = $(".total").text()
+    $(this).css({
+        background: "#35AE6B",
+        borderColor: "transparent",
+    })
+    $(this).attr("value","3")
+    $("button[name=TempOn]").css({
+        background: "#0069D9",   
+    })
+    $("button[name=TempOff]").css({
+        background: "#0069D9",   
+    })
+    $("button[name=TempOn]").attr("value","0")
+    $("button[name=TempOff]").attr("value","0")
+    $.ajax({
+        url: '../../controllers/estadoTemp.controller.php',
+        type: 'POST',
+        data: {
+            datos: 'ventiladorAuto',
+            data: tempAuto
+        },
+        success: function(respuesta){
+            console.log(respuesta)
+        }
+    })
+
+
+})
+//////////////////////////////////////////////////////////
+
 
 
 $("#editarCorreo").click(function(e){
@@ -499,56 +603,3 @@ $("body .table-dark").on("click", ".btnEliminarCuenta", function(){
       }
     })
 })
-
-// Modulo Puerta
-
-
-
-
-
-
-// Modulo Temperatura
-$("button[name=TempOn]").on("click", function(){
-    $(this).attr("value","1")
-    $("button[name=TempOff]").attr("value","0")
-    $("button[name=TempOff]").css({
-        background: "#0069D9",
-    }, 300)
-    $(this).css({
-        background: "#35AE6B",
-        borderColor: "transparent",
-    })
-        $.ajax({
-            url: '../../controllers/estadoTemp.controller.php',
-            type: 'POST',
-            data: {datos: 'encenderTemp'},
-            success: function(respuesta){
-                console.log(respuesta)
-            }
-        })
-    
-
-})
-$("button[name=TempOff]").on("click", function(){
-    $(this).attr("value","1")
-    $("button[name=TempOn]").attr("value","0")
-    $("button[name=TempOn]").css({
-        background: "#0069D9",
-        
-    }, 300)
-    $(this).css({
-        background: "#35AE6B",
-        borderColor: "transparent",
-    })
-        $.ajax({
-            url: '../../controllers/estadoTemp.controller.php',
-            type: 'POST',
-            data: {datos: 'apagarTemp'},
-            success: function(respuesta){
-                console.log(respuesta)
-            }
-        })
-    
-})
-
-

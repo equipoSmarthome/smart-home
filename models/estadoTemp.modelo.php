@@ -14,4 +14,11 @@ class TemperaturaModeloo {
 		$sql -> execute();
 		echo 'funcionaaaaa';
 	}
+	static public function ventiladorAuto ($tabla, $valor) {
+		$id = $_SESSION['iduser'];
+		$sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo = 3 WHERE id_Dispositivo = 7 AND id_Usuario = '$id' ");
+		$sql = Conexion::conectar()->prepare("UPDATE $tabla SET Estado_Dispositivo = $valor WHERE id_Dispositivo = 13 AND id_Usuario = '$id' ");
+		$sql -> execute();
+		echo 'funcionaaaaa';
+	}
 }
