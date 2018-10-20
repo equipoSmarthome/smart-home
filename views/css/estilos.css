@@ -34,8 +34,9 @@ body{
     text-align: center;
     background: #ccc;
     border-radius: 10px;
+    display: inline-block;
 }
-.cantidad h3, div, .total {
+#mas, #menos, .total {
 	display: inline-block;
 }
 .cantidad div#menos, div#mas {
