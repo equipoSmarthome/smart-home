@@ -41,7 +41,7 @@ require_once '../models/switch.modelo.php';
                             ?>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="modulos/salir.php">Cerrar Sesion</a>
+                            <a class="nav-link" href="modulos/salir.php">Cerrar Sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -59,7 +59,7 @@ require_once '../models/switch.modelo.php';
         <div class="row justify-content-center">
             <div class="col-12">
                 <fieldset class="menu-principal">
-                    <legend>Menu </legend>
+                    <legend>Menú </legend>
                     <div class="botones-menu mb-3">
                         <div class="row">
                             <div class="col-12 col-md-6">

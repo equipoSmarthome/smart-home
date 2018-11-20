@@ -5,7 +5,7 @@
     require_once '../../models/puerta.modelo.php';
     
 	if (!isset($_SESSION['correo'])) {
-	 	header('Location: ../index.php');
+	 	header('Location: ../../index.php');
 	}
 ?> 
 <!DOCTYPE html>
@@ -47,7 +47,7 @@
                             ?>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="salir.php">Cerrar Sesion</a>
+                            <a class="nav-link" href="salir.php">Cerrar Sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -73,13 +73,10 @@
                             <button class="btn btn-primary" name="puertaPrincipal"><i class="fas fa-lock mt-3 lock fa-3x"></i><p class="mt-4">Desbloquear</p></button>
                             <br>
                             <br>
-                            <div class="progress" style="display: none">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >
-                                </div>
-                            </div>
+                            
                         </div>
                         <div>
-                            <p>* Al presionar. Desbloqueras la chapa por 10 seg. Despues se volvera a bloquear</p>
+                            <p>* Al presionar. Desbloquearás la chapa por 10 seg. Después se volverá a bloquear</p>
                         </div>
                     </div>
                 </fieldset>

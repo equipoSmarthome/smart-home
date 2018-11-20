@@ -7,17 +7,22 @@ $pass2 = $_POST['pass2'];
 if ( $pass1 == "" || $pass2 == "" || $correo == "") {
     echo 2;
 } else {
-    if ($pass1 != $pass2) {
-        echo 3;
-    } else {
-        if (filter_var($correo, FILTER_VALIDATE_EMAIL)) {
-            $tabla = "usuario_2";
-            $respuesta = nuevaCuentalModelo::nuevaCuenta($tabla, $correo, $pass1);
-            return ($respuesta);
+    if (strlen($pass1) > 16 || strlen($pass1) < 7) {
+        echo 5;
+    }
+    else {
+        if ($pass1 != $pass2) {
+            echo 3;
         } else {
-            echo 4;
+            if (filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+                $tabla = "usuario_2";
+                $respuesta = nuevaCuentalModelo::nuevaCuenta($tabla, $correo, $pass1);
+                return ($respuesta);
+            } else {
+                echo 4;
+            }
+            
         }
-        
     }
 }
 

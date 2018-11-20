@@ -45,7 +45,7 @@ require_once '../../controllers/switch.vista.controller.php';
                             
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="salir.php">Cerrar Sesion</a>
+                            <a class="nav-link" href="salir.php">Cerrar Sesión</a>
                         </li>
                     </ul>
                 </div>

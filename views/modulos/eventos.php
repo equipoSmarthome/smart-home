@@ -1,10 +1,78 @@
 <?php 
 require_once '../../controllers/switch.vista.controller.php';
 require_once '../../models/switch.modelo.php';
-	
 	if (!isset($_SESSION['correo'])) {
 	 	header('Location: ../index.php');
-	}
+    }
+    // Definimos nuestra zona horaria
+date_default_timezone_set("America/Santiago");
+
+// incluimos el archivo de funciones
+include '../../calendario/funciones.php';
+
+// incluimos el archivo de configuracion
+include '../../calendario/config.php';
+
+// Verificamos si se ha enviado el campo con name from
+if (isset($_POST['from'])) 
+{
+
+    // Si se ha enviado verificamos que no vengan vacios
+    if ($_POST['from']!="" AND $_POST['to']!="") 
+    {
+
+        // Recibimos el fecha de inicio y la fecha final desde el form
+$Datein                    = date('d/m/Y H:i:s', strtotime($_POST['from']));
+$Datefi                    = date('d/m/Y H:i:s', strtotime($_POST['to']));
+        $inicio = _formatear($Datein);
+        // y la formateamos con la funcion _formatear
+
+        $final  = _formatear($Datefi);
+
+        // Recibimos el fecha de inicio y la fecha final desde el form
+        $orderDate                      = date('d/m/Y H:i:s', strtotime($_POST['from']));
+        $inicio_normal = $orderDate;
+
+        // y la formateamos con la funcion _formatear
+        $orderDate2                      = date('d/m/Y H:i:s', strtotime($_POST['to']));
+        $final_normal  = $orderDate2;
+
+        // Recibimos los demas datos desde el form
+        $titulo = evaluar($_POST['title']);
+
+        // y con la funcion evaluar
+        $body   = evaluar($_POST['event']);
+
+        // reemplazamos los caracteres no permitidos
+        $clase  = evaluar($_POST['class']);
+
+        // insertamos el evento
+        $query="INSERT INTO agenda VALUES(null,'$titulo','$body','','$clase','$inicio','$final','$inicio_normal','$final_normal')";
+
+        // Ejecutamos nuestra sentencia sql
+         $conexion->query($query)or die('<script type="text/javascript">alert("Horario No Disponible ")</script>');
+         
+         header("Location:../eventos/");         
+  
+          
+        // Obtenemos el ultimo id insetado
+        $im=$conexion->query("SELECT MAX(id) AS id FROM agenda");
+        $row = $im->fetch_row();  
+        $id = trim($row[0]);
+
+        // para generar el link del evento
+        $link = "../eventos/"."descripcion_evento.php?id=$id";
+
+        // y actualizamos su link
+        $query="UPDATE agenda SET url = '$link' WHERE id = $id";
+
+        // Ejecutamos nuestra sentencia sql
+        $conexion->query($query); 
+
+        // redireccionamos a nuestro calendario
+        header("Location:../eventos.php"); 
+    }
+}
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,12 +83,17 @@ require_once '../../models/switch.modelo.php';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/calendar.css">
     <link rel="stylesheet" href="../css/fontawesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     
     <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" href="../css/bootstrap-switch.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
+
+    <link rel="stylesheet" href="../../calendario/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../../calendario/css/calendar.css">
+    <link rel="stylesheet" href="../../calendario/css/estilos.css">
+
     
     
     
@@ -49,7 +122,7 @@ require_once '../../models/switch.modelo.php';
                             ?>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="salir.php">Cerrar Sesion</a>
+                            <a class="nav-link" href="salir.php">Cerrar Sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -66,57 +139,156 @@ require_once '../../models/switch.modelo.php';
         <div class="row">
             <div class="col-12 col-md-6">
                 <!-- Inicio Calendario -->
-                <div id='calendar'></div>
-
-
-
-
-                <!-- <div class="calendar" data-color="normal">
-                    <div data-role="day" data-day="<?php //echo date("Ynd",mktime(0,0,0,date("m"),date("d")+1,date("Y"))); ?>">
-                        <div data-role="event" data-name="Soy un evento que siempre saldr&eacute; ma&ntilde;ana" data-start="9.00" data-end="9.30" data-location="martiniglesias.eu">
-                        </div>
-                    </div>
+                <div class="page-header"><h2></h2></div>
+            <div class="pull-left form-inline">
+                <br>
+                <div class="btn-group botones-mes">
+                    <button class="btn btn-primary" data-calendar-nav="prev"><< Anterior</button>
+                    <button class="btn" data-calendar-nav="today">Hoy</button>
+                    <button class="btn btn-primary" data-calendar-nav="next">Siguiente >></button>
                 </div>
-                <script>
-                var yy;
-                var calendarArray =[];
-                var monthOffset = [6,7,8,9,10,11,0,1,2,3,4,5];
-                var monthArray = [["ENE","enero"],["FEB","Febrero"],["MAR","Marzo"],["ABR","Abril"],["MAY","Mayo"],["JUN","Junio"],["JUL","Julio"],["AGO","Agosto"],["SEP","Septiembre"],["OCT","Octubre"],["NOV","Noviembre"],["DIC","Diciembre"]];
-                var letrasArray = ["L","M","X","J","V","S","D"];
-                var dayArray = ["7","1","2","3","4","5","6"];
-                $(document).ready(function() {
-                    $(document).on('click','.calendar-day.have-events',activateDay);
-                    $(document).on('click','.specific-day',activatecalendar);
-                    $(document).on('click','.calendar-month-view-arrow',offsetcalendar);
-                    $(window).resize(calendarScale);
-                    $(".calendar").calendar({
-                        "2013910": {
-                            "Mulberry Festival": {
-                                start: "9.00",
-                                end: "9.30",
-                                location: "London"
-                            }
-                        }
-                    });
-                    calendarSet();
-                    calendarScale();
-                    });
-                </script>
-        
-                <script type="text/javascript">
-                    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-                    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-                </script>
-                <script type="text/javascript">
-                try {
-                    var pageTracker = _gat._getTracker("UA-266167-20");
-                    pageTracker._setDomainName(".martiniglesias.eu");
-                    pageTracker._trackPageview();
-                } catch(err) {}</script>
- -->
+            </div>
+            <hr>
+            <div class="row">
+                <div id="calendar"></div> <!-- Aqui se mostrara nuestro calendario -->
+                <br><br>
+            </div>
+            <div class="modal fade" id="events-modal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body" style="height: 400px">
+                                    <p>One fine body&hellip;</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+
+
+
 
                 <!-- Fin Calendario -->
             </div>
+            <script src="../../calendario/js/es-ES.js"></script>
+            <script src="../../calendario/js/jquery.min.js"></script>            
+            <script src="../../calendario/js/moment.js"></script>
+            <script src="../../calendario/js/bootstrap.min.js"></script>
+            <script src="../../calendario/js/bootstrap-datetimepicker.js"></script>
+            <script src="../../calendario/js/underscore-min.js"></script>
+            <script src="../../calendario/js/calendar.js"></script>
+            
+            <script type="text/javascript">
+        (function($){
+                //creamos la fecha actual
+                var date = new Date();
+                var yyyy = date.getFullYear().toString();
+                var mm = (date.getMonth()+1).toString().length == 1 ? "0"+(date.getMonth()+1).toString() : (date.getMonth()+1).toString();
+                var dd  = (date.getDate()).toString().length == 1 ? "0"+(date.getDate()).toString() : (date.getDate()).toString();
+
+                //establecemos los valores del calendario
+                var options = {
+
+                    // definimos que los agenda se mostraran en ventana modal
+                        modal: '#events-modal', 
+
+                        // dentro de un iframe
+                        modal_type:'iframe',    
+
+                        //obtenemos los agenda de la base de datos
+                        events_source: '../../calendario/obtener_eventos.php', 
+
+                        // mostramos el calendario en el mes
+                        view: 'month',             
+
+                        // y dia actual
+                        day: yyyy+"-"+mm+"-"+dd,   
+
+
+                        // definimos el idioma por defecto
+                        language: 'es-ES', 
+
+                        //Template de nuestro calendario
+                        tmpl_path: '../../calendario/tmpls/', 
+                        tmpl_cache: false,
+
+
+                        // Hora de inicio
+                        time_start: '08:00', 
+
+                        // y Hora final de cada dia
+                        time_end: '22:00',   
+
+                        // intervalo de tiempo entre las hora, en este caso son 30 minutos
+                        time_split: '30',    
+
+                        // Definimos un ancho del 100% a nuestro calendario
+                        width: '100%', 
+
+                        onAfterEventsLoad: function(events)
+                        {
+                                if(!events)
+                                {
+                                        return;
+                                }
+                                var list = $('#eventlist');
+                                list.html('');
+
+                                $.each(events, function(key, val)
+                                {
+                                        $(document.createElement('li'))
+                                                .html('<a href="' + val.url + '">' + val.title + '</a>')
+                                                .appendTo(list);
+                                });
+                        },
+                        onAfterViewLoad: function(view)
+                        {
+                                $('.page-header h2').text(this.getTitle());
+                                $('.btn-group button').removeClass('active');
+                                $('button[data-calendar-view="' + view + '"]').addClass('active');
+                        },
+                        classes: {
+                                months: {
+                                        general: 'label'
+                                }
+                        }
+                };
+
+
+                // id del div donde se mostrara el calendario
+                var calendar = $('#calendar').calendar(options); 
+
+                $('.btn-group button[data-calendar-nav]').each(function()
+                {
+                        var $this = $(this);
+                        $this.click(function()
+                        {
+                                calendar.navigate($this.data('calendar-nav'));
+                        });
+                });
+
+                $('.btn-group button[data-calendar-view]').each(function()
+                {
+                        var $this = $(this);
+                        $this.click(function()
+                        {
+                                calendar.view($this.data('calendar-view'));
+                        });
+                });
+
+                $('#first_day').change(function()
+                {
+                        var value = $(this).val();
+                        value = value.length ? parseInt(value) : null;
+                        calendar.setOptions({first_day: value});
+                        calendar.view();
+                });
+        }(jQuery));
+    </script>
+        </div>
+        
 
 
 
@@ -277,16 +449,18 @@ require_once '../../models/switch.modelo.php';
     
 
     
-    <script src="../js/jquery-3.3.1.min.js"></script>
+    
+    
+    <script src="../js/underscore-min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/fontawesome.min.js"></script>
-    <script src="../js/moment.js"></script>
-    <script src="../js/calendar.js"></script>
-    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/es-ES.js"></script>
+    
+    
+    <script src="../js/bootstrap-datetimepicker.js"></script>
     <script src="../js/bootstrap-switch.min.js"></script>
     <script src="../js/luces.js"></script>
-    <script src="../js/calendario.js"></script>
     
 </body>
 </html>

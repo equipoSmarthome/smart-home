@@ -2,7 +2,6 @@
 require_once 'conexion.php';
 session_start();
 
-
 class nuevaCuentalModelo {
     static public function nuevaCuenta ($tabla, $correo, $pass1){
         $id = $_SESSION['iduser'];

@@ -42,7 +42,7 @@
                             ?>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="salir.php">Cerrar Sesion</a>
+                            <a class="nav-link" href="salir.php">Cerrar Sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -59,7 +59,7 @@
         <div class="row">
             <div class="col-12">
                 <fieldset class="menu-principal">
-                    <legend>Menu</legend>
+                    <legend>Luces</legend>
 
 
 

@@ -913,16 +913,15 @@ if(!String.prototype.formatNum) {
 		$('*[data-toggle="tooltip"]').tooltip({container: 'body'});
 
 		$('*[data-cal-date]').click(function() {
-			$('#add_evento').modal('show'); 
-			// var view = $(this).data('cal-view');
-			// self.options.day = $(this).data('cal-date');
-			// self.view(view);
+			var view = $(this).data('cal-view');
+			self.options.day = $(this).data('cal-date');
+			self.view(view);
 		});
-		// $('.cal-cell').dblclick(function() {
-		// 	var view = $('[data-cal-date]', this).data('cal-view');
-		// 	self.options.day = $('[data-cal-date]', this).data('cal-date');
-		// 	self.view(view);
-		// });
+		$('.cal-cell').dblclick(function() {
+			var view = $('[data-cal-date]', this).data('cal-view');
+			self.options.day = $('[data-cal-date]', this).data('cal-date');
+			self.view(view);
+		});
 
 		this['_update_' + this.options.view]();
 

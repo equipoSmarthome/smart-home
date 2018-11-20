@@ -3,8 +3,6 @@
     session_start();
     $correo = $_POST['correo'];
     $pass = $_POST['pass'];
-    
-
     if ($correo == "" || $pass == "" ) {
         echo 2;  
     } else { 

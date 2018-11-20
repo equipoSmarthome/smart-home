@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 16px;
+}
+
+
+@media (max-width: 640px){
+   
+    body{
+        font-size: 11px;
+    }
+   
+    .modal-lista-eventos{
+        font-size: 12px;
+    }
+
+    .botones-mes button, .boton-crear-evento button{
+        font-size: 12px;
+    }
+
+    .boton-crear-evento button, .btn-group .botones-mes button{
+        margin:0 5px;
+    }
+}

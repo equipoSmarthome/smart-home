@@ -45,7 +45,7 @@
                             ?>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="salir.php">Cerrar Sesion</a>
+                            <a class="nav-link" href="salir.php">Cerrar Sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -64,7 +64,7 @@
         <div class="row">
             <div class="col-12 col-md-6 temperatura">
                 <fieldset class="menu-principal">
-                    <legend>Informacion General</legend>
+                    <legend>Información General</legend>
                     <div class="row">
                         <div class="col-12 mt-3 mb-5">
                             <h2>Temperatura Actual</h2>

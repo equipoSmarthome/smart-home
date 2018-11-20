@@ -39,7 +39,7 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-10">
-                            <button type="submit" class="btn btn-primary btn-block" name="entrar" value="entrar">Iniciar Sesion</button>
+                            <button type="submit" class="btn btn-primary btn-block" name="entrar" value="entrar">Iniciar Sesión</button>
                         </div>
                     </div>
                 </form>

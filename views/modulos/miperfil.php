@@ -43,7 +43,7 @@ require_once '../../models/switch.modelo.php';
                             ?>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="salir.php">Cerrar Sesion</a>
+                            <a class="nav-link" href="salir.php">Cerrar Sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -95,7 +95,7 @@ require_once '../../models/switch.modelo.php';
                         
                         <label class="col-12 col-md-2 col-form-label">Repetir Contraseña</label>
                         <div class="col-8 col-md-7">
-                        <input type="password" class="form-control" placeholder="Contraseña"  name="mipass2" value="<?php echo $_SESSION['pass']; ?>">
+                        <input type="password" class="form-control" placeholder="Contraseña" name="mipass2" value="<?php echo $_SESSION['pass']; ?>">
                         </div>
                         <div class="col-4 col-md-3">
                             <button class="btn btn-sm btn-primary ">

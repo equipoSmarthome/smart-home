@@ -243,7 +243,6 @@ $('input[name="Living Comedor"]').on('switchChange.bootstrapSwitch', function(ev
 // Desbloquear Puerta Principal
 $("button[name=puertaPrincipal]").on("click", function(){
     $(this).attr("value","1")
-    $('.progress').css('display', '')
     $(".lock").attr("class","fas fa-lock-open mt-3 lock fa-3x")
     $(this).css({
         background: "#35AE6B",
@@ -257,14 +256,9 @@ $("button[name=puertaPrincipal]").on("click", function(){
             console.log(respuesta)
             var progreso = 0;
             var idIterval = setInterval(function(){
-                // Aumento en 10 el progeso
                 progreso +=1;
-                $('.progress-bar').css('width', progreso + '%');
-                //Si llegó a 100 elimino el interval
                 if(progreso == 100){
                     clearInterval(idIterval);
-                    $('.progress').css('display', 'none')
-                    $('.progress-bar').css('width', 0);
                     $(".lock").attr("class","fas fa-lock mt-3 lock fa-3x")
                     $("button[name=puertaPrincipal]").css({
                         background: "#0069D9",
@@ -466,9 +460,8 @@ $(".ventiladorAuto").on("click", function(){
 
 })
 //////////////////////////////////////////////////////////
-
-
-
+//////////////////  MODULO  PERFIL  //////////////////////
+// Editar Correo
 $("#editarCorreo").click(function(e){
     e.preventDefault();
     $(".btn-guardar").show()
@@ -508,9 +501,8 @@ $("#editarCorreo").click(function(e){
         }  
     })
 })
-
+// Editar Contraseña
 $("#editarPass").click(function(e){
-
     e.preventDefault();
     $(".btn-guardar").show()
     $("#pass2").show()
@@ -523,11 +515,18 @@ $("#editarPass").click(function(e){
     $("input[name=mipass]").focus()
     $("#guardarMiPerfil").click(function(e){
         e.preventDefault();
-        console.log()
+        
+        var pass1 = $("input[name=mipass]").val()
+        console.log(pass1.length)
+
         if($("input[name=mipass]").val() == "" || $("input[name=mipass2]").val() == "" ){
             swal("Error", "Debes Completar los campos Contraseña. ", "error");
 
-        }else if ($("input[name=mipass]").val() == $("input[name=mipass2]").val() ) {
+        } else if ( pass1.length < 7){
+            swal("Error", "La contraseña debe tener entre 8 y 16 caracteres. ", "error");
+        } else if ( pass1.length > 16){
+            swal("Error", "La contraseña debe tener entre 8 y 16 caracteres. ", "error");
+        } else if ($("input[name=mipass]").val() == $("input[name=mipass2]").val() ) {
             var datos = $("#form-miPerfil").serialize()
             console.log(datos)
             $.ajax({
@@ -558,12 +557,15 @@ $("#editarPass").click(function(e){
 $("#formu-nuevaCuenta").submit(function(e){
     e.preventDefault()
     var datos = $(this).serialize()
+    console.log(datos)
     $.ajax({
         url: '../../controllers/nuevacuenta.controller.php',
         type: 'POST',
         data: datos,
         success: function(respuesta){
+            console.log(respuesta)
             if (respuesta == 1){
+
                 
                 swal("Genial", "Ha creado una Nueva Cuenta", "success").then((result) => {
                     window.location = "../modulos/nueva-cuenta.php"
@@ -574,6 +576,8 @@ $("#formu-nuevaCuenta").submit(function(e){
                 swal("Contraseñas Distintas", "Las Contraseñas deben ser iguales ", "error");        
             } else if (respuesta == 4){
                 swal("Correo Incorrecto", "Debes Ingresar un correo Valido", "error")       
+            } else if ( respuesta == 5){
+                swal("Error", "La contraseña debe tener entre 8 y 16 caracteres.", "error")    
             }
 
         }
@@ -608,7 +612,7 @@ $("body .table-dark").on("click", ".btnEliminarCuenta", function(){
                 if ( respuesta == 1) {
                     swal(
                       'Eliminado!',
-                      'Su cuenta a sido eliminada.',
+                      'Su cuenta ha sido eliminada.',
                       'success'
                     ).then((result) => {
                       
