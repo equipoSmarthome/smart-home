@@ -349,96 +349,73 @@ $Datefi                    = date('d/m/Y H:i:s', strtotime($_POST['to']));
   </div>
 </div>
 
-<div class="modal fade modal-crear-evento" id="modal-crear-evento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content bg-dark">
+<div class="modal fade" id="add_evento" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark ">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Crear Evento</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h4 class="modal-title" id="myModalLabel">Agregar nuevo evento</h4>
       </div>
-      <div class="modal-body bg-dark">
-        <div class="row inicio-evento">
-            <div class="col-6 col-md-3">
-                <h6>Comienza</h6>
-                <input type="date" name=" " id="">
-            </div>
-            <div class="col-6 col-md-3">
-                <h6>Hora</h6>
-                <input type="time">
-            </div>
-            <div class="col-12 col-md-6">
-                <h6>Estado</h6>
-                <div class="row">
-                    <div class="col-3 col-md-auto">
-                        <p>Encender</p>
-                    </div> 
-                    <div class="col-6 col-md-auto">
-                        <div class="custom-switch custom-switch-label-onoff estado">   
-                            <label class="bs-switch">
-                                <input type="checkbox" name="alarma" checked class="estado">
-                             </label>
-                        </div>
+      <div class="modal-body">
+        <form action="" method="post">
+                    <label for="from">Inicio</label>
+                    <div class='input-group date' id='from'>
+                        <input type='text' id="from" name="from" class="form-control" readonly />
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
                     </div>
-                    <div class="col-3 col-md-auto">
-                        <p>Apagar</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="row finaliza-evento">
-            <div class="col-6 col-md-3">
-                <h6>Finaliza</h6>
-                <input type="date">
-            </div>
-            <div class="col-6 col-md-3">
-                <h6>Hora</h6>
-                <input type="time">
-            </div>
-            <div class="col-12 col-md-6">
-                <h6>Estado</h6>
-                <div class="row">
-                    <div class="col-3 col-md-auto">
-                        <p>Encender</p>
-                    </div> 
-                    <div class="col-6 col-md-auto">
-                        <div class="custom-switch custom-switch-label-onoff estado">   
-                            <label class="bs-switch">
-                                <input type="checkbox" name="alarma" checked class="estado">
-                             </label>
-                        </div>
-                    </div>
-                    <div class="col-3 col-md-auto">
-                        <p>Apagar</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    <br>
 
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-4">
-                <div class="form-group">
-                    <label for="dispositivos" class="dispositivos-select-label">Dispositivos</label>
-                    <select class="form-control tamano-select" id="dispositivos">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                    <label for="to">Final</label>
+                    <div class='input-group date' id='to'>
+                        <input type='text' name="to" id="to" class="form-control" readonly />
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                    </div>
+
+                    <br>
+
+                    <label for="tipo">Dispositivo</label>
+                    <select class="form-control" name="class" id="tipo">
+                        <option value="event-info">Luces</option>
+                        <option value="event-success">Sensor</option>
+                      
                     </select>
-                </div>
-            </div>
-        </div>
+
+                    <br>
+
+                    <label for="tipo">Acciones</label>
+                    <select class="form-control" name="class" id="tipo">
+                        <option value="event-info">Apagar</option>
+                        <option value="event-success">Encender</option>
+                    </select>
+                    <br>
+
+                    <label for="title">Evento</label>
+                    <input type="text" required autocomplete="off" name="title" class="form-control" id="title" placeholder="Introduce un título">
+
+
+
+                    
+
+    <script type="text/javascript">
+        $(function () {
+            $('#from').datetimepicker({
+                language: 'es',
+                minDate: new Date()
+            });
+            $('#to').datetimepicker({
+                language: 'es',
+                minDate: new Date()
+            });
+
+        });
+    </script>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Crear Evento</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-      </div>
+          <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Agregar</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+        </form>
     </div>
   </div>
-</div>
 </div>
 <div class="row justify-content-end ">
       <div class="col-auto">
