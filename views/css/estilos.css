@@ -15,6 +15,7 @@ body{
   -moz-background-size:cover;
   -ms-background-size:cover; 
   height: 100vh;
+  
 
 }
 .opacidad{
@@ -90,12 +91,13 @@ body{
 .boton button i{
     margin-right: 10px;
 }
-.link-Registrate, .link-recupera{
+.link-descarga, .link-recupera{
     color: #FFDA44;
     text-decoration: underline;
     font-size: 16px;
     font-weight: bold;
 }
+
 /* .modal-title{
     color: rgba(100%, 96.1%, 93.3%, 100%)!important;
 }
@@ -282,7 +284,7 @@ margin-top: 14px !important;
     padding: 5px 0;
 } 
 
-.nombre-usuario{
+.nombre-usuario, .hora{
     vertical-align: center;
     font-size: 20px;
     top: 25px;
@@ -290,6 +292,11 @@ margin-top: 14px !important;
     color: #ccc;
     font-weight: bold;
     position: absolute;
+}
+.hora{
+    top:-5px;
+    left: 280px;
+    
 }
 
 /*--------Inicio Estilos Luces---------*/
@@ -320,7 +327,10 @@ margin-top: 14px !important;
 /*------------------------estilos seccion puertas--------------------------------*/
 .boton-garage button{
     margin: 30px 0;
+}
 
+.mensaje-ayuda{
+    margin-bottom: 89px;
 }
 /*---------------------------------------------------------*/
 
@@ -350,11 +360,13 @@ margin-top: 14px !important;
 }
 
 
-/*--------------responsive-------------------*/
+/*--------------responsive¡Registrate--*/
 
 
 @media (max-width: 640px){
 /*------------responsive del index------*/
+   
+    
     .logo img{
         margin-top: 35px;
     }
@@ -371,24 +383,24 @@ margin-top: 14px !important;
     .boton button i{
         margin-right: 5px;
     }
-    .link-Registrate, .link-recupera{
+    .link-descarga, .link-recupera{
         font-size: 13px;
     }
 /*----------------------------------------------------------------*/
 
 /*------------estilos del modal para registrarse(index)-----------------*/
-    .modal-dialog h5 ,.modal-dialog input{
+    /* .modal-dialog h5 ,.modal-dialog input{
         font-size: 15px;
     }
 
     .modal-registrarse .input-group-prepend, .modal-registrarse input{
         height: 28px;
         font-size: 13px;
-        
+        ¡Registrate
     }
     .modal-registrarse button{
         font-size: 14px;
-    }
+    } */
 /*----------------------------------------------------------------------------*/
 
 /*--------------------------responsive del login------------------------------------------*/
@@ -443,6 +455,7 @@ margin-top: 14px !important;
     margin-top: 18px;
     right: 3px;
 }    
+
 /*----------------------------------------------------------------------------*/
 
 /*----------------------responsive de botones del menu principal--------------*/
@@ -500,13 +513,23 @@ margin-top: 14px !important;
 
 /*---------------------responsive seccion de puertas------------------------------------*/
     .boton-desbloqueo button, .boton-garage button{
-        width: 120px;
-        height:100px;
+        width: 140px;
+        height:120px;
         font-size: 14px;
+    }
+
+    .boton-desbloqueo button{
+        margin-top: 40px; 
     }
 
     .boton-garage .iconos-menu{
         width: 35%;
+    }
+
+    .mensaje-ayuda{
+        font-size: 16px;
+        margin-top: -30px;
+        
     }
 
 /*---------------------------------------------------------*/ 

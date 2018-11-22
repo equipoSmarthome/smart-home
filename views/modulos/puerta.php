@@ -76,7 +76,7 @@
                             
                         </div>
                         <div>
-                            <p>* Al presionar. Desbloquearás la chapa por 10 seg. Después se volverá a bloquear</p>
+                            <p class="mensaje-ayuda">* Al presionar. Desbloquearás la chapa por 10 seg. Después se volverá a bloquear</p>
                         </div>
                     </div>
                 </fieldset>
