@@ -141,7 +141,7 @@
                                             <button class="btn btn-primary" name="TempOff" value=0><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-apagado.png" alt=""><p class="mt-2">Desactivar</p></button>
                                         </div> 
                                         <div class="col-6 col-md-6 boton-usuario">
-                                            <button class="btn btn-primary" id="temperatura" name="TempOn" value=1" style="background: #35AE6B;  border-color: transparent"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-encendido.png" alt=""><p class="mt-2">Activado</p></button>
+                                            <button class="btn btn-primary" id="temperatura" name="TempOn" value=1" style="background: #35AE6B;  border-color: transparent"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-encendido.png" alt=""><p class="mt-2">Activar/p></button>
                                         </div>  
                                         ';
                                     } else if ($value["Estado_Dispositivo"] == 0){
@@ -155,7 +155,7 @@
                                             <button class="btn btn-primary" name="TempOff" value=1" style="background: #35AE6B;  border-color: transparent"><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-apagado.png" alt=""><p class="mt-2">Desactivar</p></button>
                                         </div> 
                                         <div class="col-6 col-md-6 boton-usuario">
-                                            <button class="btn btn-primary" id="temperatura" name="TempOn" value=0><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-encendido.png" alt=""><p class="mt-2">Activado</p></button>
+                                            <button class="btn btn-primary" id="temperatura" name="TempOn" value=0><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-encendido.png" alt=""><p class="mt-2">Activar</p></button>
                                         </div>  
                                         ';
                                     } else if ($value["Estado_Dispositivo"] == 3){
@@ -169,7 +169,7 @@
                                             <button class="btn btn-primary" name="TempOff" value=0" ><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-apagado.png" alt=""><p class="mt-2">Desactivar</p></button>
                                         </div> 
                                         <div class="col-6 col-md-6 boton-usuario">
-                                            <button class="btn btn-primary" id="temperatura" name="TempOn" value=0><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-encendido.png" alt=""><p class="mt-2">Activado</p></button>
+                                            <button class="btn btn-primary" id="temperatura" name="TempOn" value=0><img class="iconos-menu-temperatura mt-1" src="../img/iconos/ventilador-encendido.png" alt=""><p class="mt-2">Activar</p></button>
                                         </div>  
                                         ';
                                     }

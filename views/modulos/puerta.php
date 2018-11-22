@@ -101,7 +101,7 @@
                         </div>
 
                         <div class="col-12 boton-garage">
-                            <button class="btn btn-primary" value=1 name="cerrarPuerta" style="background: #35AE6B; border-color: transparent;"><img class="iconos-menu mt-2" src="../img/iconos/bajar-puerta.png" alt=""><p class="mt-4" >Cerrado</p></button>
+                            <button class="btn btn-primary" value=1 name="cerrarPuerta" style="background: #35AE6B; border-color: transparent;"><img class="iconos-menu mt-2" src="../img/iconos/bajar-puerta.png" alt=""><p class="mt-4" >Cerrar</p></button>
                         </div>
 
                         
@@ -122,7 +122,7 @@
                   <legend>Puerta Garage</legend>
                   <div class="row">
                       <div class="col-12 boton-garage ">
-                          <button class="btn btn-primary" value=1 name="abrirPuerta" style="background: #35AE6B; border-color: transparent;"><img class="iconos-menu mt-2" src="../img/iconos/abrir-puerta.png" alt=""><p class="mt-4">Abierto</p></button>
+                          <button class="btn btn-primary" value=1 name="abrirPuerta" style="background: #35AE6B; border-color: transparent;"><img class="iconos-menu mt-2" src="../img/iconos/abrir-puerta.png" alt=""><p class="mt-4">Abrir</p></button>
                       </div>
 
                       <div class="col-12 boton-garage-cerrar mb-5">
