@@ -74,8 +74,14 @@ $("#form-login").submit(function(e){
         success: function(respuesta){
             console.log(respuesta)
             if (respuesta == 1) {
-                swal("Genial", "Iniciando Sesión", "success").then((result) => {
-                    window.location = "../menu.php"  
+                swal({
+                    title: "Genial",
+                    text: "Iniciando Sesión",
+                    icon: "success",
+                    timer: 1500,
+                    button: false
+                }).then((result) => {
+                    window.location = "../menu.php"
                 })
             } else if (respuesta == 2){
                 swal("Faltan Campos", "Tienes que completar todos los campos ", "error");
@@ -84,6 +90,16 @@ $("#form-login").submit(function(e){
             }
             else if (respuesta == 4){
                 swal("Datos Incorrectos", "Debes Ingresar un correo Valido");
+            } else if (respuesta == "admin") {
+                swal({
+                    title: "Genial",
+                    text: "Iniciando Sesión",
+                    icon: "success",
+                    timer: 1500,
+                    button: false
+                }).then((result) => {
+                    window.location = "../../backend/admin/views/modulos/usuariosa.php"
+                })
             }
         }
     })
