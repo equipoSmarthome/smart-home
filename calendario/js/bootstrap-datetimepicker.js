@@ -77,10 +77,10 @@ THE SOFTWARE.
         },
 
 		icons = {
-		    time: 'glyphicon glyphicon-time',
-		    date: 'glyphicon glyphicon-calendar',
-		    up: 'glyphicon glyphicon-chevron-up',
-		    down: 'glyphicon glyphicon-chevron-down'
+		    time: 'fas fa-clock"',
+		    date: 'far fa-calendar-alt',
+		    up:   'fas fa-angle-up',
+		    down: 'fas fa-angle-down'
 		},
 
         picker = this,
@@ -742,8 +742,8 @@ THE SOFTWARE.
                     e.stopPropagation();
                     $this = $(this);
                     $parent = $this.closest('ul');
-                    expanded = $parent.find('.in');
-                    closed = $parent.find('.collapse:not(.in)');
+                    expanded = $parent.find('.show');
+                    closed = $parent.find('.collapse:not(.show)');
 
                     if (expanded && expanded.length) {
                         collapseData = expanded.data('collapse');
@@ -915,7 +915,7 @@ THE SOFTWARE.
                      '</div>';
                 } else {
                     ret += '<ul class="list-unstyled">' +
-                        '<li' + (picker.options.collapse ? ' class="collapse in"' : '') + '>' +
+                        '<li' + (picker.options.collapse ? ' class="collapse show"' : '') + '>' +
                             '<div class="datepicker">' + dpGlobal.template + '</div>' +
                         '</li>' +
                         '<li class="picker-switch accordion-toggle"><a class="btn" style="width:100%"><span class="' + picker.options.icons.time + '"></span></a></li>' +

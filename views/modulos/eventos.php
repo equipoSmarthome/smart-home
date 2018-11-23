@@ -83,7 +83,7 @@ $Datefi                    = date('d/m/Y H:i:s', strtotime($_POST['to']));
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/calendar.css">
+
     <link rel="stylesheet" href="../css/fontawesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     
@@ -137,7 +137,7 @@ $Datefi                    = date('d/m/Y H:i:s', strtotime($_POST['to']));
     </header>
     <div class="container principal">
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-7 calendario">
                 <!-- Inicio Calendario -->
                 <div class="page-header"><h2></h2></div>
             <div class="pull-left form-inline">
@@ -286,23 +286,20 @@ $Datefi                    = date('d/m/Y H:i:s', strtotime($_POST['to']));
                         calendar.view();
                 });
         }(jQuery));
+    
     </script>
-        </div>
-        
 
-
-
-
-
-
-
-<div class="col-12 col-md-6 botones-evento mt-2">
+    <div class="col-12 col-md-4 boton-ver-evento">
     <button type="button" class="btn btn-primary btn-block boton-ver-evento" data-toggle="modal" data-target="#modal-ver-evento">
             Ver Evento
     </button>
-    <button type="button" class="btn btn-primary btn-block boton-crear-evento" data-toggle="modal" data-target="#modal-crear-evento">
-            Crear Evento
-    </button>
+</div>
+        </div>
+      <div class="row justify-content-end ">
+      <div class="col-auto">
+           <div class="btn btn-primary" id="volverMenu">Volver</div>
+       </div>
+    </div>  
 </div>
 
 <div class="modal fade modal-lista-evento" id="modal-ver-evento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -360,15 +357,15 @@ $Datefi                    = date('d/m/Y H:i:s', strtotime($_POST['to']));
                     <label for="from">Inicio</label>
                     <div class='input-group date' id='from'>
                         <input type='text' id="from" name="from" class="form-control" readonly />
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                        <span class="input-group-addon"><span class="far fa-calendar-alt"></span>
                     </div>
 
                     <br>
 
                     <label for="to">Final</label>
-                    <div class='input-group date' id='to'>
+                    <div class='input-group date' id='to' font-size: 16px;>
                         <input type='text' name="to" id="to" class="form-control" readonly />
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                        <span class="input-group-addon"><span class="far fa-calendar-alt fa-2x"></span>
                     </div>
 
                     <br>
@@ -409,20 +406,17 @@ $Datefi                    = date('d/m/Y H:i:s', strtotime($_POST['to']));
 
         });
     </script>
-      </div>
+</div>
       <div class="modal-footer">
           <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Agregar</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
         </form>
     </div>
-  </div>
 </div>
-<div class="row justify-content-end ">
-      <div class="col-auto">
-           <div class="btn btn-primary" id="volverMenu">Volver</div>
-       </div>
-    </div>
- </div>
+</div>
+    
+
+
     
 
     
@@ -435,7 +429,7 @@ $Datefi                    = date('d/m/Y H:i:s', strtotime($_POST['to']));
     <script src="../js/es-ES.js"></script>
     
     
-    <script src="../js/bootstrap-datetimepicker.js"></script>
+    
     <script src="../js/bootstrap-switch.min.js"></script>
     <script src="../js/luces.js"></script>
     

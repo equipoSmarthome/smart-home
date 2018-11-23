@@ -42,7 +42,7 @@
             <!-- Columna del link para Registrarse -->
             <div class="col-12 mt-5">
                 <!-- <a class="link-Registrate" href="#" data-toggle="modal" data-target="#modal-registrarse">¿Eres Nuevo?¡Registrate!</a> -->
-                <a class="link-descarga" href="#">¡Descargar Manual de Usuario!</a>
+                <a class="link-descarga" href="manual/ManualUsuario.pdf" download="">¡Descargar Manual de Usuario!</a>
             </div>
             <!-- Modal -->
             <form id="form-registro">

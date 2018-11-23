@@ -325,6 +325,10 @@ margin-top: 14px !important;
 /*---------------------------------------------------------*/
 
 /*------------------------estilos seccion puertas--------------------------------*/
+.boton-desbloqueo button{
+    width: 150px;
+}
+
 .boton-garage button{
     margin: 30px 0;
 }
@@ -335,10 +339,19 @@ margin-top: 14px !important;
 /*---------------------------------------------------------*/
 
 /*---------------estilos seccion eventos-------------------------------------*/
-.botones-evento {
-    vertical-align: middle;
-    margin:auto auto;
+.botones-ver-evento  {
+    text-align: center;
 }
+
+.calendario{
+    background: #1F1F1F;
+    
+}
+
+
+
+
+
 
 /*---------------------------------------------------------*/
 
@@ -358,6 +371,7 @@ margin-top: 14px !important;
 .configuracion-ventilador p{
     font-size: 12px;
 }
+
 
 
 /*--------------responsive¡Registrate--*/
@@ -538,7 +552,7 @@ margin-top: 14px !important;
     font-size: 15px;
 }
 .calendar-month-view-arrow{
-    font-size: 13px;
+    font-size: 10px;
 }
 .letrasDay div{
     font-size: 13px;
@@ -547,10 +561,10 @@ margin-top: 14px !important;
     height: 30px !important;
 }
 .calendar-grid {
-    font-size: 13px;
+    font-size: 4px;
 }
 .calendar-holder{
-    height: 180px !important;
+    height: 120px !important;
 }
 .boton-ver-evento, .boton-crear-evento{
     font-size: 14px; 
@@ -636,6 +650,7 @@ margin-top: 14px !important;
 .modal-nueva-cuenta input{
     height: 30px;
 }
+
 }
 
 
