@@ -15,6 +15,7 @@ body{
   -moz-background-size:cover;
   -ms-background-size:cover; 
   height: 100vh;
+  overflow-y: hidden;
   
 
 }
@@ -73,6 +74,7 @@ body{
     color: #D8D8D8;
     text-align: center;
     font-size: 22px;
+
 }
 /*---------Fin Estilos Generales---------*/
 /*--------Inicio Estilos Index---------*/
@@ -387,7 +389,9 @@ margin-top: 14px !important;
 
 @media (max-width: 640px){
 /*------------responsive del index------*/
-   
+   body{
+    overflow-y: scroll;
+   }
     
     .logo img{
         margin-top: 35px;

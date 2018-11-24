@@ -125,7 +125,7 @@
                           <button class="btn btn-primary" value=1 name="abrirPuerta" style="background: #35AE6B; border-color: transparent;"><img class="iconos-menu mt-2" src="../img/iconos/abrir-puerta.png" alt=""><p class="mt-4">Abrir</p></button>
                       </div>
 
-                      <div class="col-12 boton-garage-cerrar mb-5">
+                      <div class="col-12 boton-garage mb-5">
                           <button class="btn btn-primary"  value=0 name="cerrarPuerta"><img class="iconos-menu mt-2" src="../img/iconos/bajar-puerta.png" alt=""><p class="mt-4" >Cerrar</p></button>
                       </div>
 
