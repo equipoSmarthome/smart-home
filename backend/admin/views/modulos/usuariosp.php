@@ -1,7 +1,10 @@
 <?php 
+require_once '../../models/conexion.php';
+session_start();
 require_once "../../controllers/mostraruser.controller.php";
 require_once "../../models/mostaruser.modelo.php";
 require_once "../../models/completar-modal.php";
+
 if (!isset($_SESSION['correo'])) {
   header('Location: ../../../../index.php');
 }
@@ -53,7 +56,6 @@ if (!isset($_SESSION['correo'])) {
 					            </tr>
           					 </thead>
           						<tbody>
-						            <tr>
                         <?php 
                   $usuario = ControllerUsuario::mostrarUsuarioPendiente();
                   foreach ($usuario as $key => $value) {
@@ -62,9 +64,7 @@ if (!isset($_SESSION['correo'])) {
                         <th scope="row">'.$value["0"].'</th>
                         <th scope="row">'.$value["1"].'</th>
                         <th scope="row">'.$value["3"].'</th>
-                        <th scope="row"><button type="button" class="btn btn-primary" id="cambiar-estado" data-toggle="modal" data-target="#editar-estado" value="'.$value["0"].'">
-                        Editar
-                      </button></th>
+                        <th scope="row" class="editar"><button type="button" class="btn btn-primary" id="cambiar-estado" data-toggle="modal" data-target="#editar-estado" value="'.$value["0"].'"  name="'.$value["0"].'">Editar </button></th>
 
 				              </tr>
 				            ';
@@ -87,25 +87,22 @@ if (!isset($_SESSION['correo'])) {
 			      </div>
 			      <div class="modal-body">
 			      	<form action="" class="app" id="app">
-              <?php 
-                  $usuario = ControllerUsuario::mostrarUsuarioPendiente();
-                  foreach ($usuario as $key => $value) {
-                    echo '
+              
                         <div class="row justify-content-center">
                         <div class="col-12">
                           <div class="input-group mb-3">
                         <span class="input-group-addon" id="basic-addon1"><i class="fas fa-user"></i></span>
-                        <input type="text" class="form-control" placeholder="'.$value[1].'" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="Correo" id="correo-pendiente" aria-describedby="basic-addon1" name="correo">
                       </div>
       
                       <div class="input-group mb-3">
                         <span class="input-group-addon" id="basic-addon1"><i class="fas fa-laptop"></i></span>
-                        <input type="text" class="form-control" placeholder="'.$value[2].'" aria-describedby="basic-addon1" readonly>
+                        <input type="text" class="form-control" placeholder="Mac" id="mac-pendiente" aria-describedby="basic-addon1" name="mac" readonly>
                       </div>
       
                               <div class="fila numero-caracteres">
                               <div>
-                                <input type="hidden" id="numero-caracteres" readonly value="8">
+                                <input type="hidden" id="numero-caracteres" readonly value="10">
                               </div>
                               </div>
       
@@ -130,29 +127,26 @@ if (!isset($_SESSION['correo'])) {
                               <div class="fila generar row justify-content-center mb-3">
                                 <div class="input-group mb-3 col-auto">
                                   <span class="input-group-addon" id="basic-addon1"><i class="fas fa-key"></i></span>
-                                  <input type="text" class="form-control" id="input-password" placeholder="Generador de contraseña" aria-describedby="basic-addon1" readonly>
+                                  <input type="text" class="form-control" id="input-password" placeholder="Generador de contraseña" aria-describedby="basic-addon1" name="pass" required readonly>
                                 </div>
       
                                 <div class="col-12">
-                                  <button class="btn btn-primary btn-lg btn-block btn-sm btn-generar" id="btn-generar">Generar <i class="fas fa-lock"></i></button>
+                                  <button type="button" class="btn btn-primary btn-lg btn-block btn-sm btn-generar" id="btn-generar">Generar <i class="fas fa-lock" ></i></button>
                                 </div>
                               </div>
       
                               
                         </div>
                       </div>
-				            ';
-                  }
-				          
-				          ?>
+											<div class="modal-footer">
+			        <button type="submit" class="btn btn-success" id="activar-usuario">Activar</button>
+			        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+			      </div>
 			      		
 			      	</form>
 			        
 			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-success">Activar</button>
-			        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-			      </div>
+			      
 			    </div>
 			  </div>
 			</div>
@@ -167,6 +161,7 @@ if (!isset($_SESSION['correo'])) {
 	<script src="../../js/jquery-3.2.1.min.js"></script>
 	<script src="../../js/popper.min.js"></script>
 	<script src="../../js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="../../js/app.js"></script>
 	<script src="../../js/acciones.js"></script>
 </body>

@@ -1,6 +1,6 @@
 <?php 
-require_once '../../models/conexion.php';
-session_start();
+
+
 $id = $_SESSION['iduser'];
 Class ModeloUsuario {
     static public function mostrarUsuarioMdl($tabla){

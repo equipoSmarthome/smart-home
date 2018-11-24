@@ -1,6 +1,6 @@
 <?php 
 
-require_once "conexion.php";
+
 Class ModeloUsuariosp {
 	
 		static public function iniciarSesionMdl($tabla, $usuario) {

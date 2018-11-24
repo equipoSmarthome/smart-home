@@ -1,4 +1,6 @@
 <?php 
+require_once '../../models/conexion.php';
+session_start();
 require_once "../../controllers/mostraruser.controller.php";
 require_once "../../models/mostaruser.modelo.php";
 
