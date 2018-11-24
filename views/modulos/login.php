@@ -2,6 +2,44 @@
 	//  session_start();
 	//  unset($_SESSION['usuario']);
 ?>
+<?php
+    if(!empty($_POST["forgot-password"])){
+        $conn = mysqli_connect("localhost", "root", "", "smarthome");
+        
+        $condition = "";
+        if(!empty($_POST["user-email"])) {
+            if(!empty($condition)) {
+                $condition = " and ";
+            }
+            $condition = " Correo_Usuario_1 = '" . $_POST["user-email"] . "'";
+        }
+        
+        if(!empty($condition)) {
+            $condition = " where " . $condition;
+        }
+
+        $sql = "Select * from usuario_1 " . $condition;
+        $result = mysqli_query($conn,$sql);
+        $user = mysqli_fetch_array($result);
+        
+        if(!empty($user)) {
+            require_once("correo/recuperarC.php");
+        } else {
+            $error_message = 'No User Found';
+        }
+    }
+?>
+
+<script>
+function validate_forgot() {
+    if(document.getElementById("user-email").value == "") {
+        document.getElementById("validation-message").innerHTML = "Login name or Email is required!"
+        return false;
+    }
+    return true
+}
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,20 +77,22 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-10">
-                            <button type="submit" class="btn btn-primary btn-block" name="entrar" value="entrar">Iniciar Sesión</button>
+                            <button type="submit" class="btn btn-primary btn-block" name="entrar" value="entrar">Iniciar Sesion</button>
                         </div>
                     </div>
                 </form>
             </div>
             <!-- fin del formulario -->
             <!-- link de recuperar contraseña -->
+
             <div class="col-12 mt-4">
-                <a class="link-recupera" href="#" data-toggle="modal" data-target="#modal-contraseña">Recuperar Contraseña</a>
+                <a class="link-recupera" href="#" data-toggle="modal" data-target="#modal-contra">Recuperar Contraseña</a>
             </div>
             <!-- fin del recuperar contraseña -->
 
             <!-- inicio de ventana modal -->
-            <div class="modal fade modal-recupera-contraseña" id="modal-contraseña" tabindex="-1" role="dialog" aria-labelledby="#modal-contraseña" aria-hidden="true">
+         <form name="frmForgot" id="frmForgot" method="post" onSubmit="return validate_forgot();">
+            <div class="modal fade modal-recupera-contraseña" id="modal-contra" tabindex="-1" role="dialog" aria-labelledby="#modal-contra" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content bg-dark">
                         <div class="modal-header">
@@ -62,21 +102,23 @@
                             </button>
                         </div>
                         <div class="modal-body bg-dark">
-                            <p class="">Para Recuperar su Contraseña, Ingrese su Correo Electronico</p>
+                            <!--<p class="">Para Recuperar su Contraseña, Ingrese su Correo Electronico</p>-->
                             <div class="col-auto input-group mb-3 mt-1">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="inputGroup-sizing-default"><i class="fas fa-user"></i></span>
                                 </div>
-                                <input type="email" class="form-control" placeholder="Ingrese su Correo">
+                                <input type="email" class="form-control" name="user-email" id="user-email" placeholder="Ingrese su Correo">
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">Enviar</button>
+                            
+                          <button type="submit" name="forgot-password" id="forgot-password" value="Enviar" class="btn btn-primary">Enviar</button>
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
                 </div>
             </div>
+            </form>
             <!-- fin ventana modal -->
         </div>
 

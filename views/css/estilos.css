@@ -339,12 +339,14 @@ margin-top: 14px !important;
 /*---------------------------------------------------------*/
 
 /*---------------estilos seccion eventos-------------------------------------*/
-.botones-ver-evento  {
-    text-align: center;
+.boton-ver-evento {
+    vertical-align: middle;
+    margin: auto auto;
 }
 
 .calendario{
-    background: #1F1F1F;
+    background: #353535;
+    border-radius: 10px;
     
 }
 
@@ -372,6 +374,12 @@ margin-top: 14px !important;
     font-size: 12px;
 }
 
+/* estilos restablecer */
+
+.restablecer-titulo{
+    color:#FFDA44;
+    margin-bottom: 40px;
+}
 
 
 /*--------------responsive¡Registrate--*/
@@ -566,8 +574,13 @@ margin-top: 14px !important;
 .calendar-holder{
     height: 120px !important;
 }
-.boton-ver-evento, .boton-crear-evento{
+.boton-ver-evento{
     font-size: 14px; 
+    margin-top: 15px; 
+}
+
+.modal-footer .agregar-evento, .cancelar-evento {
+    font-size: 13px !important;
 }
 /*---------------------------------------------------------*/ 
 
@@ -581,27 +594,7 @@ margin-top: 14px !important;
 /*---------------------------------------------------------*/ 
 
 /*---------------------------------------------------------*/ 
-.modal-crear-evento th, .modal-crear-evento td{
-    font-size: 13px;
-}
-.modal-crear-evento button{
-    font-size: 13px;
-}
-.modal-crear-evento p{
-    font-size: 15px;
-}
-.modal-crear-evento .dispositivos-select-label{
-  font-size: 16px;
-}
-.tamano-select{
-    height: 30px;
-}
-.inicio-evento{
-    border-bottom: 1px solid white;
-}
-.finaliza-evento{
-    border-bottom: 1px solid white;
-}
+
 /*------------------------------------------------------*/
 /*---------------responsive seccion luces---------------------------------------*/
 .luz{

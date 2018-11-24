@@ -357,15 +357,15 @@ $Datefi                    = date('d/m/Y H:i:s', strtotime($_POST['to']));
                     <label for="from">Inicio</label>
                     <div class='input-group date' id='from'>
                         <input type='text' id="from" name="from" class="form-control" readonly />
-                        <span class="input-group-addon"><span class="far fa-calendar-alt"></span>
+                        <span class="input-group-text"><span class="far fa-calendar-alt"></span>
                     </div>
 
                     <br>
 
                     <label for="to">Final</label>
-                    <div class='input-group date' id='to' font-size: 16px;>
+                    <div class='input-group date' id='to'>
                         <input type='text' name="to" id="to" class="form-control" readonly />
-                        <span class="input-group-addon"><span class="far fa-calendar-alt fa-2x"></span>
+                        <span class="input-group-text"><span class="far fa-calendar-alt"></span>
                     </div>
 
                     <br>
@@ -408,8 +408,8 @@ $Datefi                    = date('d/m/Y H:i:s', strtotime($_POST['to']));
     </script>
 </div>
       <div class="modal-footer">
-          <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Agregar</button>
-          <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+          <button type="submit" class="btn btn-success agregar-evento"><i class="fa fa-check"></i> Agregar</button>
+          <button type="button" class="btn btn-danger cancelar-evento" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
         </form>
     </div>
 </div>
