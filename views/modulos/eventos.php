@@ -408,8 +408,8 @@ $Datefi                    = date('d/m/Y H:i:s', strtotime($_POST['to']));
     </script>
 </div>
       <div class="modal-footer">
-          <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> Agregar</button>
-          <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+          <button type="submit" class="btn btn-success agregar-evento"><i class="fa fa-check"></i> Agregar</button>
+          <button type="button" class="btn btn-danger cancelar-evento" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
         </form>
     </div>
 </div>

@@ -389,22 +389,22 @@
 }
 .cal-year-box .row-fluid:hover,
 .cal-row-fluid:hover {
-  background-color: #fafafa;
+  background-color:#333;
 }
 .cal-month-day {
-  height: 100px;
+  height: 60px;
 }
 [class*="cal-cell"]:hover {
-  background-color: #ededed;
+  background-color:rgb(13.3%, 13.6%, 13.3%);
 }
 .cal-year-box [class*="span"],
 .cal-month-box [class*="cal-cell"] {
-  min-height: 100px;
+  height: 60px;
   border-right: 1px solid #e1e1e1;
   position: relative;
 }
 .cal-year-box [class*="span"] {
-  min-height: 60px;
+  min-height: 100px;
 }
 .cal-year-box .row-fluid [class*="span"]:last-child,
 .cal-month-box .cal-row-fluid [class*="cal-cell"]:last-child {
@@ -430,7 +430,7 @@
   border-radius: 2px;
 }
 span[data-cal-date] {
-  font-size: 1.2em;
+  font-size: 1.6em;
   font-weight: normal;
   opacity: 0.5;
   cursor: pointer;
@@ -450,7 +450,7 @@ span[data-cal-date]:hover {
   cursor: default;
 }
 .cal-day-today {
-  background-color: #e8fde7;
+  background-color: #b2b9b2;
 }
 .cal-day-today span[data-cal-date] {
   color: darkgreen;
@@ -468,7 +468,7 @@ span[data-cal-date]:hover {
   border: 1px solid #e1e1e1;
   border-right: 0px;
   border-radius: 5px 0 0 5px;
-  background-color: #fafafa;
+  background-color:#696464;
   text-align: right;
 }
 #cal-day-tick {
