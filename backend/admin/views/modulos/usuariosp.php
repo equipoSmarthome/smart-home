@@ -31,7 +31,9 @@ if (!isset($_SESSION['correo'])) {
         </div>
         <br>
 				<nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
-        <?php echo '<p style="text-align: center;">Bienvenido: '.$_SESSION['correo'].'</p>'; ?>
+        <div class="nombre-admin col-10 col-md-10">   
+					<?php echo '<p style="text-align: center;">Bienvenido: '.$_SESSION['correo'].'</p>'; ?>
+				</div>
 					<a href="usuariosa.php"><i class="fas fa-user"></i><span>Usuarios Activos</span></a>
 					<a href="usuariosp.php" class="active"><i class="fas fa-question-circle"></i><span>Usuarios Pendientes</span></a>
 					<a href="../../../../views/modulos/salir.php"><i class="fas fa-times-circle"></i><span>Salir</span></a>
@@ -91,12 +93,16 @@ if (!isset($_SESSION['correo'])) {
                         <div class="row justify-content-center">
                         <div class="col-12">
                           <div class="input-group mb-3">
-                        <span class="input-group-addon" id="basic-addon1"><i class="fas fa-user"></i></span>
-                        <input type="text" class="form-control" placeholder="Correo" id="correo-pendiente" aria-describedby="basic-addon1" name="correo">
-                      </div>
+														<div class="input-group-prepend">
+															<span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+														</div>
+                        	<input type="text" class="form-control" placeholder="Correo" id="correo-pendiente" aria-describedby="basic-addon1" name="correo">
+                         </div>
       
                       <div class="input-group mb-3">
-                        <span class="input-group-addon" id="basic-addon1"><i class="fas fa-laptop"></i></span>
+											<div class="input-group-prepend">
+												<span class="input-group-text" id="basic-addon1"><i class="fas fa-laptop"></i></span>
+											</div>
                         <input type="text" class="form-control" placeholder="Mac" id="mac-pendiente" aria-describedby="basic-addon1" name="mac" readonly>
                       </div>
       
@@ -126,7 +132,9 @@ if (!isset($_SESSION['correo'])) {
       
                               <div class="fila generar row justify-content-center mb-3">
                                 <div class="input-group mb-3 col-auto">
-                                  <span class="input-group-addon" id="basic-addon1"><i class="fas fa-key"></i></span>
+																<div class="input-group-prepend">
+																	<span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
+																</div>
                                   <input type="text" class="form-control" id="input-password" placeholder="Generador de contraseña" aria-describedby="basic-addon1" name="pass" required readonly>
                                 </div>
       

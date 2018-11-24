@@ -31,7 +31,10 @@ if (!isset($_SESSION['correo'])) {
         </div>
         <br>
 				<nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
-          <?php echo '<p style="text-align: center;">Bienvenido: '.$_SESSION['correo'].'</p>'; ?>
+		<div class="nombre-admin col-10 col-md-10">   
+		<?php echo '<p style="text-align: center;">Bienvenido: '.$_SESSION['correo'].'</p>'; ?>
+		</div>
+          
 					<a href="usuariosa.php" class="active"><i class="fas fa-user"></i><span>Usuarios Activos</span></a>
 					<a href="usuariosp.php"><i class="fas fa-question-circle"></i><span>Usuarios Pendientes</span></a>
 					<a href="../../../../views/modulos/salir.php"><i class="fas fa-times-circle"></i><span>Salir</span></a>
