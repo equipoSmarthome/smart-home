@@ -357,15 +357,15 @@ $Datefi                    = date('d/m/Y H:i:s', strtotime($_POST['to']));
                     <label for="from">Inicio</label>
                     <div class='input-group date' id='from'>
                         <input type='text' id="from" name="from" class="form-control" readonly />
-                        <span class="input-group-addon"><span class="far fa-calendar-alt"></span>
+                        <span class="input-group-text"><span class="far fa-calendar-alt"></span>
                     </div>
 
                     <br>
 
                     <label for="to">Final</label>
-                    <div class='input-group date' id='to' font-size: 16px;>
+                    <div class='input-group date' id='to'>
                         <input type='text' name="to" id="to" class="form-control" readonly />
-                        <span class="input-group-addon"><span class="far fa-calendar-alt fa-2x"></span>
+                        <span class="input-group-text"><span class="far fa-calendar-alt"></span>
                     </div>
 
                     <br>
